@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-slate-900;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  p {
+    @apply text-base md:text-lg text-slate-600;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Reserve space at the bottom of the viewport on mobile so the
+     sticky call/quote bar never covers footer content or forms. */
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 4.25rem;
+    }
+  }
+}
+
+@layer components {
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Primary CTA — yellow, dark text, used for the main conversion action */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-secondary-500 text-navy-900 font-bold rounded-xl shadow-sm hover:bg-secondary-400 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  /* Secondary button — white with a visible border, dark text */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-navy-900 font-semibold rounded-xl border-2 border-slate-200 hover:border-navy-900 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-navy-900 font-semibold rounded-xl border-2 border-slate-200 hover:border-navy-900 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  /* Outline button variant for use on dark navy sections */
+  .btn-outline-dark {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-soft transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply cursor-pointer hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply text-primary-600;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-28;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Eyebrow / pill badge used above section headings and the hero */
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
