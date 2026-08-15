@@ -105,7 +105,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICES.slice(0, 3).map((service) => {
-                const ServiceIcon = Icons[service.icon as keyof typeof Icons] || Icons.Zap;
+                const ServiceIcon = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as ComponentType<{ className?: string }>;
                 return (
                   <FadeUp key={service.id} delay={0.05}>
                     <div className="card">
