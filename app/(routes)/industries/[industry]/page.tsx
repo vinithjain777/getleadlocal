@@ -3,6 +3,7 @@ import { INDUSTRIES, SERVICES } from "@/lib/constants";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import { VisualPanel } from "@/components/visual-panel";
+import type { ComponentType } from "react";
 
 interface IndustryPageProps {
   params: Promise<{ industry: string }>;
@@ -37,7 +38,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     return <div>Industry not found</div>;
   }
 
-  const IconComponent = Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase;
+  const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as ComponentType<{ className?: string }>;
 
   const stats = [
     { metric: "Leads Generated", value: "127+", icon: "TrendingUp" },
