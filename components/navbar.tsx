@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, PhoneCall, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAVIGATION } from "@/lib/constants";
-import { site } from "@/lib/site";
-import { cn } from "@/lib/cn";
 import { Logo } from "@/components/logo";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const telHref = `tel:${site.phone.replace(/[^\d+]/g, "")}`;
 
   return (
     <nav className="fixed top-0 w-full bg-white z-50 border-b border-slate-200 shadow-sm">
@@ -35,13 +32,6 @@ export function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-5">
-          <a
-            href={telHref}
-            className="hidden lg:flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-primary-600 transition-colors"
-          >
-            <PhoneCall className="w-4 h-4 text-primary-500" />
-            {site.phone}
-          </a>
           <Link
             href="/contact"
             className="px-6 py-2.5 bg-secondary-500 text-navy-900 font-bold rounded-lg hover:bg-secondary-400 hover:-translate-y-0.5 transition-all"
@@ -81,13 +71,6 @@ export function Navbar() {
             >
               Get Started
             </Link>
-            <a
-              href={telHref}
-              className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-700 py-2"
-            >
-              <PhoneCall className="w-4 h-4 text-primary-500" />
-              {site.phone}
-            </a>
           </div>
         </div>
       )}

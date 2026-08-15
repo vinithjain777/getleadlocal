@@ -4,7 +4,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { ClipboardCheck, MapPin, Search, TrendingUp, Unlock, Zap } from "lucide-react";
 import { WHY_CHOOSE_US } from "@/lib/constants";
 
-const iconMap: Record<string, React.ComponentType<any>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   "qualified-leads": TrendingUp,
   "google-ads-experts": Search,
   "local-seo": MapPin,

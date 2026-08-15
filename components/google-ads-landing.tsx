@@ -123,7 +123,7 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                 Common Challenges For {data.industry}
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Here's what typically gets in the way of a profitable ad account
+                Here&apos;s what typically gets in the way of a profitable ad account
               </p>
             </div>
           </FadeUp>
@@ -186,7 +186,7 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
           <FadeUp>
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                What's Included
+                What&apos;s Included
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Everything you need to launch and scale a profitable Google Ads account

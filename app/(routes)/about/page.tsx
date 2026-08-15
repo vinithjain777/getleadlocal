@@ -18,7 +18,7 @@ const values = [
   },
   {
     title: "Partnership",
-    description: "Your success is our success. We're invested in your growth long-term.",
+    description: "Your success is our success. We&apos;re invested in your growth long-term.",
   },
   {
     title: "Innovation",
@@ -37,7 +37,7 @@ export default function AboutPage() {
               About GetLeadLocal
             </h1>
             <p className="text-xl text-slate-600">
-              We're a team of digital marketers, designers, and strategists dedicated to helping
+              We&apos;re a team of digital marketers, designers, and strategists dedicated to helping
               local service businesses generate more qualified leads and grow revenue.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Our Story</h2>
               <p className="text-lg text-slate-600 mb-4 leading-relaxed">
                 GetLeadLocal was founded on a simple observation: most home service business owners
-                don't have the time or expertise to master digital marketing. They're focused on
+                don&apos;t have the time or expertise to master digital marketing. They&apos;re focused on
                 running their business, not learning Google Ads algorithms.
               </p>
               <p className="text-lg text-slate-600 mb-4 leading-relaxed">
@@ -58,7 +58,7 @@ export default function AboutPage() {
                 industry, speaks their language, and delivers results they can measure.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                We're focused on building long-term partnerships with local service businesses,
+                We&apos;re focused on building long-term partnerships with local service businesses,
                 combining Google Ads, Local SEO and AI automation into one accountable growth system.
               </p>
             </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <div className="bg-navy-900 rounded-2xl p-12 text-center text-white">
             <h2 className="text-4xl font-bold mb-4">Ready to grow your business?</h2>
             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you generate more qualified leads and book more jobs.
+              Let&apos;s discuss how we can help you generate more qualified leads and book more jobs.
             </p>
             <Link href="/contact" className="btn-primary group">
               Book Your Free Strategy Call

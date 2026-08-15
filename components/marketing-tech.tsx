@@ -1,16 +1,16 @@
 "use client";
 
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
-import { LineChart, MapPin, Megaphone, Share2, Tags, Workflow } from "lucide-react";
+import { LineChart, MapPin, Megaphone, Share2, Phone, TrendingUp } from "lucide-react";
 import { MARKETING_TECH } from "@/lib/constants";
 
-const iconMap: Record<string, React.ComponentType<any>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   "google-ads": Megaphone,
   "meta-ads": Share2,
   "google-analytics": LineChart,
-  gtm: Tags,
-  gbp: MapPin,
-  ghl: Workflow,
+  "gbp": MapPin,
+  "call-tracking": Phone,
+  "search-console": TrendingUp,
 };
 
 export function MarketingTech() {
@@ -20,10 +20,10 @@ export function MarketingTech() {
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Marketing Technology We Use
+              Tools & Platforms We Use
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Industry-leading platforms powering every campaign we run
+              Professional marketing platforms to track every call, lead, and conversion
             </p>
           </div>
         </FadeUp>

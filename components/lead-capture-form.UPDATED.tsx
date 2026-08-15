@@ -1,3 +1,4 @@
+// Updated Lead Capture Form with Web3Forms Integration
 "use client";
 
 import { useState } from "react";
@@ -17,19 +18,12 @@ type LeadFormData = z.infer<typeof leadSchema>;
 
 const SERVICE_OPTIONS = [
   "Google Ads",
-  "Facebook & Instagram Ads",
+  "Meta Ads",
   "Local SEO",
-  "All Three Services",
+  "Website Design",
   "Not sure yet",
 ];
 
-/**
- * Primary hero lead-capture form. Replaces the old image + single-field
- * "quick audit" widget with a short, fully qualifying form (name, phone,
- * email, service) — this is the highest-intent conversion point on the
- * page, so it's designed to be the visual centerpiece of the hero rather
- * than a secondary floating card.
- */
 export function LeadCaptureForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
   const {

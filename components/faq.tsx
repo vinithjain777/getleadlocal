@@ -8,32 +8,32 @@ const faqs = [
   {
     question: "How long does it take to see results?",
     answer:
-      "Most clients see their first leads within 1-2 weeks. However, significant ROI improvements typically take 4-6 weeks as we optimize and refine campaigns based on performance data.",
+      "Google Ads can generate calls within days. Facebook/Instagram Ads typically show results in 1-2 weeks. Local SEO is a 3-6 month strategy, but the results compound over time.",
   },
   {
     question: "What's included in your services?",
     answer:
-      "Our services include campaign strategy, implementation, landing pages, tracking setup, weekly optimization, and detailed monthly reporting. We handle everything from setup to ongoing management.",
+      "Campaign strategy, ad account setup, keyword research (Google Ads), audience targeting (Facebook/Instagram), Google Business Profile optimization (Local SEO), weekly optimization, and monthly performance reports. We handle everything.",
   },
   {
     question: "Do you work with businesses outside of home services?",
     answer:
-      "While we specialize in home service businesses (plumbing, roofing, HVAC, etc.), our digital marketing strategies can be adapted for other local service industries. Contact us to discuss your specific needs.",
+      "We exclusively focus on local service businesses like plumbers, HVAC companies, roofers, contractors, electricians, and other home service professionals. This specialization allows us to deliver better results.",
   },
   {
     question: "What's your pricing model?",
     answer:
-      "We offer flexible pricing based on your service mix, ad spend, and marketing objectives. Most clients invest between $1,500-$5,000 per month. We'll provide a custom quote after our discovery call.",
+      "We charge a management fee based on the services you choose. Most clients invest $1,500-$3,000/month in management fees, plus ad spend (typically $1,500-$5,000/month for Google/Facebook Ads). We'll provide a custom quote after our strategy call.",
   },
   {
     question: "Can you help if my Google Ads are underperforming?",
     answer:
-      "Absolutely. This is one of our specialties. We'll audit your campaigns, identify issues, and implement proven optimization strategies to improve your ROI and reduce cost per lead.",
+      "Yes! We specialize in fixing underperforming campaigns. We'll audit your account, identify wasted spend, optimize targeting, improve ad copy, and reduce your cost per lead.",
   },
   {
-    question: "Do you provide training for our team?",
+    question: "Do I need all three services?",
     answer:
-      "Yes. We can train your team on how to manage GoHighLevel, review performance reports, and understand your marketing funnel. We want you to be empowered with knowledge.",
+      "Not necessarily. Many clients start with Google Ads for immediate results, then add Local SEO for long-term growth. Facebook/Instagram Ads work great for brand awareness. We'll recommend the best strategy for your goals and budget.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function FAQ() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-slate-600">
-              Have questions? We've got answers. If you don't find what you're looking for, reach
+              Have questions? We&apos;ve got answers. If you don&apos;t find what you&apos;re looking for, reach
               out directly.
             </p>
           </div>

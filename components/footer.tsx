@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, Linkedin, Twitter } from "lucide-react";
-import { NAVIGATION, SITE_CONFIG } from "@/lib/constants";
+import { Linkedin, Twitter } from "lucide-react";
+import { NAVIGATION } from "@/lib/constants";
 import { Logo } from "@/components/logo";
 
 export function Footer() {
@@ -55,7 +55,7 @@ export function Footer() {
                   href="/services#meta-ads"
                   className="hover:text-primary-400 transition-colors"
                 >
-                  Meta Ads
+                  Facebook & Instagram Ads
                 </Link>
               </li>
               <li>
@@ -66,36 +66,18 @@ export function Footer() {
                   Local SEO
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/services#ai-automation"
-                  className="hover:text-primary-400 transition-colors"
-                >
-                  AI Automation
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-white mb-4">Contact</h4>
-            <div className="space-y-3">
-              <a
-                href={`mailto:hello@getleadlocal.com`}
-                className="flex items-center gap-2 text-sm hover:text-primary-400 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                hello@getleadlocal.com
-              </a>
-              <a
-                href="tel:(888)2040186"
-                className="flex items-center gap-2 text-sm hover:text-primary-400 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                (888) 204-0186
-              </a>
-            </div>
+            <h4 className="font-semibold text-white mb-4">Get Started</h4>
+            <Link
+              href="/contact"
+              className="inline-block text-sm bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              Contact Us Today
+            </Link>
           </div>
         </div>
 

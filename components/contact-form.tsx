@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FadeUp } from "./animations";
-import { Mail, Phone, Briefcase, User } from "lucide-react";
+import { Mail, Phone, Briefcase, User, CheckCircle } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -35,14 +35,39 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setLoading(true);
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Form submitted:", data);
-      setSubmitted(true);
-      reset();
-      setTimeout(() => setSubmitted(false), 5000);
+      // Submit to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "81f1a7af-0858-44be-b131-1d4ab5633954",
+          name: data.name,
+          business: data.business,
+          website: data.website || "Not provided",
+          email: data.email,
+          phone: data.phone,
+          budget: data.budget || "Not specified",
+          message: data.message,
+          form_type: "Contact Page Form",
+          from_name: "GetLeadLocal Website",
+          subject: `New Contact Form: ${data.name} - ${data.business}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        reset();
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("There was an error submitting the form. Please try again or call us directly.");
     } finally {
       setLoading(false);
     }
@@ -58,7 +83,7 @@ export function ContactForm() {
             </div>
             <h3 className="text-2xl font-semibold text-slate-900 mb-2">Thank you!</h3>
             <p className="text-slate-600 mb-6">
-              We'll review your information and get back to you within 24 hours with a customized
+              We&apos;ll review your information and get back to you within 24 hours with a customized
               strategy.
             </p>
           </div>
@@ -76,7 +101,7 @@ export function ContactForm() {
                 <input
                   {...register("name")}
                   type="text"
-                  placeholder="John Smith"
+                  placeholder="Your full name"
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 />
                 {errors.name && <p className="text-sm text-red-600 mt-1">{errors.name.message}</p>}

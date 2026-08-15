@@ -147,7 +147,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               Ready To Generate More {industry.name} Leads?
             </h2>
             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss a custom strategy tailored to your {industry.name?.toLowerCase()}{" "}
+              Let&apos;s discuss a custom strategy tailored to your {industry.name?.toLowerCase()}{" "}
               business.
             </p>
             <Link href="/contact" className="btn-primary">

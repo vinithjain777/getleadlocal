@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { PROCESS_STEPS } from "@/lib/constants";
 
@@ -22,7 +23,7 @@ export function Process() {
           {/* Connecting line for desktop */}
           <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-transparent" />
 
-          {PROCESS_STEPS.map((step, idx) => (
+          {PROCESS_STEPS.map((step, _idx) => (
             <StaggerItem key={step.number}>
               <div className="relative">
                 {/* Number circle */}
@@ -43,9 +44,9 @@ export function Process() {
         {/* CTA */}
         <FadeUp delay={0.3}>
           <div className="mt-16 text-center">
-            <a href="/contact" className="btn-primary inline-flex gap-2">
+            <Link href="/contact" className="btn-primary inline-flex gap-2">
               Start Your Journey Today
-            </a>
+            </Link>
           </div>
         </FadeUp>
       </div>

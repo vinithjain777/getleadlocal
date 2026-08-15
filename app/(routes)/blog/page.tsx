@@ -9,7 +9,6 @@ import {
   MapPin,
   Megaphone,
   MousePointerClick,
-  User,
   Workflow,
 } from "lucide-react";
 
@@ -27,7 +26,7 @@ const blogPosts = [
     id: 1,
     title: "The Complete Guide to Google Ads for Plumbers",
     category: "Google Ads",
-    author: "John Smith",
+    author: "GetLeadLocal Team",
     date: "Jan 15, 2024",
     readTime: "8 min read",
     description:
@@ -38,7 +37,7 @@ const blogPosts = [
     id: 2,
     title: "Local SEO Strategy for Roofing Companies in 2024",
     category: "Local SEO",
-    author: "Sarah Johnson",
+    author: "GetLeadLocal Team",
     date: "Jan 12, 2024",
     readTime: "10 min read",
     description:
@@ -49,7 +48,7 @@ const blogPosts = [
     id: 3,
     title: "Meta Ads vs Google Ads: Which Should Your HVAC Company Use?",
     category: "Digital Marketing",
-    author: "Mike Rodriguez",
+    author: "GetLeadLocal Team",
     date: "Jan 10, 2024",
     readTime: "7 min read",
     description:
@@ -60,7 +59,7 @@ const blogPosts = [
     id: 4,
     title: "How to Use GoHighLevel CRM to Close More Leads",
     category: "Automation",
-    author: "John Smith",
+    author: "GetLeadLocal Team",
     date: "Jan 8, 2024",
     readTime: "9 min read",
     description: "Step-by-step guide to setting up GoHighLevel for your home service business.",
@@ -70,7 +69,7 @@ const blogPosts = [
     id: 5,
     title: "Top 10 Landing Page Mistakes Local Businesses Make",
     category: "Conversion",
-    author: "Sarah Johnson",
+    author: "GetLeadLocal Team",
     date: "Jan 5, 2024",
     readTime: "6 min read",
     description:
@@ -81,7 +80,7 @@ const blogPosts = [
     id: 6,
     title: "AI Automation: The Future of Lead Generation for Home Services",
     category: "AI",
-    author: "Mike Rodriguez",
+    author: "GetLeadLocal Team",
     date: "Jan 1, 2024",
     readTime: "11 min read",
     description: "How AI-powered automation is revolutionizing lead capture and qualification.",

@@ -6,10 +6,10 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { LeadCaptureForm } from "./lead-capture-form";
 
 const HERO_HIGHLIGHTS = [
-  "Google Ads Specialists",
-  "Local SEO Experts",
-  "AI Automation",
-  "Transparent Reporting",
+  "Google Ads for Local Businesses",
+  "Facebook & Instagram Advertising",
+  "Local SEO & Map Rankings",
+  "Month-to-Month Pricing",
 ];
 
 export function Hero() {
@@ -34,9 +34,8 @@ export function Hero() {
 
             <FadeUp delay={0.2}>
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-balance">
-                We help plumbers, roofing companies, flooring companies, construction businesses and
-                other local service companies generate more booked jobs through Google Ads, Meta
-                Ads, Local SEO and AI-powered automation.
+                We specialize in Google Ads, Facebook/Instagram Ads, and Local SEO for local service businesses.
+                Get more phone calls and more booked jobs from customers in your area.
               </p>
             </FadeUp>
 

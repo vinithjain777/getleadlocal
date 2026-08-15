@@ -13,23 +13,23 @@ export const metadata: Metadata = {
     template: "%s | GetLeadLocal",
   },
   description:
-    "Digital marketing agency helping local service businesses generate more qualified leads through Google Ads, Meta Ads, Local SEO, and AI-powered automation.",
+    "Google Ads, Facebook/Instagram Ads, and Local SEO for plumbers, HVAC companies, roofers, and local service businesses. Get more calls and booked jobs.",
   keywords: [
-    "lead generation",
-    "digital marketing",
-    "local seo",
-    "google ads",
-    "plumbing leads",
-    "roofing leads",
+    "google ads for plumbers",
+    "local seo for contractors",
+    "facebook ads for hvac",
+    "lead generation local business",
+    "google ads local service",
+    "contractor marketing",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: "GetLeadLocal | Generate More Qualified Leads",
+    title: "GetLeadLocal | Google Ads, Facebook Ads & Local SEO",
     description:
-      "Digital marketing agency for local service businesses. Google Ads, Meta Ads, Local SEO, AI Automation.",
+      "Google Ads, Facebook/Instagram Ads, and Local SEO specialists for local service businesses. More calls, more leads, more jobs.",
     images: [
       {
         url: "/og-image.png",
@@ -38,11 +38,6 @@ export const metadata: Metadata = {
         alt: "GetLeadLocal",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@getleadlocal",
-    creator: "@getleadlocal",
   },
   robots: {
     index: true,
