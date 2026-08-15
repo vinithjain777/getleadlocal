@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
 
 const SIZE_MAP = {
   sm: { wrap: "h-14 w-14 rounded-xl", icon: "h-7 w-7" },
@@ -7,7 +7,7 @@ const SIZE_MAP = {
 } as const;
 
 interface VisualPanelProps {
-  icon: LucideIcon;
+  icon: ComponentType<{ className?: string }>;
   label?: string;
   size?: keyof typeof SIZE_MAP;
   className?: string;
