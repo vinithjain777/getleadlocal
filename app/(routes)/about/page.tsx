@@ -1,6 +1,6 @@
 import { FadeUp } from "@/components/animations";
-import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata = {
   title: "About Us",
@@ -113,10 +113,10 @@ export default function AboutPage() {
             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how we can help you generate more qualified leads and book more jobs.
             </p>
-            <Link href="/contact" className="btn-primary group">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary group">
               Book Your Free Strategy Call
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
         </FadeUp>
       </div>

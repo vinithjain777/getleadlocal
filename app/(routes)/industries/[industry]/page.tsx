@@ -1,9 +1,9 @@
 import { FadeUp } from "@/components/animations";
 import { INDUSTRIES, SERVICES } from "@/lib/constants";
 import * as Icons from "lucide-react";
-import Link from "next/link";
 import { VisualPanel } from "@/components/visual-panel";
 import type { LucideIcon } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 interface IndustryPageProps {
   params: Promise<{ industry: string }>;
@@ -72,9 +72,9 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 {industry.description} Our proven digital marketing strategies have helped hundreds
                 of {industry.name?.toLowerCase()} companies grow their revenue.
               </p>
-              <Link href="/contact" className="btn-primary inline-flex gap-2">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex gap-2">
                 Book Your Free Strategy Call
-              </Link>
+              </a>
             </div>
           </FadeUp>
 
@@ -151,9 +151,9 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               Let&apos;s discuss a custom strategy tailored to your {industry.name?.toLowerCase()}{" "}
               business.
             </p>
-            <Link href="/contact" className="btn-primary">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
               Get Your Free Strategy
-            </Link>
+            </a>
           </div>
         </FadeUp>
       </div>

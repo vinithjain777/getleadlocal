@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { LeadCaptureForm } from "./lead-capture-form";
+import { CALENDLY_URL } from "@/lib/constants";
 
 const HERO_HIGHLIGHTS = [
   "Google Ads for Local Businesses",
@@ -41,13 +42,15 @@ export function Hero() {
 
             <FadeUp delay={0.3}>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link
-                  href="/contact"
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary flex items-center justify-center gap-2 group"
                 >
                   Book Free Strategy Call
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
                 <Link
                   href="/services"
                   className="btn-outline flex items-center justify-center gap-2"

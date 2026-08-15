@@ -4,6 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata = {
   title: "Services",
@@ -354,6 +355,11 @@ export default function ServicesPage() {
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Fill out the form below and we&apos;ll create a custom strategy based on your goals and budget.
               </p>
+              <div className="mt-6">
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex gap-2">
+                  Prefer to talk now? Book a Free Strategy Call
+                </a>
+              </div>
             </div>
             <ContactForm />
           </div>

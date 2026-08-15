@@ -15,6 +15,7 @@ import {
   getGoogleAdsPage,
 } from "@/lib/google-ads-pages";
 import type { GoogleAdsLandingPage } from "@/types";
+import { CALENDLY_URL } from "@/lib/constants";
 
 const RELATED_SERVICES = [
   { label: "Google Ads", href: "/services" },
@@ -66,10 +67,10 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                   {data.heroSubheadline}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="btn-primary">
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                     Book Free Strategy Call
                     <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </a>
                   <Link href="/contact" className="btn-secondary">
                     Contact Us
                   </Link>
@@ -303,10 +304,10 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
               {data.finalCtaSubtext}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Book Your Free Strategy Call
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
               <Link href="/contact" className="btn-outline-dark">
                 <PhoneCall className="w-4 h-4" />
                 Contact Us

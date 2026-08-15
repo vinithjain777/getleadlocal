@@ -6,6 +6,8 @@ export const SITE_CONFIG = {
   image: "/og-image.png",
 };
 
+export const CALENDLY_URL = "https://calendly.com/vinithjain02/30min";
+
 export const NAVIGATION = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },

@@ -4,6 +4,7 @@ import * as Icons from "lucide-react";
 import { VisualPanel } from "@/components/visual-panel";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata = {
   title: "Industries",
@@ -74,9 +75,14 @@ export default function IndustriesPage() {
               Our strategies can be adapted to any local service business. Contact us to discuss
               your specific needs.
             </p>
-            <Link href="/contact" className="btn-primary inline-flex gap-2">
-              Get in Touch
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex gap-2">
+                Book a Free Strategy Call
+              </a>
+              <Link href="/contact" className="btn-outline inline-flex gap-2">
+                Get in Touch
+              </Link>
+            </div>
           </div>
         </FadeUp>
       </div>

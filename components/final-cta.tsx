@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { FadeUp } from "./animations";
 import { ArrowRight } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/constants";
 
 export function FinalCTA() {
   return (
@@ -22,10 +22,10 @@ export function FinalCTA() {
         </FadeUp>
 
         <FadeUp delay={0.2}>
-          <Link href="/contact" className="btn-primary group inline-flex">
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary group inline-flex">
             Book Your Free Strategy Call
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
         </FadeUp>
       </div>
     </section>
