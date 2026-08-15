@@ -3,7 +3,7 @@ import { INDUSTRIES, SERVICES } from "@/lib/constants";
 import * as Icons from "lucide-react";
 import Link from "next/link";
 import { VisualPanel } from "@/components/visual-panel";
-import type { ComponentType } from "react";
+import type { LucideIcon } from "lucide-react";
 
 interface IndustryPageProps {
   params: Promise<{ industry: string }>;
@@ -38,7 +38,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     return <div>Industry not found</div>;
   }
 
-  const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as ComponentType<{ className?: string }>;
+  const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as LucideIcon;
 
   const stats = [
     { metric: "Leads Generated", value: "127+", icon: "TrendingUp" },
@@ -105,7 +105,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICES.slice(0, 3).map((service) => {
-                const ServiceIcon = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as ComponentType<{ className?: string }>;
+                const ServiceIcon = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
                 return (
                   <FadeUp key={service.id} delay={0.05}>
                     <div className="card">

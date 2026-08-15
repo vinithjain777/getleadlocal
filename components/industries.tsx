@@ -5,6 +5,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import { VisualPanel } from "./visual-panel";
+import type { LucideIcon } from "lucide-react";
 
 export function Industries() {
   return (
@@ -23,7 +24,7 @@ export function Industries() {
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {INDUSTRIES.map((industry) => {
-            const IconComponent = Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase;
+            const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as LucideIcon;
 
             return (
               <StaggerItem key={industry.id}>

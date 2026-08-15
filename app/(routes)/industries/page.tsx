@@ -3,6 +3,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
 import * as Icons from "lucide-react";
 import { VisualPanel } from "@/components/visual-panel";
 import Link from "next/link";
+import type { LucideIcon } from "lucide-react";
 
 export const metadata = {
   title: "Industries",
@@ -28,7 +29,7 @@ export default function IndustriesPage() {
         {/* Industries Grid */}
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {INDUSTRIES.map((industry) => {
-            const IconComponent = Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase;
+            const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as LucideIcon;
 
             return (
               <StaggerItem key={industry.id}>

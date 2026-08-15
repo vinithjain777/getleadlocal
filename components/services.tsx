@@ -3,6 +3,7 @@
 import { SERVICES } from "@/lib/constants";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import * as Icons from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export function Services() {
   return (
@@ -19,7 +20,7 @@ export function Services() {
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
-            const IconComponent = Icons[service.icon as keyof typeof Icons] || Icons.Zap;
+            const IconComponent = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
 
             return (
               <StaggerItem key={service.id}>

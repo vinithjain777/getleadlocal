@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import { ArrowRight, Check, ChevronDown, PhoneCall } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { VisualPanel } from "./visual-panel";
 import {
@@ -47,7 +48,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingPage }) {
   const HeroIcon = (Icons[data.heroIcon as keyof typeof Icons] ||
-    Icons.Target) as React.ComponentType<{ className?: string; strokeWidth?: number }>;
+    Icons.Target) as LucideIcon;
 
   return (
     <main className="pt-24 md:pt-32">
