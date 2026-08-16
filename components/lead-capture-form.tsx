@@ -96,7 +96,7 @@ export function LeadCaptureForm() {
           Get Your Free Marketing Plan
         </p>
         <p className="mt-1 text-sm text-slate-500">
-          Tell us about your business — we&apos;ll reply with a custom plan within 24 hours.
+          Tell us about your business and we&apos;ll identify the best opportunities to generate more qualified leads.
         </p>
       </div>
 

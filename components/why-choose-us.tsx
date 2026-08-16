@@ -1,16 +1,16 @@
 "use client";
 
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
-import { ClipboardCheck, MapPin, Search, TrendingUp, Unlock, Zap } from "lucide-react";
+import { Eye, Layers, RefreshCw, Target, TrendingUp, Zap } from "lucide-react";
 import { WHY_CHOOSE_US } from "@/lib/constants";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  "qualified-leads": TrendingUp,
-  "google-ads-experts": Search,
-  "local-seo": MapPin,
-  automation: Zap,
-  reporting: ClipboardCheck,
-  "no-contracts": Unlock,
+  "local-focus": Target,
+  "three-channels": Layers,
+  "lead-focused": TrendingUp,
+  "full-funnel": Zap,
+  transparent: Eye,
+  optimization: RefreshCw,
 };
 
 export function WhyChooseUs() {
@@ -20,17 +20,17 @@ export function WhyChooseUs() {
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Why Businesses Choose GetLeadLocal
+              Why GetLeadLocal?
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A modern, transparent approach built specifically for local service businesses
+              Focused on the three channels that can consistently bring local businesses new customers.
             </p>
           </div>
         </FadeUp>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {WHY_CHOOSE_US.map((item) => {
-            const Icon = iconMap[item.id] || TrendingUp;
+            const Icon = iconMap[item.id] || Target;
 
             return (
               <StaggerItem key={item.id}>

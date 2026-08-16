@@ -10,7 +10,7 @@ const HERO_HIGHLIGHTS = [
   "Google Ads for Local Businesses",
   "Facebook & Instagram Advertising",
   "Local SEO & Map Rankings",
-  "Month-to-Month Pricing",
+  "Conversion Tracking & Optimization",
 ];
 
 export function Hero() {
@@ -29,14 +29,16 @@ export function Hero() {
 
             <FadeUp delay={0.1}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight text-balance">
-                Generate More Qualified Leads For Your Local Business
+                Get More Customers From Google & Facebook
               </h1>
             </FadeUp>
 
             <FadeUp delay={0.2}>
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-balance">
-                We specialize in Google Ads, Facebook/Instagram Ads, and Local SEO for local service businesses.
-                Get more phone calls and more booked jobs from customers in your area.
+                We help local businesses generate qualified leads through Google Ads, Meta Ads and Local SEO.
+              </p>
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed text-balance mt-3">
+                From getting found to generating the enquiry, we focus on the channels that bring local customers to your business.
               </p>
             </FadeUp>
 
@@ -48,14 +50,14 @@ export function Hero() {
                   rel="noopener noreferrer"
                   className="btn-primary flex items-center justify-center gap-2 group"
                 >
-                  Book Free Strategy Call
+                  Book Your Free Strategy Call
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <Link
-                  href="/services"
+                  href="/contact"
                   className="btn-outline flex items-center justify-center gap-2"
                 >
-                  View Our Services
+                  Contact Us
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

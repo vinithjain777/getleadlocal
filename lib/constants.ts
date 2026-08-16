@@ -124,45 +124,45 @@ export const SERVICES = [
 export const WHY_CHOOSE_US = [
   {
     id: "local-focus",
-    title: "100% Local Business Focused",
+    title: "Local Business Focused",
     description:
-      "We only work with local service businesses. Every campaign is built for contractors, plumbers, HVAC companies, and home service pros.",
+      "We build strategies around businesses that depend on local customers and enquiries.",
     icon: "Target",
   },
   {
-    id: "google-ads-experts",
-    title: "Google Ads Specialists",
+    id: "three-channels",
+    title: "Three Core Channels",
     description:
-      "Expert management of Google Ads campaigns that generate phone calls and booked jobs, not just website clicks.",
-    icon: "Search",
+      "We focus deeply on Google Ads, Meta Ads and Local SEO instead of trying to sell every marketing service.",
+    icon: "Layers",
   },
   {
-    id: "local-seo",
-    title: "Local SEO That Ranks",
+    id: "lead-focused",
+    title: "Lead-Focused",
     description:
-      "Proven strategies to get you in the Google Map Pack and ranking #1 for '[your service] near me' searches.",
-    icon: "MapPin",
+      "We care about qualified enquiries and business opportunities, not vanity metrics.",
+    icon: "TrendingUp",
   },
   {
-    id: "social-advertising",
-    title: "Facebook & Instagram Experts",
+    id: "full-funnel",
+    title: "Full-Funnel Thinking",
     description:
-      "Targeted social media advertising that builds brand awareness and fills your pipeline with local leads.",
-    icon: "Share2",
+      "We look beyond the click and consider landing pages, tracking and follow-up.",
+    icon: "Zap",
   },
   {
-    id: "reporting",
-    title: "100% Transparent Reporting",
+    id: "transparent",
+    title: "Transparent",
     description:
-      "Know exactly how many calls, leads, and jobs your marketing is generating every month. No fluff metrics.",
-    icon: "ClipboardCheck",
+      "Clear communication and understandable reporting.",
+    icon: "Eye",
   },
   {
-    id: "no-contracts",
-    title: "Month-to-Month Pricing",
+    id: "optimization",
+    title: "Continuous Optimization",
     description:
-      "No long-term contracts. We earn your business every month by delivering real results you can measure.",
-    icon: "Unlock",
+      "We use performance data to improve campaigns and strategies over time.",
+    icon: "RefreshCw",
   },
 ];
 
@@ -208,33 +208,33 @@ export const MARKETING_TECH = [
 export const PROCESS_STEPS = [
   {
     number: 1,
-    title: "Discovery",
+    title: "Discover",
     description:
-      "We learn about your business, goals, target market, and current marketing efforts",
+      "Understand your business, customers, services and market.",
   },
   {
     number: 2,
-    title: "Strategy",
-    description: "We create a customized marketing strategy based on your needs and budget",
+    title: "Research",
+    description: "Research your competitors, customers, search behavior and opportunities.",
   },
   {
     number: 3,
     title: "Build",
-    description: "We implement your campaigns, landing pages, and automation systems",
+    description: "Build the right Google Ads, Meta Ads or SEO strategy.",
   },
   {
     number: 4,
     title: "Launch",
-    description: "We go live and start generating qualified leads for your business",
+    description: "Launch campaigns or begin the SEO growth plan.",
   },
   {
     number: 5,
     title: "Optimize",
-    description: "We monitor, test, and refine to continuously improve performance",
+    description: "Use real performance data to improve results.",
   },
   {
     number: 6,
-    title: "Scale",
-    description: "Once dialed in, we scale what works to maximize your lead generation",
+    title: "Grow",
+    description: "Scale what works and continue improving performance.",
   },
 ];

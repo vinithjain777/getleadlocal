@@ -6,34 +6,54 @@ import { FadeUp } from "./animations";
 
 const faqs = [
   {
-    question: "How long does it take to see results?",
+    question: "How quickly can Google Ads generate leads?",
     answer:
-      "Google Ads can generate calls within days. Facebook/Instagram Ads typically show results in 1-2 weeks. Local SEO is a 3-6 month strategy, but the results compound over time.",
+      "Google Ads can start generating leads within the first few days of launch. However, it typically takes 2-4 weeks to gather enough data to optimize performance and reduce cost per lead.",
   },
   {
-    question: "What's included in your services?",
+    question: "How much should a local business spend on Google Ads?",
     answer:
-      "Campaign strategy, ad account setup, keyword research (Google Ads), audience targeting (Facebook/Instagram), Google Business Profile optimization (Local SEO), weekly optimization, and monthly performance reports. We handle everything.",
+      "Most local businesses invest $1,500-$5,000 per month in ad spend, depending on competition in their market and service area. We&apos;ll recommend a budget based on your goals and market after our strategy call.",
   },
   {
-    question: "Do you work with businesses outside of home services?",
+    question: "Should I use Google Ads, Meta Ads or SEO?",
     answer:
-      "We exclusively focus on local service businesses like plumbers, HVAC companies, roofers, contractors, electricians, and other home service professionals. This specialization allows us to deliver better results.",
+      "It depends on your goals and timeline. Google Ads captures high-intent customers actively searching for your services. Meta Ads builds awareness and reaches people before they search. Local SEO is a long-term strategy that compounds over time. Many businesses start with Google Ads and add the others as they grow.",
   },
   {
-    question: "What's your pricing model?",
+    question: "Do you work with my industry?",
     answer:
-      "We charge a management fee based on the services you choose. Most clients invest $1,500-$3,000/month in management fees, plus ad spend (typically $1,500-$5,000/month for Google/Facebook Ads). We'll provide a custom quote after our strategy call.",
+      "We work with local service businesses across many industries including plumbing, HVAC, roofing, electrical, construction, landscaping, pest control, dental, legal, and more. If you depend on local customers and enquiries, we can likely help.",
   },
   {
-    question: "Can you help if my Google Ads are underperforming?",
+    question: "Can you manage my existing Google Ads account?",
     answer:
-      "Yes! We specialize in fixing underperforming campaigns. We'll audit your account, identify wasted spend, optimize targeting, improve ad copy, and reduce your cost per lead.",
+      "Yes. We can audit your existing account, identify wasted spend, and take over management to improve performance and reduce cost per lead.",
+  },
+  {
+    question: "How long does Local SEO take?",
+    answer:
+      "Local SEO typically takes 3-6 months to show meaningful results. The timeline depends on your current website, Google Business Profile, competition, and market. Results compound over time as your rankings and visibility improve.",
+  },
+  {
+    question: "Can Meta Ads work for local businesses?",
+    answer:
+      "Yes. Meta Ads (Facebook & Instagram) are effective for building brand awareness, retargeting website visitors, and generating leads through highly targeted local campaigns. They work best when combined with Google Ads or SEO.",
+  },
+  {
+    question: "Do you provide landing pages and conversion tracking?",
+    answer:
+      "Yes. Landing pages, conversion tracking, and call tracking are part of our campaign setup and optimization process. We focus on the complete customer journey, not just clicks.",
   },
   {
     question: "Do I need all three services?",
     answer:
-      "Not necessarily. Many clients start with Google Ads for immediate results, then add Local SEO for long-term growth. Facebook/Instagram Ads work great for brand awareness. We'll recommend the best strategy for your goals and budget.",
+      "No. Many businesses start with one service (usually Google Ads) and add others as they scale. We&apos;ll recommend the best approach based on your goals, budget, and timeline during our strategy call.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "Book a free strategy call using the button above. We&apos;ll discuss your business, goals, and market, then recommend the best approach to generate more qualified leads.",
   },
 ];
 

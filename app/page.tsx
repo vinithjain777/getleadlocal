@@ -2,9 +2,9 @@ import { Hero } from "@/components/hero";
 import { TrustBar } from "@/components/trust-bar";
 import { Industries } from "@/components/industries";
 import { Services } from "@/components/services";
-import { WhyChooseUs } from "@/components/why-choose-us";
+import { SystemFlow } from "@/components/system-flow";
 import { Process } from "@/components/process";
-import { MarketingTech } from "@/components/marketing-tech";
+import { WhyChooseUs } from "@/components/why-choose-us";
 import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
 
@@ -15,9 +15,9 @@ export default function Home() {
       <TrustBar />
       <Industries />
       <Services />
+      <SystemFlow />
       <Process />
       <WhyChooseUs />
-      <MarketingTech />
       <FAQ />
       <FinalCTA />
     </>

@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
-import { PROCESS_STEPS } from "@/lib/constants";
+import { PROCESS_STEPS, CALENDLY_URL } from "@/lib/constants";
 
 export function Process() {
   return (
@@ -11,10 +10,10 @@ export function Process() {
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Our Proven Process
+              How We Grow Your Local Business
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Six steps to generate more qualified leads and grow your business
+              A proven process to generate more qualified leads and customers
             </p>
           </div>
         </FadeUp>
@@ -44,9 +43,9 @@ export function Process() {
         {/* CTA */}
         <FadeUp delay={0.3}>
           <div className="mt-16 text-center">
-            <Link href="/contact" className="btn-primary inline-flex gap-2">
-              Start Your Journey Today
-            </Link>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex gap-2">
+              Book Your Free Strategy Call →
+            </a>
           </div>
         </FadeUp>
       </div>

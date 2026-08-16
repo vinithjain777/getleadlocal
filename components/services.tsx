@@ -11,9 +11,11 @@ export function Services() {
       <div className="container-max">
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Our Services</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Complete digital marketing solutions to generate more leads and book more jobs
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              Three Ways We Help Local Businesses Get More Customers
+            </h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              We focus on the channels that connect your business with people actively looking for what you sell — or are ready to become your next customer.
             </p>
           </div>
         </FadeUp>
