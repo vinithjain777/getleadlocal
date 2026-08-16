@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "C0_PtJ7to003_TlMIMJvfz8LQT5tN4Yrv_gnRPhcZXk",
+  },
 };
 
 const jsonLd = {
