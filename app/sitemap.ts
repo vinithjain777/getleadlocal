@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { GOOGLE_ADS_PAGES } from '@/lib/google-ads-pages'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.getleadlocal.com'
+  const baseUrl = 'https://getleadlocal.com'
   
   // Core pages
   const routes = [
@@ -20,6 +20,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/google-ads`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/meta-ads`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/local-seo`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -49,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/${page.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.85,
+    priority: 0.7,
   }))
 
   // Industry pages
@@ -68,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/industries/${industry}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.75,
+    priority: 0.8,
   }))
 
   return [...routes, ...googleAdsPages, ...industryPages]
