@@ -12,6 +12,26 @@ export const metadata = {
   alternates: {
     canonical: "https://getleadlocal.com/services",
   },
+  openGraph: {
+    title: "Digital Marketing Services for Local Businesses | GetLeadLocal",
+    description: "Google Ads, Meta Ads (Facebook & Instagram), and Local SEO services designed specifically for local service businesses. Get more calls and booked jobs.",
+    url: "https://getleadlocal.com/services",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing Services for Local Businesses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Digital Marketing Services for Local Businesses",
+    description: "Google Ads, Meta Ads, and Local SEO services for local service businesses. Get more calls and booked jobs.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function ServicesPage() {

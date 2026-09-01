@@ -20,6 +20,26 @@ export const metadata = {
   alternates: {
     canonical: "https://getleadlocal.com/services/google-ads",
   },
+  openGraph: {
+    title: "Google Ads Management for Local Businesses | GetLeadLocal",
+    description: "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses. Expert campaign management, keyword targeting, and conversion tracking.",
+    url: "https://getleadlocal.com/services/google-ads",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Google Ads Management for Local Businesses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Google Ads Management for Local Businesses",
+    description: "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses.",
+    images: ["/og-image.png"],
+  },
 };
 
 const BENEFITS = [
@@ -361,6 +381,44 @@ export default function GoogleAdsPage() {
           </FadeUp>
         </div>
       </section>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Google Ads Management",
+              "provider": {
+                "@type": "Organization",
+                "name": "GetLeadLocal",
+                "url": "https://getleadlocal.com",
+              },
+              "areaServed": "United States",
+              "description": "Google Ads campaign management for local service businesses. Expert keyword targeting, campaign optimization, and conversion tracking.",
+              "offers": {
+                "@type": "Offer",
+                "priceRange": "$1500-$5000",
+                "priceCurrency": "USD",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": FAQS.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
+            },
+          ]),
+        }}
+      />
     </main>
   );
 }

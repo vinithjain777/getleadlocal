@@ -20,6 +20,26 @@ export const metadata = {
   alternates: {
     canonical: "https://getleadlocal.com/services/meta-ads",
   },
+  openGraph: {
+    title: "Facebook & Instagram Ads for Local Businesses | GetLeadLocal",
+    description: "Build brand awareness and generate leads with Meta Ads (Facebook & Instagram). Targeted social media advertising for local service businesses.",
+    url: "https://getleadlocal.com/services/meta-ads",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Facebook & Instagram Ads for Local Businesses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facebook & Instagram Ads for Local Businesses",
+    description: "Build brand awareness and generate leads with Meta Ads. Targeted social media advertising for local service businesses.",
+    images: ["/og-image.png"],
+  },
 };
 
 const BENEFITS = [
@@ -425,6 +445,44 @@ export default function MetaAdsPage() {
           </FadeUp>
         </div>
       </section>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Facebook & Instagram Ads Management",
+              "provider": {
+                "@type": "Organization",
+                "name": "GetLeadLocal",
+                "url": "https://getleadlocal.com",
+              },
+              "areaServed": "United States",
+              "description": "Meta Ads (Facebook & Instagram) campaign management for local service businesses. Build brand awareness and generate leads through targeted social media advertising.",
+              "offers": {
+                "@type": "Offer",
+                "priceRange": "$1500-$5000",
+                "priceCurrency": "USD",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": FAQS.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
+            },
+          ]),
+        }}
+      />
     </main>
   );
 }

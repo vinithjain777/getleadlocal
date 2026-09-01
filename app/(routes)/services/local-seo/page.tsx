@@ -20,6 +20,26 @@ export const metadata = {
   alternates: {
     canonical: "https://getleadlocal.com/services/local-seo",
   },
+  openGraph: {
+    title: "Local SEO Services for Small Businesses | GetLeadLocal",
+    description: "Rank higher in Google local search and the Map Pack. Local SEO services designed to help your business get found by customers in your area.",
+    url: "https://getleadlocal.com/services/local-seo",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local SEO Services for Small Businesses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Local SEO Services for Small Businesses",
+    description: "Rank higher in Google local search and the Map Pack. Get found by customers in your area.",
+    images: ["/og-image.png"],
+  },
 };
 
 const BENEFITS = [
@@ -448,6 +468,44 @@ export default function LocalSEOPage() {
           </FadeUp>
         </div>
       </section>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Local SEO Services",
+              "provider": {
+                "@type": "Organization",
+                "name": "GetLeadLocal",
+                "url": "https://getleadlocal.com",
+              },
+              "areaServed": "United States",
+              "description": "Local SEO services to help your business rank higher in Google local search and the Map Pack. Get found by customers in your area.",
+              "offers": {
+                "@type": "Offer",
+                "priceRange": "$1500-$5000",
+                "priceCurrency": "USD",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": FAQS.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer,
+                },
+              })),
+            },
+          ]),
+        }}
+      />
     </main>
   );
 }
