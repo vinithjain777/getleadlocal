@@ -17,6 +17,9 @@ export const metadata = {
   title: "Facebook & Instagram Ads for Local Businesses",
   description:
     "Build brand awareness and generate leads with Meta Ads (Facebook & Instagram). Targeted social media advertising for local service businesses.",
+  alternates: {
+    canonical: "https://getleadlocal.com/services/meta-ads",
+  },
 };
 
 const BENEFITS = [

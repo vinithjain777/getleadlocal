@@ -17,6 +17,9 @@ export const metadata = {
   title: "Local SEO Services for Small Businesses",
   description:
     "Rank higher in Google local search and the Map Pack. Local SEO services designed to help your business get found by customers in your area.",
+  alternates: {
+    canonical: "https://getleadlocal.com/services/local-seo",
+  },
 };
 
 const BENEFITS = [

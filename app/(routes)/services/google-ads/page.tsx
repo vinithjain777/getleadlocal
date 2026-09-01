@@ -17,6 +17,9 @@ export const metadata = {
   title: "Google Ads Management for Local Businesses",
   description:
     "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses. Expert campaign management, keyword targeting, and conversion tracking.",
+  alternates: {
+    canonical: "https://getleadlocal.com/services/google-ads",
+  },
 };
 
 const BENEFITS = [

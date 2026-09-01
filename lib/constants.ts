@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "GetLeadLocal",
   description:
     "Digital marketing agency specializing in Google Ads, Facebook Ads, and Local SEO for local service businesses. Get more calls, more leads, more booked jobs.",
-  url: "https://www.getleadlocal.com",
+  url: "https://getleadlocal.com",
   image: "/og-image.png",
 };
 

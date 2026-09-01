@@ -5,6 +5,9 @@ import Link from "next/link";
 export const metadata = {
   title: "Contact Us",
   description: "Get in touch with GetLeadLocal to discuss your lead generation needs.",
+  alternates: {
+    canonical: "https://getleadlocal.com/contact",
+  },
 };
 
 export default function ContactPage() {

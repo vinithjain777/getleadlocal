@@ -1,5 +1,5 @@
 import { FadeUp } from "@/components/animations";
-import { INDUSTRIES, SERVICES } from "@/lib/constants";
+import { INDUSTRIES, SERVICES, SITE_CONFIG } from "@/lib/constants";
 import * as Icons from "lucide-react";
 import { VisualPanel } from "@/components/visual-panel";
 import type { LucideIcon } from "lucide-react";
@@ -19,6 +19,9 @@ export async function generateMetadata({ params }: IndustryPageProps) {
   return {
     title: `${ind?.name} Lead Generation | GetLeadLocal`,
     description: `Get more ${ind?.name?.toLowerCase()} leads with our proven digital marketing strategies.`,
+    alternates: {
+      canonical: `${SITE_CONFIG.url}/industries/${industry}`,
+    },
   };
 }
 

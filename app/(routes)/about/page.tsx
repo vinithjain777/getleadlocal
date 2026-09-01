@@ -5,6 +5,9 @@ import { CALENDLY_URL } from "@/lib/constants";
 export const metadata = {
   title: "About Us",
   description: "Learn about GetLeadLocal and our mission to help local businesses grow.",
+  alternates: {
+    canonical: "https://getleadlocal.com/about",
+  },
 };
 
 const values = [

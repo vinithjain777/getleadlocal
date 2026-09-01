@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "google ads local service",
     "contractor marketing",
   ],
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -9,6 +9,9 @@ import { CALENDLY_URL } from "@/lib/constants";
 export const metadata = {
   title: "Digital Marketing Services for Local Businesses",
   description: "Google Ads, Meta Ads (Facebook & Instagram), and Local SEO services designed specifically for local service businesses. Get more calls and booked jobs.",
+  alternates: {
+    canonical: "https://getleadlocal.com/services",
+  },
 };
 
 export default function ServicesPage() {

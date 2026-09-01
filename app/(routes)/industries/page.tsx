@@ -9,6 +9,9 @@ import { CALENDLY_URL } from "@/lib/constants";
 export const metadata = {
   title: "Industries",
   description: "Digital marketing for local service businesses across multiple industries.",
+  alternates: {
+    canonical: "https://getleadlocal.com/industries",
+  },
 };
 
 export default function IndustriesPage() {

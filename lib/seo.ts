@@ -17,6 +17,9 @@ export function generateMetadata(metadata: SEOMetadata) {
     title: metadata.title,
     description: metadata.description,
     keywords: metadata.keywords?.join(", "),
+    alternates: {
+      canonical: metadata.url || SITE_CONFIG.url,
+    },
     openGraph: {
       title: metadata.title,
       description: metadata.description,

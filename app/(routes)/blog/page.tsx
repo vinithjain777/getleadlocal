@@ -91,6 +91,9 @@ const blogPosts = [
 export const metadata = {
   title: "Blog",
   description: "Digital marketing insights and strategies for local service businesses.",
+  alternates: {
+    canonical: "https://getleadlocal.com/blog",
+  },
 };
 
 export default function BlogPage() {
