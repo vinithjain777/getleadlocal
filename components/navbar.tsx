@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NAVIGATION } from "@/lib/constants";
@@ -15,6 +15,20 @@ const SERVICES_DROPDOWN = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 200);
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-white z-50 border-b border-slate-200 shadow-sm">
@@ -31,13 +45,13 @@ export function Navbar() {
               return (
                 <div
                   key={item.href}
-                  className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  className="relative group"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     href={item.href}
-                    className="text-sm font-medium text-slate-600 hover:text-primary-500 transition-colors flex items-center gap-1"
+                    className="text-sm font-medium text-slate-600 hover:text-primary-500 transition-colors flex items-center gap-1 py-2"
                   >
                     {item.label}
                     <ChevronDown className="w-4 h-4" />
@@ -45,16 +59,18 @@ export function Navbar() {
                   
                   {/* Dropdown Menu */}
                   {servicesOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
-                      {SERVICES_DROPDOWN.map((service) => (
-                        <Link
-                          key={service.href}
-                          href={service.href}
-                          className="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-slate-50 transition-colors"
-                        >
-                          {service.label}
-                        </Link>
-                      ))}
+                    <div className="absolute top-full left-0 pt-1 w-64 z-50">
+                      <div className="bg-white rounded-lg shadow-lg border border-slate-200 py-2">
+                        {SERVICES_DROPDOWN.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-slate-50 transition-colors"
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
