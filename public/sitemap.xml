@@ -1,72 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.getleadlocal.com</loc>
+    <loc>https://getleadlocal.com</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/about</loc>
+    <loc>https://getleadlocal.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/services</loc>
+    <loc>https://getleadlocal.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries</loc>
+    <loc>https://getleadlocal.com/services/google-ads</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/plumbing</loc>
+    <loc>https://getleadlocal.com/services/meta-ads</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/services/local-seo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/industries</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/industries/plumbing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/roofing</loc>
+    <loc>https://getleadlocal.com/industries/roofing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/flooring</loc>
+    <loc>https://getleadlocal.com/industries/flooring</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/construction</loc>
+    <loc>https://getleadlocal.com/industries/construction</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/hvac</loc>
+    <loc>https://getleadlocal.com/industries/hvac</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/electrical</loc>
+    <loc>https://getleadlocal.com/industries/electrical</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/solar</loc>
+    <loc>https://getleadlocal.com/industries/solar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/industries/landscaping</loc>
+    <loc>https://getleadlocal.com/industries/landscaping</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/blog</loc>
+    <loc>https://getleadlocal.com/google-ads-for-dentists</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-doctors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-law-firms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-plumbers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-therapists</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-restaurants</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-accountants</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-apartments</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-electricians</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-pest-control</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-realtors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-hvac</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-manufacturers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-painters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-epoxy-flooring</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/google-ads-for-physios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://getleadlocal.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getleadlocal.com/contact</loc>
+    <loc>https://getleadlocal.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
