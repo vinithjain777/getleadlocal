@@ -14,10 +14,10 @@ export function Industries() {
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              We Serve All Types of Home Service Businesses
+              Marketing Built for Local Businesses
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Proven strategies tailored specifically for your industry
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Focused strategies for businesses that depend on local customers, phone calls, enquiries and booked jobs.
             </p>
           </div>
         </FadeUp>

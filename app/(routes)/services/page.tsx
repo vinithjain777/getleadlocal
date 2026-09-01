@@ -7,8 +7,8 @@ import type { LucideIcon } from "lucide-react";
 import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata = {
-  title: "Services",
-  description: "Google Ads, Facebook & Instagram Ads, and Local SEO for local service businesses. Get more calls and booked jobs.",
+  title: "Digital Marketing Services for Local Businesses",
+  description: "Google Ads, Meta Ads (Facebook & Instagram), and Local SEO services designed specifically for local service businesses. Get more calls and booked jobs.",
 };
 
 export default function ServicesPage() {
@@ -18,9 +18,11 @@ export default function ServicesPage() {
         {/* Header */}
         <FadeUp>
           <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">Our Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+              Digital Marketing Services for Local Businesses
+            </h1>
             <p className="text-xl text-slate-600">
-              3 proven strategies to get more customers: Google Ads, Facebook/Instagram Ads, and Local SEO
+              Three proven strategies to get more customers: Google Ads, Meta Ads, and Local SEO
             </p>
           </div>
         </FadeUp>
@@ -55,39 +57,42 @@ export default function ServicesPage() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
             const IconComponent = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
+            const serviceRoute = service.id === "google-ads" ? "/services/google-ads" 
+              : service.id === "meta-ads" ? "/services/meta-ads"
+              : service.id === "local-seo" ? "/services/local-seo"
+              : "/contact";
 
             return (
               <StaggerItem key={service.id}>
-                <div className="card card-hover group h-full flex flex-col">
-                  {/* Icon */}
-                  <div className="inline-flex p-3 bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors mb-6 w-fit">
-                    <IconComponent className="w-6 h-6 text-primary-500" />
+                <Link href={serviceRoute} className="block h-full">
+                  <div className="card card-hover group h-full flex flex-col">
+                    {/* Icon */}
+                    <div className="inline-flex p-3 bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors mb-6 w-fit">
+                      <IconComponent className="w-6 h-6 text-primary-500" />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-2xl font-semibold text-slate-900 mb-3">{service.title}</h3>
+                    <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
+
+                    {/* Features */}
+                    <ul className="space-y-3 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary-100 text-primary-600 flex-shrink-0 text-xs font-semibold mt-0.5">
+                            ✓
+                          </span>
+                          <span className="text-sm text-slate-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* CTA */}
+                    <span className="text-primary-600 font-semibold text-sm hover:text-primary-700 group-hover:translate-x-1 transition-transform inline-block">
+                      {service.cta} →
+                    </span>
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-2xl font-semibold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
-
-                  {/* Features */}
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary-100 text-primary-600 flex-shrink-0 text-xs font-semibold mt-0.5">
-                          ✓
-                        </span>
-                        <span className="text-sm text-slate-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA */}
-                  <Link
-                    href="/contact"
-                    className="text-primary-600 font-semibold text-sm hover:text-primary-700 group-hover:translate-x-1 transition-transform"
-                  >
-                    {service.cta} →
-                  </Link>
-                </div>
+                </Link>
               </StaggerItem>
             );
           })}

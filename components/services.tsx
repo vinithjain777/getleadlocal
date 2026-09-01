@@ -3,7 +3,14 @@
 import { SERVICES } from "@/lib/constants";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import * as Icons from "lucide-react";
+import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+
+const SERVICE_ROUTES: Record<string, string> = {
+  "google-ads": "/services/google-ads",
+  "meta-ads": "/services/meta-ads",
+  "local-seo": "/services/local-seo",
+};
 
 export function Services() {
   return (
@@ -23,10 +30,11 @@ export function Services() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
             const IconComponent = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
+            const serviceRoute = SERVICE_ROUTES[service.id] || "/contact";
 
             return (
               <StaggerItem key={service.id}>
-                <div className="card card-hover group">
+                <div className="card card-hover group h-full flex flex-col">
                   {/* Icon */}
                   <div className="inline-flex p-3 bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors mb-6">
                     <IconComponent className="w-6 h-6 text-primary-500" />
@@ -34,7 +42,7 @@ export function Services() {
 
                   {/* Content */}
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 mb-6">{service.description}</p>
+                  <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
 
                   {/* Features */}
                   <ul className="space-y-3 mb-6">
@@ -49,9 +57,12 @@ export function Services() {
                   </ul>
 
                   {/* CTA */}
-                  <button className="text-primary-600 font-semibold text-sm hover:text-primary-700 group-hover:translate-x-1 transition-transform">
+                  <Link
+                    href={serviceRoute}
+                    className="text-primary-600 font-semibold text-sm hover:text-primary-700 group-hover:translate-x-1 transition-transform inline-block"
+                  >
                     {service.cta} →
-                  </button>
+                  </Link>
                 </div>
               </StaggerItem>
             );

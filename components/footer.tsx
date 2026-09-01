@@ -44,7 +44,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/services#google-ads"
+                  href="/services/google-ads"
                   className="hover:text-primary-400 transition-colors"
                 >
                   Google Ads
@@ -52,7 +52,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#meta-ads"
+                  href="/services/meta-ads"
                   className="hover:text-primary-400 transition-colors"
                 >
                   Facebook & Instagram Ads
@@ -60,7 +60,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#local-seo"
+                  href="/services/local-seo"
                   className="hover:text-primary-400 transition-colors"
                 >
                   Local SEO
