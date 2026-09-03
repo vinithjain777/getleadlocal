@@ -18,15 +18,12 @@ export function Process() {
           </div>
         </FadeUp>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-transparent" />
-
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROCESS_STEPS.map((step, _idx) => (
             <StaggerItem key={step.number}>
-              <div className="relative">
+              <div className="card h-full">
                 {/* Number circle */}
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-500 text-white font-bold rounded-full mb-4 relative z-10">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-500 text-white font-bold rounded-full mb-4">
                   {step.number}
                 </div>
 

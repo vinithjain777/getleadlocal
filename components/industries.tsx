@@ -9,7 +9,7 @@ import type { LucideIcon } from "lucide-react";
 
 export function Industries() {
   return (
-    <section className="section-padding bg-slate-50">
+    <section className="section-padding bg-white">
       <div className="container-max">
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">

@@ -6,7 +6,7 @@ import {
   CheckCircle2,
   Eye,
   Heart,
-  Image,
+  Image as ImageIcon,
   Share2,
   Target,
   Users,
@@ -54,7 +54,7 @@ const BENEFITS = [
     description: "Reach exact demographics, interests, and local areas",
   },
   {
-    icon: Image,
+    icon: ImageIcon,
     title: "Visual Storytelling",
     description: "Showcase before/after photos and project galleries",
   },
@@ -123,7 +123,7 @@ const USE_CASES = [
   {
     title: "Before/After Showcases",
     description: "Perfect for visual industries like contractors, renovations, and landscaping",
-    icon: Image,
+    icon: ImageIcon,
   },
 ];
 
@@ -212,7 +212,7 @@ export default function MetaAdsPage() {
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-purple-50 rounded-lg">
-                        <Image className="w-6 h-6 text-purple-600" />
+                        <ImageIcon className="w-6 h-6 text-purple-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-slate-900 mb-1">

@@ -14,7 +14,7 @@ const SERVICE_ROUTES: Record<string, string> = {
 
 export function Services() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-slate-50">
       <div className="container-max">
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">

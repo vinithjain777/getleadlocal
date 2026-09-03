@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "How much should a local business spend on Google Ads?",
     answer:
-      "Most local businesses invest $1,500-$5,000 per month in ad spend, depending on competition in their market and service area. We&apos;ll recommend a budget based on your goals and market after our strategy call.",
+      "Most local businesses invest $1,500-$5,000 per month in ad spend, depending on competition in their market and service area. We'll recommend a budget based on your goals and market after our strategy call.",
   },
   {
     question: "Should I use Google Ads, Meta Ads or SEO?",
@@ -48,12 +48,12 @@ const faqs = [
   {
     question: "Do I need all three services?",
     answer:
-      "No. Many businesses start with one service (usually Google Ads) and add others as they scale. We&apos;ll recommend the best approach based on your goals, budget, and timeline during our strategy call.",
+      "No. Many businesses start with one service (usually Google Ads) and add others as they scale. We'll recommend the best approach based on your goals, budget, and timeline during our strategy call.",
   },
   {
     question: "How do I get started?",
     answer:
-      "Book a free strategy call using the button above. We&apos;ll discuss your business, goals, and market, then recommend the best approach to generate more qualified leads.",
+      "Book a free strategy call using the button above. We'll discuss your business, goals, and market, then recommend the best approach to generate more qualified leads.",
   },
 ];
 
@@ -61,7 +61,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-slate-50">
       <div className="container-max">
         <FadeUp>
           <div className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
