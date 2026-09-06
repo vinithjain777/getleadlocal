@@ -80,9 +80,6 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href={SITE_CONFIG.url} />
-      </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}>
         <Navbar />
         <main>{children}</main>
