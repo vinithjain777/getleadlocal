@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: IndustryPageProps) {
   const ind = await getIndustry(industry);
   return {
     title: `${ind?.name} Lead Generation | GetLeadLocal`,
-    description: `Get more ${ind?.name?.toLowerCase()} leads with our proven digital marketing strategies.`,
+    description: `${ind?.description}. Google Ads, Meta Ads, and Local SEO built specifically for ${ind?.name?.toLowerCase()} businesses, averaging ${ind?.stats?.[1]?.value} ROI.`,
     alternates: {
       canonical: `${SITE_CONFIG.url}/industries/${industry}`,
     },
@@ -43,12 +43,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
   const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as LucideIcon;
 
-  const stats = [
-    { metric: "Leads Generated", value: "127+", icon: "TrendingUp" },
-    { metric: "Average ROI", value: "340%", icon: "Target" },
-    { metric: "Cost Per Lead", value: "$18", icon: "DollarSign" },
-    { metric: "Client Satisfaction", value: "4.9/5", icon: "Star" },
-  ];
+  const stats = industry.stats;
 
   const processs = [
     "Audit your current marketing efforts",
@@ -121,6 +116,24 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                   </FadeUp>
                 );
               })}
+            </div>
+          </div>
+        </FadeUp>
+
+        {/* Challenges */}
+        <FadeUp>
+          <div className="mb-20">
+            <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">
+              Common Challenges {industry.name} Businesses Face
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {industry.challenges.map((challenge, idx) => (
+                <FadeUp key={idx} delay={0.05}>
+                  <div className="card h-full">
+                    <p className="text-slate-600">{challenge}</p>
+                  </div>
+                </FadeUp>
+              ))}
             </div>
           </div>
         </FadeUp>
