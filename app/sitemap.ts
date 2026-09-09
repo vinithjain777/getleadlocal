@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { GOOGLE_ADS_PAGES } from '@/lib/google-ads-pages'
+import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://getleadlocal.com'
@@ -89,5 +90,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...routes, ...googleAdsPages, ...industryPages]
+  // Blog posts
+  const blogPages = BLOG_POSTS.map(post => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...routes, ...googleAdsPages, ...industryPages, ...blogPages]
 }

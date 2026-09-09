@@ -61,7 +61,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-slate-50">
+    <section id="faq" className="section-padding bg-slate-50">
       <div className="container-max">
         <FadeUp>
           <div className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
