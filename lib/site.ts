@@ -1,6 +1,6 @@
 import { MapPin, Megaphone, Search, type LucideIcon } from "lucide-react";
 
-export const site = { name: "GetLeadLocal", url: "https://www.getleadlocal.com" };
+export const site = { name: "GetLeadLocal", url: "https://getleadlocal.com" };
 export type Service = { slug: string; title: string; description: string; icon: LucideIcon; benefit: string };
 export const services: Service[] = [
   { slug: "google-ads", title: "Google Ads", description: "Capture ready-to-book customers actively searching for your services right now.", icon: Search, benefit: "More phone calls from high-intent local customers." },
