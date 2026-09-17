@@ -1,6 +1,7 @@
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
 import { ContactForm } from "@/components/contact-form";
 import { CALENDLY_URL } from "@/lib/constants";
+import { GOOGLE_ADS_PAGES } from "@/lib/google-ads-pages";
 import {
   ArrowRight,
   CheckCircle2,
@@ -22,7 +23,8 @@ export const metadata = {
   },
   openGraph: {
     title: "Google Ads Management for Local Businesses | GetLeadLocal",
-    description: "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses. Expert campaign management, keyword targeting, and conversion tracking.",
+    description:
+      "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses. Expert campaign management, keyword targeting, and conversion tracking.",
     url: "https://getleadlocal.com/services/google-ads",
     type: "website",
     images: [
@@ -37,7 +39,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Google Ads Management for Local Businesses",
-    description: "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses.",
+    description:
+      "Get more calls and booked jobs with Google Ads campaigns designed for local service businesses.",
     images: ["/og-image.png"],
   },
 };
@@ -93,14 +96,12 @@ const PROCESS_STEPS = [
   {
     number: 3,
     title: "Launch & Monitor",
-    description:
-      "Your ads go live and we monitor performance daily, making adjustments as needed.",
+    description: "Your ads go live and we monitor performance daily, making adjustments as needed.",
   },
   {
     number: 4,
     title: "Optimize & Scale",
-    description:
-      "We continuously improve performance, lower costs, and scale what works best.",
+    description: "We continuously improve performance, lower costs, and scale what works best.",
   },
 ];
 
@@ -190,9 +191,7 @@ export default function GoogleAdsPage() {
                         <Phone className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900 mb-1">
-                          Generate Phone Calls
-                        </h3>
+                        <h3 className="font-semibold text-slate-900 mb-1">Generate Phone Calls</h3>
                         <p className="text-sm text-slate-600">
                           Get more calls from customers ready to book your services
                         </p>
@@ -241,9 +240,7 @@ export default function GoogleAdsPage() {
                     <div className="inline-flex p-4 bg-primary-50 rounded-xl mb-4">
                       <Icon className="w-8 h-8 text-primary-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                      {benefit.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{benefit.title}</h3>
                     <p className="text-slate-600 text-sm">{benefit.description}</p>
                   </div>
                 </StaggerItem>
@@ -332,6 +329,37 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
+      {/* Industry guides: gives every specialist page a path from the main site. */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-max">
+          <FadeUp>
+            <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+              <h2 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">
+                Google Ads Guides by Industry
+              </h2>
+              <p className="text-lg text-slate-600">
+                Explore the search behavior, lead qualification, and campaign priorities that matter
+                in your market.
+              </p>
+            </div>
+          </FadeUp>
+
+          <StaggerContainer className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {GOOGLE_ADS_PAGES.map((page) => (
+              <StaggerItem key={page.slug}>
+                <Link
+                  href={`/${page.slug}`}
+                  className="group flex h-full items-center justify-between rounded-xl border border-slate-200 bg-white p-5 font-semibold text-slate-900 transition-all hover:-translate-y-0.5 hover:border-primary-400 hover:shadow-card"
+                >
+                  <span>Google Ads for {page.industry}</span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-primary-600 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">
@@ -390,29 +418,30 @@ export default function GoogleAdsPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "serviceType": "Google Ads Management",
-              "provider": {
+              serviceType: "Google Ads Management",
+              provider: {
                 "@type": "Organization",
-                "name": "GetLeadLocal",
-                "url": "https://getleadlocal.com",
+                name: "GetLeadLocal",
+                url: "https://getleadlocal.com",
               },
-              "areaServed": "United States",
-              "description": "Google Ads campaign management for local service businesses. Expert keyword targeting, campaign optimization, and conversion tracking.",
-              "offers": {
+              areaServed: "United States",
+              description:
+                "Google Ads campaign management for local service businesses. Expert keyword targeting, campaign optimization, and conversion tracking.",
+              offers: {
                 "@type": "Offer",
-                "priceRange": "$1500-$5000",
-                "priceCurrency": "USD",
+                priceRange: "$1500-$5000",
+                priceCurrency: "USD",
               },
             },
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": FAQS.map((faq) => ({
+              mainEntity: FAQS.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
+                name: faq.question,
+                acceptedAnswer: {
                   "@type": "Answer",
-                  "text": faq.answer,
+                  text: faq.answer,
                 },
               })),
             },

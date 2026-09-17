@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Twitter } from "lucide-react";
 import { NAVIGATION } from "@/lib/constants";
 import { Logo } from "@/components/logo";
 
@@ -84,15 +83,18 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-400">
-            © {currentYear} GetLeadLocal. All rights reserved.
+            &copy; {currentYear} GetLeadLocal. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <a href="#" className="text-slate-400 hover:text-primary-400 transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-slate-400 hover:text-primary-400 transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
+          <div className="flex items-center gap-5 text-sm">
+            <Link href="/about" className="text-slate-400 hover:text-primary-400 transition-colors">
+              About our approach
+            </Link>
+            <Link
+              href="/contact"
+              className="text-slate-400 hover:text-primary-400 transition-colors"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>

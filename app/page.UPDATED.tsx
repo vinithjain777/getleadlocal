@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     "local business marketing",
   ],
   alternates: {
-    canonical: "https://www.getleadlocal.com",
+    canonical: "https://getleadlocal.com",
   },
   openGraph: {
     title: "GetLeadLocal - More Leads, More Calls, More Booked Jobs",
     description: "We help local service businesses generate qualified leads through Google Ads, Meta Ads, Local SEO and AI automation.",
-    url: "https://www.getleadlocal.com",
+    url: "https://getleadlocal.com",
     type: "website",
     images: [
       {

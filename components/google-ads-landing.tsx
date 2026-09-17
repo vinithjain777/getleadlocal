@@ -7,22 +7,16 @@ import { ArrowRight, Check, ChevronDown, PhoneCall } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
 import { VisualPanel } from "./visual-panel";
-import {
-  GOOGLE_ADS_INCLUDED,
-  GOOGLE_ADS_PROCESS,
-  GOOGLE_ADS_STRATEGY,
-  GOOGLE_ADS_WHY_CHOOSE_US,
-  getGoogleAdsPage,
-} from "@/lib/google-ads-pages";
+import { GOOGLE_ADS_INCLUDED, getGoogleAdsPage } from "@/lib/google-ads-pages";
+import { getGoogleAdsInsight } from "@/lib/google-ads-insights";
 import type { GoogleAdsLandingPage } from "@/types";
 import { CALENDLY_URL } from "@/lib/constants";
 
 const RELATED_SERVICES = [
-  { label: "Google Ads", href: "/services" },
-  { label: "Meta Ads", href: "/services" },
-  { label: "Local SEO", href: "/services" },
-  { label: "Landing Pages", href: "/services" },
-  { label: "AI Automation", href: "/services" },
+  { label: "Google Ads", href: "/services/google-ads" },
+  { label: "Meta Ads", href: "/services/meta-ads" },
+  { label: "Local SEO", href: "/services/local-seo" },
+  { label: "All Services", href: "/services" },
 ];
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
@@ -48,8 +42,8 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingPage }) {
-  const HeroIcon = (Icons[data.heroIcon as keyof typeof Icons] ||
-    Icons.Target) as LucideIcon;
+  const HeroIcon = (Icons[data.heroIcon as keyof typeof Icons] || Icons.Target) as LucideIcon;
+  const insight = getGoogleAdsInsight(data.slug);
 
   return (
     <main className="pt-24 md:pt-32">
@@ -67,7 +61,12 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                   {data.heroSubheadline}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <a
+                    href={CALENDLY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                  >
                     Book Free Strategy Call
                     <ArrowRight className="w-4 h-4" />
                   </a>
@@ -150,34 +149,32 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
         </div>
       </section>
 
-      {/* 4. Our Google Ads Strategy */}
+      {/* 4. Industry-specific campaign plan */}
       <section className="section-padding bg-surface">
         <div className="container-max">
           <FadeUp>
             <div className="max-w-3xl mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Our Google Ads Strategy
+                {insight?.heading || `A Google Ads Plan for ${data.industry}`}
               </h2>
-              <p className="text-lg text-slate-600">{data.strategyIntro}</p>
+              <p className="text-lg text-slate-600">
+                {insight?.introduction || data.strategyIntro}
+              </p>
             </div>
           </FadeUp>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GOOGLE_ADS_STRATEGY.map((item) => {
-              const Icon = (Icons[item.icon as keyof typeof Icons] ||
-                Icons.Target) as React.ComponentType<{ className?: string }>;
-              return (
-                <StaggerItem key={item.title}>
-                  <div className="card h-full">
-                    <div className="inline-flex p-3 bg-primary-50 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
-                  </div>
-                </StaggerItem>
-              );
-            })}
+            {(insight?.priorities || []).map((item, index) => (
+              <StaggerItem key={item.title}>
+                <article className="card h-full">
+                  <span className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary-600 text-sm font-bold text-white">
+                    {index + 1}
+                  </span>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+                </article>
+              </StaggerItem>
+            ))}
           </StaggerContainer>
         </div>
       </section>
@@ -209,69 +206,7 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
         </div>
       </section>
 
-      {/* 6. Why Choose Us */}
-      <section className="section-padding bg-surface">
-        <div className="container-max">
-          <FadeUp>
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Us</h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                A dedicated approach built specifically for {data.industry.toLowerCase()}
-              </p>
-            </div>
-          </FadeUp>
-
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GOOGLE_ADS_WHY_CHOOSE_US.map((item) => {
-              const Icon = (Icons[item.icon as keyof typeof Icons] ||
-                Icons.Target) as React.ComponentType<{ className?: string }>;
-              return (
-                <StaggerItem key={item.title}>
-                  <div className="card card-hover h-full">
-                    <div className="inline-flex p-3 bg-primary-50 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-600 text-sm">{item.description}</p>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 7. Our Process */}
-      <section className="section-padding bg-white">
-        <div className="container-max">
-          <FadeUp>
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Process</h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                A clear, proven path from strategy call to scaled results
-              </p>
-            </div>
-          </FadeUp>
-
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {GOOGLE_ADS_PROCESS.map((step) => (
-              <StaggerItem key={step.number}>
-                <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 font-semibold text-white">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-1">{step.title}</h3>
-                    <p className="text-slate-600 text-sm">{step.description}</p>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
-
-      {/* 8. FAQ */}
+      {/* 6. FAQ */}
       <section className="section-padding bg-surface">
         <div className="container-max max-w-3xl">
           <FadeUp>
@@ -300,11 +235,14 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               {data.finalCtaHeading}
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-              {data.finalCtaSubtext}
-            </p>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">{data.finalCtaSubtext}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Book Your Free Strategy Call
                 <ArrowRight className="w-4 h-4" />
               </a>

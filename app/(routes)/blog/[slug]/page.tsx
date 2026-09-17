@@ -1,14 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import {
-  BarChart3,
-  Bot,
-  MapPin,
-  Megaphone,
-  MousePointerClick,
-  Workflow,
-} from "lucide-react";
+import { BarChart3, Bot, MapPin, Megaphone, MousePointerClick, Workflow } from "lucide-react";
 import { FadeUp } from "@/components/animations";
 import { VisualPanel } from "@/components/visual-panel";
 import { BLOG_POSTS, getBlogPost } from "@/lib/blog-posts";
@@ -38,20 +31,30 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   const post = getBlogPost(slug);
 
   if (!post) {
-    return { title: "Post Not Found | GetLeadLocal" };
+    notFound();
   }
+
+  const canonical = `${SITE_CONFIG.url}/blog/${post.slug}`;
+  const publishedTime = new Date(post.date).toISOString();
 
   return {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `${SITE_CONFIG.url}/blog/${post.slug}`,
+      canonical,
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `${SITE_CONFIG.url}/blog/${post.slug}`,
+      url: canonical,
       type: "article",
+      publishedTime,
+      authors: [`${SITE_CONFIG.url}/about`],
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: post.title,
+      description: post.description,
     },
   };
 }
@@ -65,6 +68,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const Icon = CATEGORY_ICONS[post.category] || Megaphone;
+  const relatedPosts = BLOG_POSTS.filter((candidate) => candidate.slug !== post.slug)
+    .sort((a, b) => Number(b.category === post.category) - Number(a.category === post.category))
+    .slice(0, 3);
+  const canonical = `${SITE_CONFIG.url}/blog/${post.slug}`;
 
   return (
     <main className="pt-24 md:pt-32 pb-12">
@@ -83,7 +90,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <p className="text-xs font-semibold text-primary-600 uppercase mb-3">{post.category}</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{post.title}</h1>
           <div className="flex items-center gap-4 text-sm text-slate-600 mb-10">
-            <span>{post.author}</span>
+            <Link href="/about" className="font-medium hover:text-primary-600">
+              {post.author}
+            </Link>
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {post.date}
@@ -133,17 +142,71 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </FadeUp>
 
         <FadeUp>
+          <aside
+            className="mb-12 border-y border-slate-200 py-10"
+            aria-labelledby="related-guides-heading"
+          >
+            <h2 id="related-guides-heading" className="mb-6 text-2xl font-bold text-slate-900">
+              Related Marketing Guides
+            </h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/blog/${related.slug}`}
+                  className="rounded-xl border border-slate-200 p-5 transition-colors hover:border-primary-400"
+                >
+                  <span className="mb-2 block text-xs font-semibold uppercase text-primary-600">
+                    {related.category}
+                  </span>
+                  <span className="font-semibold leading-snug text-slate-900">{related.title}</span>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        </FadeUp>
+
+        <FadeUp>
           <div className="text-center bg-navy-900 rounded-2xl p-10 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">Ready To Grow Your Business?</h2>
             <p className="text-slate-300 mb-6 max-w-xl mx-auto">
               Book a free strategy call and we&apos;ll show you exactly how to generate more leads.
             </p>
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Book Your Free Strategy Call
             </a>
           </div>
         </FadeUp>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.description,
+            datePublished: new Date(post.date).toISOString(),
+            mainEntityOfPage: canonical,
+            author: {
+              "@type": "Organization",
+              name: "GetLeadLocal",
+              url: `${SITE_CONFIG.url}/about`,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "GetLeadLocal",
+              url: SITE_CONFIG.url,
+            },
+          }),
+        }}
+      />
     </main>
   );
 }

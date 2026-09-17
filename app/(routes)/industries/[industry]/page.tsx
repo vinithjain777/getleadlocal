@@ -4,6 +4,9 @@ import * as Icons from "lucide-react";
 import { VisualPanel } from "@/components/visual-panel";
 import type { LucideIcon } from "lucide-react";
 import { CALENDLY_URL } from "@/lib/constants";
+import { INDUSTRY_CONTENT } from "@/lib/industry-content";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface IndustryPageProps {
   params: Promise<{ industry: string }>;
@@ -13,14 +16,42 @@ async function getIndustry(slug: string) {
   return INDUSTRIES.find((ind) => ind.id === slug);
 }
 
+const SERVICE_ROUTES: Record<string, string> = {
+  "google-ads": "/services/google-ads",
+  "meta-ads": "/services/meta-ads",
+  "local-seo": "/services/local-seo",
+};
+
 export async function generateMetadata({ params }: IndustryPageProps) {
   const { industry } = await params;
   const ind = await getIndustry(industry);
+
+  if (!ind) {
+    notFound();
+  }
+
+  const canonical = `${SITE_CONFIG.url}/industries/${ind.id}`;
+  const industryContent = INDUSTRY_CONTENT[ind.id];
+  const description = industryContent
+    ? industryContent.introduction
+    : `${ind.description}. Google Ads, Meta Ads, and Local SEO built specifically for ${ind.name.toLowerCase()} businesses.`;
+
   return {
-    title: `${ind?.name} Lead Generation | GetLeadLocal`,
-    description: `${ind?.description}. Google Ads, Meta Ads, and Local SEO built specifically for ${ind?.name?.toLowerCase()} businesses, averaging ${ind?.stats?.[1]?.value} ROI.`,
+    title: `${ind.name} Lead Generation`,
+    description,
     alternates: {
-      canonical: `${SITE_CONFIG.url}/industries/${industry}`,
+      canonical,
+    },
+    openGraph: {
+      title: `${ind.name} Lead Generation | GetLeadLocal`,
+      description,
+      url: canonical,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image" as const,
+      title: `${ind.name} Lead Generation | GetLeadLocal`,
+      description,
     },
   };
 }
@@ -38,12 +69,14 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
   const industry = await getIndustry(industrySlug);
 
   if (!industry) {
-    return <div>Industry not found</div>;
+    notFound();
   }
 
-  const IconComponent = (Icons[industry.icon as keyof typeof Icons] || Icons.Briefcase) as LucideIcon;
+  const IconComponent = (Icons[industry.icon as keyof typeof Icons] ||
+    Icons.Briefcase) as LucideIcon;
 
   const stats = industry.stats;
+  const industryContent = INDUSTRY_CONTENT[industry.id];
 
   const processs = [
     "Audit your current marketing efforts",
@@ -56,6 +89,16 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
   return (
     <main className="pt-24 md:pt-32 pb-12">
       <div className="container-max">
+        <nav aria-label="Breadcrumb" className="mb-8 text-sm text-slate-600">
+          <Link href="/industries" className="hover:text-primary-600">
+            Industries
+          </Link>
+          <span aria-hidden="true" className="mx-2">
+            /
+          </span>
+          <span aria-current="page">{industry.name}</span>
+        </nav>
+
         {/* Hero */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
           <FadeUp>
@@ -67,10 +110,15 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 More {industry.name} Leads For Your Business
               </h1>
               <p className="text-xl text-slate-600 mb-8">
-                {industry.description} Our proven digital marketing strategies have helped hundreds
-                of {industry.name?.toLowerCase()} companies grow their revenue.
+                {industryContent?.introduction ||
+                  `${industry.description}. We create focused campaigns that connect ${industry.name.toLowerCase()} businesses with local customers who are ready to enquire.`}
               </p>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex gap-2">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex gap-2"
+              >
                 Book Your Free Strategy Call
               </a>
             </div>
@@ -95,6 +143,41 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           </div>
         </FadeUp>
 
+        {industryContent && (
+          <FadeUp>
+            <section aria-labelledby="industry-strategy-heading" className="mb-20">
+              <div className="mx-auto mb-10 max-w-3xl text-center">
+                <h2
+                  id="industry-strategy-heading"
+                  className="mb-4 text-4xl font-bold text-slate-900"
+                >
+                  {industryContent.heading}
+                </h2>
+                <p className="text-lg leading-relaxed text-slate-600">{industryContent.overview}</p>
+              </div>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                {industryContent.priorities.map((strategy) => (
+                  <article key={strategy.title} className="card h-full">
+                    <h3 className="mb-3 text-xl font-semibold text-slate-900">{strategy.title}</h3>
+                    <p className="leading-relaxed text-slate-600">{strategy.description}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                {industryContent.resources.map((resource) => (
+                  <Link
+                    key={resource.href}
+                    href={resource.href}
+                    className="rounded-full border border-primary-200 bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700 hover:border-primary-500"
+                  >
+                    {resource.label}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </FadeUp>
+        )}
+
         {/* Services for this industry */}
         <FadeUp>
           <div className="mb-20">
@@ -103,7 +186,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICES.slice(0, 3).map((service) => {
-                const ServiceIcon = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
+                const ServiceIcon = (Icons[service.icon as keyof typeof Icons] ||
+                  Icons.Zap) as LucideIcon;
                 return (
                   <FadeUp key={service.id} delay={0.05}>
                     <div className="card">
@@ -112,6 +196,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       </div>
                       <h3 className="text-lg font-semibold text-slate-900 mb-2">{service.title}</h3>
                       <p className="text-slate-600 text-sm">{service.description}</p>
+                      <Link
+                        href={SERVICE_ROUTES[service.id] || "/services"}
+                        className="mt-4 inline-flex text-sm font-semibold text-primary-600 hover:text-primary-700"
+                      >
+                        Explore {service.title}
+                      </Link>
                     </div>
                   </FadeUp>
                 );
@@ -167,7 +257,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               Let&apos;s discuss a custom strategy tailored to your {industry.name?.toLowerCase()}{" "}
               business.
             </p>
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Get Your Free Strategy
             </a>
           </div>
