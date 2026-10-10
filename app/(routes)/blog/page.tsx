@@ -10,6 +10,7 @@ import {
   MapPin,
   Megaphone,
   MousePointerClick,
+  Wrench,
   Workflow,
 } from "lucide-react";
 
@@ -20,6 +21,7 @@ const CATEGORY_ICONS: Record<string, typeof Megaphone> = {
   Automation: Workflow,
   Conversion: MousePointerClick,
   AI: Bot,
+  "Plumbing Marketing": Wrench,
 };
 
 const blogPosts = BLOG_POSTS;

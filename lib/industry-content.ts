@@ -29,6 +29,8 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
       },
     ],
     resources: [
+      { label: "How to get more plumbing leads", href: "/blog/how-to-get-more-plumbing-leads" },
+      { label: "Facebook ads for plumbers", href: "/blog/facebook-ads-for-plumbers" },
       { label: "Google Ads for plumbers", href: "/google-ads-for-plumbers" },
       { label: "Plumber advertising guide", href: "/blog/google-ads-plumbers" },
     ],

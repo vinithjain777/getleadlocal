@@ -1,7 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import { BarChart3, Bot, MapPin, Megaphone, MousePointerClick, Workflow } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import {
+  BarChart3,
+  Bot,
+  MapPin,
+  Megaphone,
+  MousePointerClick,
+  Workflow,
+  Wrench,
+} from "lucide-react";
 import { FadeUp } from "@/components/animations";
 import { VisualPanel } from "@/components/visual-panel";
 import { BLOG_POSTS, getBlogPost } from "@/lib/blog-posts";
@@ -14,6 +22,7 @@ const CATEGORY_ICONS: Record<string, typeof Megaphone> = {
   Automation: Workflow,
   Conversion: MousePointerClick,
   AI: Bot,
+  "Plumbing Marketing": Wrench,
 };
 
 interface BlogPostPageProps {
@@ -136,6 +145,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </FadeUp>
         ))}
+
+        {post.relatedLinks && post.relatedLinks.length > 0 && (
+          <FadeUp>
+            <aside className="mb-10 rounded-2xl border border-primary-100 bg-primary-50/60 p-6">
+              <h2 className="mb-5 text-2xl font-bold text-slate-900">
+                Continue Your Plumbing Plan
+              </h2>
+              <div className="space-y-4">
+                {post.relatedLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="group block">
+                    <span className="inline-flex items-center gap-2 font-semibold text-primary-700 group-hover:text-primary-800">
+                      {item.label}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                    <span className="mt-1 block text-sm leading-relaxed text-slate-600">
+                      {item.description}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </aside>
+          </FadeUp>
+        )}
 
         <FadeUp>
           <p className="text-slate-600 leading-relaxed mb-12">{post.conclusion}</p>

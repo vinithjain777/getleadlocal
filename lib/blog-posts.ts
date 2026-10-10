@@ -15,10 +15,216 @@ export interface BlogPost {
   slug: string;
   intro: string;
   sections: BlogPostSection[];
+  relatedLinks?: { label: string; href: string; description: string }[];
   conclusion: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 7,
+    title: "How to Get More Leads for Your Plumbing Business: A Practical Plan",
+    category: "Plumbing Marketing",
+    author: "GetLeadLocal Team",
+    date: "Oct 10, 2026",
+    readTime: "10 min read",
+    description:
+      "Learn how to get more leads for your plumbing business using local search, referrals, paid ads, better follow-up, and a simple way to track booked jobs.",
+    slug: "how-to-get-more-plumbing-leads",
+    intro:
+      "If you are asking how to get more leads for my plumbing business, start by separating urgent demand from planned work. A homeowner with a burst pipe searches and calls immediately. A homeowner considering a water heater replacement may compare reviews, prices, and financing for days. Your marketing should give each customer a clear way to find you, trust you, and book the next step.",
+    sections: [
+      {
+        heading: "The Short Answer: Build a Plumbing Lead System",
+        paragraphs: [
+          "More leads do not come from switching on every marketing channel at once. A dependable system combines visibility, trust, fast response, and measurement. First, make it easy for nearby homeowners to find you. Next, give them enough evidence to call. Then answer quickly and record whether the enquiry became a booked and completed job.",
+          "For most plumbing companies, the strongest starting mix is a complete Google Business Profile, a consistent review process, referral and customer reactivation, high-intent search campaigns, and service pages that answer the questions homeowners ask before booking.",
+        ],
+      },
+      {
+        heading: "1. Improve Your Google Business Profile",
+        paragraphs: [
+          "Your Google Business Profile can introduce the company before a homeowner reaches your website. Keep the primary category, service area, opening hours, phone number, and services accurate. Add real photographs of technicians, vehicles, completed work, and the team rather than stock images.",
+          "Ask satisfied customers for an honest review soon after the job is completed. Reply to every review in a natural way, without repeating the same keyword-heavy response. Reviews help prospective customers judge reliability, while current photos and accurate hours prevent avoidable calls from being lost.",
+        ],
+      },
+      {
+        heading: "2. Turn Existing Customers Into New Plumbing Leads",
+        paragraphs: [
+          "Past customers already know the business, which makes them easier to reach than a completely new audience. Create a simple reminder program for maintenance, water heater checks, seasonal freeze preparation, or other services that genuinely fit the work you provide.",
+          "A referral request can be simple: after confirming that a customer is happy, ask whether they know a neighbor or family member who needs help. Track referred jobs separately so you can see which technicians, services, and customer groups generate the strongest word of mouth.",
+        ],
+      },
+      {
+        heading: "3. Capture Urgent Demand With Google Ads and Local Services Ads",
+        paragraphs: [
+          "Search advertising is best suited to immediate intent. Campaigns can focus on services such as emergency plumbing, drain cleaning, leak repair, sewer work, and water heater replacement. Keep different job types in separate groups so the ad, landing page, budget, and call reporting match the service being searched.",
+          "Do not judge a campaign by clicks alone. Record the search or campaign that produced the call, whether the caller was in the service area, whether the job was booked, and the revenue from completed work. A cheaper enquiry is not necessarily better if it never becomes a suitable job.",
+        ],
+      },
+      {
+        heading: "4. Build Service Pages Around Real Customer Questions",
+        paragraphs: [
+          "A general homepage cannot answer every plumbing need. Create useful pages for the services that matter most to the business, such as emergency repairs, drain cleaning, water heaters, sewer lines, repiping, or commercial plumbing. Explain what the service covers, common warning signs, the areas served, and how a customer can request help.",
+          "Support those pages with articles based on genuine questions from calls and estimates. Useful topics include whether a leaking water heater can be repaired, what causes recurring drain blockages, and when an old pipe system should be replaced. This creates relevant internal links without publishing dozens of nearly identical city pages.",
+        ],
+      },
+      {
+        heading: "5. Use Facebook Ads for Planned Services and Remarketing",
+        paragraphs: [
+          "Facebook and Instagram usually do not capture a burst-pipe emergency as effectively as search. They are more useful for services a homeowner can consider in advance: water heater upgrades, maintenance offers, filtration, remodeling work, or a seasonal inspection. They can also remind previous website visitors about the company after an initial search.",
+          "Use real local photographs or short videos, one specific offer, and a simple next step. Keep the service area tight enough that the team can profitably complete the work generated by the campaign.",
+        ],
+      },
+      {
+        heading: "6. Fix the Booking Process Before Buying More Traffic",
+        paragraphs: [
+          "A missed call, slow response, or confusing form can waste a good lead. Make the phone number easy to tap on mobile, keep forms short, and decide who responds when the office is busy or closed. If someone cannot answer immediately, use a clear missed-call text and follow-up process rather than leaving the customer unsure whether anyone received the enquiry.",
+          "Listen to call quality and review lost estimates. The problem may be targeting, but it may also be call handling, availability, pricing communication, or follow-up. Improving those steps often creates more booked jobs without increasing traffic.",
+        ],
+      },
+      {
+        heading: "A Simple 30-Day Plumbing Lead Plan",
+        paragraphs: [
+          "Choose a small set of actions that can be completed and measured. Avoid spreading the budget across too many channels before you know which ones generate suitable jobs.",
+        ],
+        list: [
+          "Week 1: complete the Google Business Profile, confirm contact details, and add recent job photos",
+          "Week 2: create a review and referral request that is used after every successful job",
+          "Week 3: improve the page for one valuable plumbing service and make its phone call action obvious",
+          "Week 4: test one high-intent advertising campaign and track calls through to booked jobs",
+          "At month end: compare lead source, qualified calls, booking rate, completed jobs, and revenue",
+        ],
+      },
+    ],
+    relatedLinks: [
+      {
+        label: "Google Ads for plumbers",
+        href: "/google-ads-for-plumbers",
+        description:
+          "See how a plumbing search campaign can be structured around urgent and planned jobs.",
+      },
+      {
+        label: "Plumbing lead generation services",
+        href: "/industries/plumbing",
+        description:
+          "Explore the marketing approach GetLeadLocal is building for plumbing companies.",
+      },
+      {
+        label: "Facebook ads for plumbers",
+        href: "/blog/facebook-ads-for-plumbers",
+        description:
+          "Learn which plumbing offers, audiences, and campaign formats fit Facebook and Instagram.",
+      },
+    ],
+    conclusion:
+      "The best way to get more plumbing leads is to build a system that connects demand to booked work. Start with local visibility and referrals, capture urgent searches, use Facebook for the right planned services, and track every source beyond the initial call. Improve one part of that system each month instead of chasing a new tactic every week.",
+  },
+  {
+    id: 8,
+    title: "Facebook Ads for Plumbers: Offers, Targeting, and Campaign Setup",
+    category: "Plumbing Marketing",
+    author: "GetLeadLocal Team",
+    date: "Oct 10, 2026",
+    readTime: "9 min read",
+    description:
+      "A practical guide to plumbing ads for Facebook, including the services to promote, campaign offers, local targeting, creative, lead forms, and measurement.",
+    slug: "facebook-ads-for-plumbers",
+    intro:
+      "Plumbing ads for Facebook work differently from Google search campaigns. People scrolling Facebook or Instagram are usually not searching for an emergency plumber at that moment. A successful campaign therefore needs the right service, a clear local offer, credible creative, and a follow-up process that turns interest into a booked estimate or appointment.",
+    sections: [
+      {
+        heading: "Do Facebook Ads Work for Plumbing Companies?",
+        paragraphs: [
+          "They can work when the campaign matches how people use the platform. Facebook is a discovery and reminder channel. It can introduce a company before a problem becomes urgent, promote a planned service, or reconnect with someone who previously visited the website.",
+          "Emergency leaks and no-water calls usually belong in Google Search or Local Services Ads because the customer is actively looking for immediate help. Facebook is better tested against water heater replacement, filtration, maintenance, remodeling-related plumbing, seasonal checks, and remarketing.",
+        ],
+      },
+      {
+        heading: "Choose One Plumbing Service and One Offer",
+        paragraphs: [
+          "An ad that says a company handles every type of plumbing gives the homeowner little reason to act. Choose one service with a clear customer problem and a profitable job value. The landing experience, form questions, and follow-up should all continue that same message.",
+        ],
+        list: [
+          "Water heater inspection or replacement consultation",
+          "Drain inspection tied to a recurring blockage problem",
+          "Whole-home plumbing or seasonal maintenance check",
+          "Water filtration consultation where the service is available",
+          "A remarketing reminder for people who viewed a specific service page",
+        ],
+      },
+      {
+        heading: "Target the Area You Can Actually Serve",
+        paragraphs: [
+          "Start with the real service territory rather than a broad region. Exclude areas that create excessive drive time or jobs the company cannot schedule profitably. The campaign should match technician capacity, office hours, and the services available in each location.",
+          "Avoid building the strategy around a long list of narrow interests. Local relevance, the offer, the creative, and conversion data usually give the platform a stronger foundation than guessing which interests identify someone who may need a plumber.",
+        ],
+      },
+      {
+        heading: "Create Plumbing Ads That Look Local and Credible",
+        paragraphs: [
+          "Use real photographs and short vertical videos whenever possible. A technician explaining a common problem, a clean completed installation, or a brief before-and-after walkthrough is more believable than a generic stock image of a wrench. Keep uniforms, vehicles, and customer information appropriate for public use.",
+          "The first line should identify the customer and problem. The rest of the ad should explain the offer, the area served, and the next step. Avoid exaggerated urgency, unprovable savings, and result claims that the company cannot support.",
+        ],
+      },
+      {
+        heading: "Lead Form or Landing Page?",
+        paragraphs: [
+          "A Meta instant form reduces friction because the customer can enquire without leaving Facebook or Instagram. It can be useful for a simple offer, but easy forms may also produce weak enquiries. Add a few practical questions such as service needed, ZIP code, timeframe, and preferred contact method.",
+          "A landing page offers more room for service details, real reviews, photographs, financing information, and qualification. Use it when the job requires more consideration. Whichever path you choose, test the form yourself on a phone and make sure the enquiry reaches the person responsible for follow-up.",
+        ],
+      },
+      {
+        heading: "Follow Up Before the Lead Goes Cold",
+        paragraphs: [
+          "The ad does not finish the sale. Send an immediate confirmation, call during the hours promised, and keep a short follow-up sequence for people who do not answer the first attempt. The message should reference the exact service or offer they requested so it does not feel like a generic sales call.",
+          "Record why leads are not booked. Common reasons include being outside the service area, requesting an unsupported service, comparing prices, or not being ready yet. Those reasons tell you whether to change the ad, form, targeting, offer, or sales process.",
+        ],
+      },
+      {
+        heading: "Measure Booked Plumbing Work, Not Cheap Form Leads",
+        paragraphs: [
+          "Cost per form submission is only the first measurement. Track qualified leads, contact rate, estimates scheduled, jobs booked, completed-job revenue, and cancellations. Send conversion outcomes back to the advertising platform when the tracking setup allows it, so optimization is based on useful enquiries rather than every form submission.",
+          "Compare Facebook with the other channels using the same definition of a qualified lead. A campaign that produces fewer but better water-heater appointments may be more valuable than one that generates many low-intent coupon requests.",
+        ],
+      },
+      {
+        heading: "Common Facebook Advertising Mistakes for Plumbers",
+        paragraphs: [
+          "Most weak campaigns fail because the service, message, or follow-up does not match the platform. Review these basics before increasing the budget.",
+        ],
+        list: [
+          "Advertising emergency service to a cold audience and expecting search-like intent",
+          "Promoting every plumbing service in one ad",
+          "Using generic stock creative with no local proof",
+          "Targeting a service area the team cannot cover efficiently",
+          "Collecting only a name and phone number with no qualification",
+          "Waiting too long to contact new leads",
+          "Optimizing for the cheapest lead instead of booked and completed jobs",
+        ],
+      },
+    ],
+    relatedLinks: [
+      {
+        label: "How to get more plumbing leads",
+        href: "/blog/how-to-get-more-plumbing-leads",
+        description:
+          "Build a complete lead system across local search, referrals, advertising, and follow-up.",
+      },
+      {
+        label: "Meta Ads management",
+        href: "/services/meta-ads",
+        description: "See the wider GetLeadLocal approach to Facebook and Instagram advertising.",
+      },
+      {
+        label: "Google Ads for plumbers",
+        href: "/google-ads-for-plumbers",
+        description:
+          "Compare Facebook discovery campaigns with high-intent plumbing search advertising.",
+      },
+    ],
+    conclusion:
+      "Facebook ads can support a plumbing company when they promote planned services, use credible local creative, and connect each lead to fast follow-up. Begin with one service and one offer, measure booked work, and expand only after the campaign produces enquiries the team can profitably serve.",
+  },
   {
     id: 1,
     title: "The Complete Guide to Google Ads for Plumbers",
@@ -30,7 +236,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Learn how to set up, optimize, and scale Google Ads campaigns specifically for plumbing businesses.",
     slug: "google-ads-plumbers",
     intro:
-      "When a pipe bursts at 11pm, homeowners don't browse — they search \"emergency plumber near me\" and call the first company that looks credible. Google Ads is one of the fastest ways to put your plumbing business in front of that exact moment of need. This guide breaks down how to structure, target, and track campaigns that turn urgent searches into booked jobs.",
+      'When a pipe bursts at 11pm, homeowners don\'t browse — they search "emergency plumber near me" and call the first company that looks credible. Google Ads is one of the fastest ways to put your plumbing business in front of that exact moment of need. This guide breaks down how to structure, target, and track campaigns that turn urgent searches into booked jobs.',
     sections: [
       {
         heading: "Why Plumbers Need Google Ads",
@@ -53,7 +259,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Choosing the Right Keywords",
         paragraphs: [
-          "Focus budget on buying-intent keywords like \"emergency plumber near me\" or \"water heater repair today\" rather than broad, research-stage terms like \"how to fix a leaky faucet.\" Just as important is a strong negative keyword list — filtering out \"DIY,\" \"jobs,\" and \"how to\" searches keeps your budget from being wasted on people who aren't hiring a plumber.",
+          'Focus budget on buying-intent keywords like "emergency plumber near me" or "water heater repair today" rather than broad, research-stage terms like "how to fix a leaky faucet." Just as important is a strong negative keyword list — filtering out "DIY," "jobs," and "how to" searches keeps your budget from being wasted on people who aren\'t hiring a plumber.',
         ],
       },
       {
@@ -67,6 +273,25 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "The most common issues we see are: running one campaign for every service instead of separating by intent, ignoring negative keywords, sending traffic to a generic homepage instead of a service-specific landing page, and not tracking calls back to the ad that generated them. Fixing these four issues alone typically improves cost-per-lead significantly.",
         ],
+      },
+    ],
+    relatedLinks: [
+      {
+        label: "How to get more plumbing leads",
+        href: "/blog/how-to-get-more-plumbing-leads",
+        description:
+          "Plan the full lead system across local search, referrals, advertising, and follow-up.",
+      },
+      {
+        label: "Facebook ads for plumbers",
+        href: "/blog/facebook-ads-for-plumbers",
+        description:
+          "Learn how Meta campaigns can support planned plumbing services and remarketing.",
+      },
+      {
+        label: "Plumbing lead generation services",
+        href: "/industries/plumbing",
+        description: "Explore GetLeadLocal's wider marketing approach for plumbing companies.",
       },
     ],
     conclusion:
@@ -83,7 +308,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Everything you need to know about dominating local search results for roofing services.",
     slug: "local-seo-roofing",
     intro:
-      "Most homeowners choosing a roofer never make it past the Google Map Pack — the top three local results shown for searches like \"roofer near me\" or \"roof replacement [city].\" If your roofing company isn't showing up there, you're losing jobs to competitors before a homeowner ever visits your website. Here's how to build a local SEO strategy that earns those top positions.",
+      'Most homeowners choosing a roofer never make it past the Google Map Pack — the top three local results shown for searches like "roofer near me" or "roof replacement [city]." If your roofing company isn\'t showing up there, you\'re losing jobs to competitors before a homeowner ever visits your website. Here\'s how to build a local SEO strategy that earns those top positions.',
     sections: [
       {
         heading: "Why Local SEO Matters for Roofers",
@@ -100,7 +325,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Building Location-Specific Service Pages",
         paragraphs: [
-          "If you serve multiple cities or neighborhoods, generic \"our service area\" pages won't rank. Build dedicated pages for each major city you serve, with unique content about local roofing considerations — climate, common roof types, permit requirements — rather than the same paragraph with the city name swapped in.",
+          'If you serve multiple cities or neighborhoods, generic "our service area" pages won\'t rank. Build dedicated pages for each major city you serve, with unique content about local roofing considerations — climate, common roof types, permit requirements — rather than the same paragraph with the city name swapped in.',
         ],
       },
       {
@@ -141,7 +366,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "How the Two Platforms Work Differently",
         paragraphs: [
-          "Google Ads targets active demand — people typing \"AC repair near me\" because their system is already broken. Meta Ads targets audiences based on demographics, interests, and behavior, reaching people who aren't actively searching but who match a profile likely to need your services soon.",
+          'Google Ads targets active demand — people typing "AC repair near me" because their system is already broken. Meta Ads targets audiences based on demographics, interests, and behavior, reaching people who aren\'t actively searching but who match a profile likely to need your services soon.',
         ],
       },
       {
