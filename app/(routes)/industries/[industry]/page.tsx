@@ -75,7 +75,6 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
   const IconComponent = (Icons[industry.icon as keyof typeof Icons] ||
     Icons.Briefcase) as LucideIcon;
 
-  const stats = industry.stats;
   const industryContent = INDUSTRY_CONTENT[industry.id];
 
   const processs = [
@@ -131,18 +130,6 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           </FadeUp>
         </div>
 
-        {/* Stats */}
-        <FadeUp>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 bg-slate-50 rounded-xl p-8">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">{stat.value}</p>
-                <p className="text-sm text-slate-600">{stat.metric}</p>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
-
         {industryContent && (
           <FadeUp>
             <section aria-labelledby="industry-strategy-heading" className="mb-20">
@@ -173,6 +160,45 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     {resource.label}
                   </Link>
                 ))}
+              </div>
+            </section>
+          </FadeUp>
+        )}
+
+        {industry.id === "plumbing" && (
+          <FadeUp>
+            <section className="mb-20 rounded-2xl bg-slate-50 p-8 md:p-12" aria-labelledby="plumbing-plan-heading">
+              <div className="max-w-3xl">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-700">Example plan, not client results</p>
+                <h2 id="plumbing-plan-heading" className="mb-5 text-3xl font-bold text-slate-900 md:text-4xl">
+                  What a plumbing lead generation plan could look like
+                </h2>
+                <p className="mb-8 text-lg leading-relaxed text-slate-600">
+                  A plan starts with the jobs you want, the areas you serve, and who can answer enquiries. Here is an illustrative setup to discuss on a first call.
+                </p>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                <article className="card h-full">
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">Separate service demand</h3>
+                  <p className="text-slate-600">Group urgent leak repairs, drain cleaning, and water heater work by intent. Match each group to the right message and page.</p>
+                </article>
+                <article className="card h-full">
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">Set practical boundaries</h3>
+                  <p className="text-slate-600">Choose service areas, dispatch hours, and an initial budget based on your capacity before launching ads.</p>
+                </article>
+                <article className="card h-full">
+                  <h3 className="mb-3 text-xl font-semibold text-slate-900">Measure booked work</h3>
+                  <p className="text-slate-600">Plan call and form tracking, then review which enquiries become appointments and completed jobs.</p>
+                </article>
+              </div>
+              <div className="mt-8 rounded-xl border border-slate-200 bg-white p-6">
+                <h3 className="mb-3 text-xl font-semibold text-slate-900">What we would cover on a first call</h3>
+                <p className="leading-relaxed text-slate-600">
+                  Your priority services, current lead sources, service radius, monthly budget range, and how calls are handled. From there, we can outline an audit, a proposed campaign structure, the tracking needed, and what to review in the first month.
+                </p>
+                <Link href="/blog/how-to-get-more-plumbing-leads" className="mt-4 inline-flex font-semibold text-primary-700 hover:text-primary-800">
+                  Read the plumbing lead generation guide
+                </Link>
               </div>
             </section>
           </FadeUp>

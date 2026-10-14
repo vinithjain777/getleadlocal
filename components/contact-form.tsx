@@ -83,8 +83,7 @@ export function ContactForm() {
             </div>
             <h3 className="text-2xl font-semibold text-slate-900 mb-2">Thank you!</h3>
             <p className="text-slate-600 mb-6">
-              We&apos;ll review your information and get back to you within 24 hours with a customized
-              strategy.
+              We&apos;ll review your information and follow up about the next steps.
             </p>
           </div>
         ) : (

@@ -83,7 +83,7 @@ export function LeadCaptureForm() {
         </span>
         <p className="text-lg font-bold text-slate-900">You&apos;re all set!</p>
         <p className="text-sm text-slate-600">
-          A strategist will call you within 24 hours with your custom growth plan.
+          We&apos;ve received your details and will follow up to discuss your goals.
         </p>
       </div>
     );
@@ -178,7 +178,7 @@ export function LeadCaptureForm() {
 
         <p className="flex items-center justify-center gap-1.5 text-center text-xs text-slate-500">
           <ShieldCheck className="h-3.5 w-3.5 text-primary-500" />
-          No spam. No obligation. 24-hour response guaranteed.
+          No spam. No obligation.
         </p>
       </form>
     </div>

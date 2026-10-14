@@ -129,7 +129,7 @@ const FAQS = [
   {
     question: "Do you guarantee results?",
     answer:
-      "We cannot guarantee specific lead numbers, but we do guarantee our campaigns will be professionally managed using best practices. Most clients see improved performance within the first 60-90 days.",
+      "No one can guarantee specific lead numbers or a fixed timeline. We agree on the campaign scope, tracking, and review cadence up front, then use the results to decide what to change.",
   },
 ];
 

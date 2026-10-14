@@ -24,12 +24,6 @@ export const INDUSTRIES = [
     description: "Generate emergency calls and new customer appointments",
     icon: "Wrench",
     link: "/industries/plumbing",
-    stats: [
-      { metric: "Emergency Calls", value: "142+" },
-      { metric: "Average ROI", value: "310%" },
-      { metric: "Cost Per Lead", value: "$22" },
-      { metric: "Client Satisfaction", value: "4.9/5" },
-    ],
     challenges: [
       "Losing emergency jobs to competitors who show up first in search results",
       "Slow seasons with too much downtime between service calls",
@@ -42,12 +36,6 @@ export const INDUSTRIES = [
     description: "Book more roofing inspections and replacements",
     icon: "Home",
     link: "/industries/roofing",
-    stats: [
-      { metric: "Inspections Booked", value: "98+" },
-      { metric: "Average ROI", value: "380%" },
-      { metric: "Cost Per Lead", value: "$34" },
-      { metric: "Client Satisfaction", value: "4.8/5" },
-    ],
     challenges: [
       "High-value replacement jobs going to competitors with better online reviews",
       "Storm-season lead spikes that overwhelm your sales process",
@@ -60,12 +48,6 @@ export const INDUSTRIES = [
     description: "Fill your schedule with qualified flooring projects",
     icon: "Grid3x3",
     link: "/industries/flooring",
-    stats: [
-      { metric: "Projects Booked", value: "116+" },
-      { metric: "Average ROI", value: "295%" },
-      { metric: "Cost Per Lead", value: "$26" },
-      { metric: "Client Satisfaction", value: "4.9/5" },
-    ],
     challenges: [
       "Showroom visits that never turn into signed estimates",
       "Competing on price against big-box flooring retailers",
@@ -78,12 +60,6 @@ export const INDUSTRIES = [
     description: "Secure more building and renovation contracts",
     icon: "Hammer",
     link: "/industries/construction",
-    stats: [
-      { metric: "Contracts Secured", value: "64+" },
-      { metric: "Average ROI", value: "410%" },
-      { metric: "Cost Per Lead", value: "$58" },
-      { metric: "Client Satisfaction", value: "4.8/5" },
-    ],
     challenges: [
       "Long sales cycles that make it hard to track marketing ROI",
       "Unqualified inquiries that waste your estimator's time",
@@ -96,12 +72,6 @@ export const INDUSTRIES = [
     description: "Increase seasonal HVAC service calls and installations",
     icon: "Wind",
     link: "/industries/hvac",
-    stats: [
-      { metric: "Service Calls", value: "168+" },
-      { metric: "Average ROI", value: "325%" },
-      { metric: "Cost Per Lead", value: "$24" },
-      { metric: "Client Satisfaction", value: "4.9/5" },
-    ],
     challenges: [
       "Extreme seasonality causing feast-or-famine call volume",
       "Losing installation jobs to competitors with faster response times",
@@ -114,12 +84,6 @@ export const INDUSTRIES = [
     description: "Generate electrical service calls and large projects",
     icon: "Zap",
     link: "/industries/electrical",
-    stats: [
-      { metric: "Service Calls", value: "134+" },
-      { metric: "Average ROI", value: "300%" },
-      { metric: "Cost Per Lead", value: "$21" },
-      { metric: "Client Satisfaction", value: "4.8/5" },
-    ],
     challenges: [
       "Small repair calls crowding out higher-value panel and rewiring jobs",
       "Difficulty standing out from other licensed electricians online",
@@ -132,12 +96,6 @@ export const INDUSTRIES = [
     description: "Book solar consultations and installations",
     icon: "Sun",
     link: "/industries/solar",
-    stats: [
-      { metric: "Consultations Booked", value: "87+" },
-      { metric: "Average ROI", value: "365%" },
-      { metric: "Cost Per Lead", value: "$45" },
-      { metric: "Client Satisfaction", value: "4.9/5" },
-    ],
     challenges: [
       "Homeowners who request quotes but never schedule a consultation",
       "Rising ad costs in a crowded, competitive solar market",
@@ -150,12 +108,6 @@ export const INDUSTRIES = [
     description: "Fill your landscaping pipeline with qualified leads",
     icon: "Leaf",
     link: "/industries/landscaping",
-    stats: [
-      { metric: "Projects Booked", value: "121+" },
-      { metric: "Average ROI", value: "290%" },
-      { metric: "Cost Per Lead", value: "$19" },
-      { metric: "Client Satisfaction", value: "4.8/5" },
-    ],
     challenges: [
       "Seasonal demand swings that leave crews idle in the off-season",
       "One-time mow customers instead of recurring maintenance contracts",

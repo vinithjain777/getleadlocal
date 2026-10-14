@@ -3,8 +3,8 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import { CALENDLY_URL } from "@/lib/constants";
 
 export const metadata = {
-  title: "About Us",
-  description: "Learn about GetLeadLocal and our mission to help local businesses grow.",
+  title: "About GetLeadLocal",
+  description: "GetLeadLocal is a founder-led marketing agency focused on lead generation for local service businesses. Learn how we approach strategy, tracking, and communication.",
   alternates: {
     canonical: "https://getleadlocal.com/about",
   },
@@ -13,19 +13,19 @@ export const metadata = {
 const values = [
   {
     title: "Results-Driven",
-    description: "Every strategy is built around measurable ROI, not vanity metrics.",
+    description: "We start with the enquiries and booked jobs a business needs, then choose metrics that reflect that goal.",
   },
   {
     title: "Transparency",
-    description: "We explain everything clearly and share detailed performance reports monthly.",
+    description: "We explain the proposed work, the data we can measure, and the decisions behind each change.",
   },
   {
     title: "Partnership",
-    description: "Your success is our success. We&apos;re invested in your growth long-term.",
+    description: "We aim to build a working relationship around clear priorities and honest feedback.",
   },
   {
     title: "Innovation",
-    description: "We stay ahead of algorithm changes and implement cutting-edge strategies.",
+    description: "We test practical ideas and adjust the plan when the evidence changes.",
   },
 ];
 
@@ -58,8 +58,8 @@ export default function AboutPage() {
               About GetLeadLocal
             </h1>
             <p className="text-xl text-slate-600">
-              We&apos;re a team of digital marketers, designers, and strategists dedicated to
-              helping local service businesses generate more qualified leads and grow revenue.
+              GetLeadLocal is a founder-led marketing agency focused on helping local service
+              businesses turn search demand into enquiries and booked work.
             </p>
           </div>
         </FadeUp>
@@ -70,18 +70,17 @@ export default function AboutPage() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Our Story</h2>
               <p className="text-lg text-slate-600 mb-4 leading-relaxed">
-                GetLeadLocal was founded on a simple observation: most home service business owners
-                don&apos;t have the time or expertise to master digital marketing. They&apos;re
-                focused on running their business, not learning Google Ads algorithms.
+                GetLeadLocal is being built by a working digital marketer with a focus on local
+                service businesses. The goal is to make lead generation easier to understand and
+                easier to measure.
               </p>
               <p className="text-lg text-slate-600 mb-4 leading-relaxed">
-                We created GetLeadLocal to be the partner they needed—a team that understands their
-                industry, speaks their language, and delivers results they can measure.
+                A useful plan starts with the services you want to sell, the areas you can serve,
+                and how your business handles calls and enquiries. Campaigns come after those basics.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                We&apos;re focused on building long-term partnerships with local service businesses,
-                combining Google Ads, Local SEO and AI automation into one accountable growth
-                system.
+                We focus on Google Ads, local SEO, and lead follow-up. If we work together, we&apos;ll
+                agree on a scope and a way to review progress before making claims about results.
               </p>
             </div>
           </FadeUp>
@@ -99,7 +98,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold opacity-90">Our Commitment</p>
-                  <p className="text-2xl font-bold">Transparent, No-Contract Results</p>
+                  <p className="text-2xl font-bold">Clear Scope and Honest Reporting</p>
                 </div>
               </div>
             </div>

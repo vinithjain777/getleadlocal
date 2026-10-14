@@ -21,8 +21,8 @@ export default function ContactPage() {
               Let&apos;s Talk About Your Lead Generation
             </h1>
             <p className="text-xl text-slate-600">
-              Fill out the form below and we&apos;ll get back to you within 24 hours with a customized
-              strategy.
+              Tell us about your business and the services you want to grow. We&apos;ll review your
+              details and follow up about the next steps.
             </p>
           </div>
         </FadeUp>
