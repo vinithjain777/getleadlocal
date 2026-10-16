@@ -67,7 +67,7 @@ export function ContactForm() {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("There was an error submitting the form. Please try again or call us directly.");
+      alert("There was an error submitting the form. Please try again in a moment.");
     } finally {
       setLoading(false);
     }

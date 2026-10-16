@@ -82,7 +82,6 @@ const jsonLd = {
   url: SITE_CONFIG.url,
   description: SITE_CONFIG.description,
   areaServed: "US",
-  priceRange: "$1500-$5000",
   serviceType: ["Digital Marketing", "Lead Generation", "Google Ads", "Meta Ads", "Local SEO"],
 };
 
