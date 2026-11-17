@@ -6,7 +6,7 @@ import { Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <main className="pt-24 md:pt-32 pb-12 min-h-screen flex items-center">
+    <main className="site-interior pt-24 md:pt-32 pb-12 min-h-screen flex items-center">
       <div className="container-max">
         <FadeUp>
           <div className="text-center max-w-2xl mx-auto">

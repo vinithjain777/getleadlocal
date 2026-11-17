@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
+import "./home.css";
+import "./site-theme.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { StickyMobileCTA } from "@/components/sticky-mobile-cta";

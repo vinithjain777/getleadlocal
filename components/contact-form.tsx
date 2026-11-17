@@ -75,7 +75,7 @@ export function ContactForm() {
 
   return (
     <FadeUp>
-      <div className="bg-white border border-slate-200 rounded-xl p-6 md:p-8 max-w-2xl mx-auto">
+      <div className="brand-form bg-white border border-slate-200 rounded-xl p-6 md:p-8 max-w-2xl mx-auto">
         {submitted ? (
           <div className="text-center py-12">
             <div className="inline-flex p-3 bg-green-50 rounded-lg mb-4">

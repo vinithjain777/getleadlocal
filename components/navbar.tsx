@@ -55,7 +55,7 @@ export function Navbar() {
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget as Node)) closeMenus();
       }}
-      className="fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-xl"
+      className="gll-nav fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-xl"
     >
       <div className="container-max flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link

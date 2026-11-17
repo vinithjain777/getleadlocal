@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const canonical = `${SITE_CONFIG.url}/blog/${post.slug}`;
 
   return (
-    <main className="pt-24 md:pt-32 pb-12">
+    <main className="brand-article pt-24 md:pt-32 pb-12">
       <div className="container-max max-w-3xl">
         <FadeUp>
           <Link
@@ -98,7 +98,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <FadeUp>
           <p className="text-xs font-semibold text-primary-600 uppercase mb-3">{post.category}</p>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{post.title}</h1>
-          <div className="flex items-center gap-4 text-sm text-slate-600 mb-10">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-10">
             <Link href="/about" className="font-medium hover:text-primary-600">
               {post.author}
             </Link>

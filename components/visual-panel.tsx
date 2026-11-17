@@ -24,18 +24,16 @@ export function VisualPanel({ icon: Icon, label, size = "md", className = "" }: 
   return (
     <div
       aria-hidden="true"
-      className={`relative flex h-full w-full items-center justify-center overflow-hidden bg-primary-50 ${className}`}
-      style={{
-        backgroundImage: "radial-gradient(rgba(37,99,235,0.14) 1.5px, transparent 1.5px)",
-        backgroundSize: "22px 22px",
-      }}
+      className={`brand-visual brand-visual-${size} relative flex h-full w-full items-center justify-center overflow-hidden ${className}`}
     >
-      <div className={`flex items-center justify-center bg-white text-primary-600 shadow-soft ${wrap}`}>
+      <span className="brand-visual-orbit" />
+      <span className="brand-visual-spark">✦</span>
+      <div className={`brand-visual-icon flex items-center justify-center ${wrap}`}>
         <Icon className={icon} strokeWidth={1.5} />
       </div>
 
       {label ? (
-        <span className="absolute bottom-3 left-3 rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-900 shadow-sm">
+        <span className="brand-visual-label absolute bottom-4 left-4 px-3 py-1.5 text-xs font-semibold">
           {label}
         </span>
       ) : null}

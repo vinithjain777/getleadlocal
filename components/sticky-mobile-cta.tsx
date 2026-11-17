@@ -11,7 +11,7 @@ import { CALENDLY_URL } from "@/lib/constants";
  */
 export function StickyMobileCTA() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(15,23,42,0.08)] md:hidden">
+    <div className="brand-mobile-cta fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-200 bg-white pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_20px_rgba(15,23,42,0.08)] md:hidden">
       <Link
         href="/contact"
         className="flex flex-1 items-center justify-center gap-2 border-r border-slate-200 py-3.5 text-sm font-semibold text-navy-900 active:bg-slate-50"

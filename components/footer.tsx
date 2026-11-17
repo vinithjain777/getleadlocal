@@ -8,14 +8,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-900 text-slate-300">
+    <footer className="gll-footer bg-navy-900 text-slate-300">
       <div className="container-max py-12 md:py-16">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 pb-12 border-b border-white/10">
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Logo light textClassName="text-white" />
+              <Logo textClassName="text-slate-900" />
             </div>
             <p className="text-sm text-slate-400">Digital marketing for local service businesses</p>
           </div>

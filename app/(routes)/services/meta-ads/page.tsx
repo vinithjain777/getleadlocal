@@ -157,9 +157,9 @@ const FAQS = [
 
 export default function MetaAdsPage() {
   return (
-    <main className="pt-24 md:pt-32 pb-12">
+    <main className="brand-service-page pt-24 md:pt-32 pb-12">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 md:py-24">
+      <section className="brand-service-hero bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16 md:py-24">
         <div className="container-max">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeUp>
@@ -195,7 +195,7 @@ export default function MetaAdsPage() {
             <FadeUp delay={0.2}>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl blur-3xl"></div>
-                <div className="relative bg-white rounded-2xl p-8 shadow-xl">
+                <div className="brand-feature-panel relative bg-white rounded-2xl p-8 shadow-xl">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-blue-50 rounded-lg">
