@@ -3,6 +3,9 @@ import { GoogleAdsLandingPageTemplate } from "@/components/google-ads-landing";
 import { GOOGLE_ADS_PAGES, getGoogleAdsPage } from "@/lib/google-ads-pages";
 import { generateMetadata as buildMetadata } from "@/lib/seo";
 import { SITE_CONFIG } from "@/lib/constants";
+import { MARKETING_GUIDES, getMarketingGuide } from "@/lib/marketing-guides";
+import { MarketingGuidePage } from "@/components/marketing-guide";
+import { RelatedMarketingGuides } from "@/components/related-marketing-guides";
 
 interface SlugPageProps {
   params: Promise<{ slug: string }>;
@@ -11,11 +14,19 @@ interface SlugPageProps {
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return GOOGLE_ADS_PAGES.map((page) => ({ slug: page.slug }));
+  return [...GOOGLE_ADS_PAGES, ...MARKETING_GUIDES].map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: SlugPageProps) {
   const { slug } = await params;
+  const guide = getMarketingGuide(slug);
+  if (guide)
+    return buildMetadata({
+      title: guide.title,
+      description: guide.description,
+      url: `${SITE_CONFIG.url}/${guide.slug}`,
+      type: "article",
+    });
   const page = getGoogleAdsPage(slug);
 
   if (!page) {
@@ -31,11 +42,18 @@ export async function generateMetadata({ params }: SlugPageProps) {
 
 export default async function GoogleAdsIndustryPage({ params }: SlugPageProps) {
   const { slug } = await params;
+  const guide = getMarketingGuide(slug);
+  if (guide) return <MarketingGuidePage guide={guide} />;
   const page = getGoogleAdsPage(slug);
 
   if (!page) {
     notFound();
   }
 
-  return <GoogleAdsLandingPageTemplate data={page} />;
+  return (
+    <>
+      <GoogleAdsLandingPageTemplate data={page} />
+      <RelatedMarketingGuides path={`/${page.slug}`} />
+    </>
+  );
 }

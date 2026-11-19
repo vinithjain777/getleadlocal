@@ -1,3 +1,4 @@
+import { GuideLinks } from "@/components/guide-links";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
 import { ContactForm } from "@/components/contact-form";
 import { CALENDLY_URL } from "@/lib/constants";
@@ -22,7 +23,8 @@ export const metadata = {
   },
   openGraph: {
     title: "Local SEO Services for Small Businesses | GetLeadLocal",
-    description: "Rank higher in Google local search and the Map Pack. Local SEO services designed to help your business get found by customers in your area.",
+    description:
+      "Rank higher in Google local search and the Map Pack. Local SEO services designed to help your business get found by customers in your area.",
     url: "https://getleadlocal.com/services/local-seo",
     type: "website",
     images: [
@@ -37,7 +39,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Local SEO Services for Small Businesses",
-    description: "Rank higher in Google local search and the Map Pack. Get found by customers in your area.",
+    description:
+      "Rank higher in Google local search and the Map Pack. Get found by customers in your area.",
     images: ["/og-image.png"],
   },
 };
@@ -282,9 +285,7 @@ export default function LocalSEOPage() {
                     <div className="inline-flex p-4 bg-green-50 rounded-xl mb-4">
                       <Icon className="w-8 h-8 text-green-500" />
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                      {benefit.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">{benefit.title}</h3>
                     <p className="text-slate-600 text-sm">{benefit.description}</p>
                   </div>
                 </StaggerItem>
@@ -419,6 +420,7 @@ export default function LocalSEOPage() {
         </div>
       </section>
 
+      <GuideLinks category="seo" />
       {/* FAQ Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
@@ -477,29 +479,30 @@ export default function LocalSEOPage() {
             {
               "@context": "https://schema.org",
               "@type": "Service",
-              "serviceType": "Local SEO Services",
-              "provider": {
+              serviceType: "Local SEO Services",
+              provider: {
                 "@type": "Organization",
-                "name": "GetLeadLocal",
-                "url": "https://getleadlocal.com",
+                name: "GetLeadLocal",
+                url: "https://getleadlocal.com",
               },
-              "areaServed": "United States",
-              "description": "Local SEO services to help your business rank higher in Google local search and the Map Pack. Get found by customers in your area.",
-              "offers": {
+              areaServed: "United States",
+              description:
+                "Local SEO services to help your business rank higher in Google local search and the Map Pack. Get found by customers in your area.",
+              offers: {
                 "@type": "Offer",
-                "priceRange": "$1500-$5000",
-                "priceCurrency": "USD",
+                priceRange: "$1500-$5000",
+                priceCurrency: "USD",
               },
             },
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "mainEntity": FAQS.map((faq) => ({
+              mainEntity: FAQS.map((faq) => ({
                 "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
+                name: faq.question,
+                acceptedAnswer: {
                   "@type": "Answer",
-                  "text": faq.answer,
+                  text: faq.answer,
                 },
               })),
             },

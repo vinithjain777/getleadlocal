@@ -1,0 +1,74 @@
+.guide-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 65px;
+  align-items: start;
+}
+.guide-contents {
+  position: sticky;
+  top: 105px;
+}
+.guide-contents a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.guide-body {
+  max-width: 780px;
+}
+.guide-step {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--brand-lime);
+  border: 1.5px solid var(--brand-ink);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--brand-ink);
+  margin-bottom: 18px;
+}
+.site-interior .guide-example {
+  background: #eef1ff;
+}
+.guide-question {
+  border-top: 1px solid var(--brand-ink);
+}
+.guide-question:last-child {
+  border-bottom: 1px solid var(--brand-ink);
+}
+.guide-question summary {
+  cursor: pointer;
+  font-weight: 750;
+  padding: 20px 0;
+}
+.guide-question summary::marker {
+  color: var(--brand-blue);
+}
+@media (max-width: 900px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .guide-contents {
+    position: static;
+  }
+  .guide-contents ol {
+    columns: 2;
+    column-gap: 25px;
+  }
+  .guide-contents li {
+    break-inside: avoid;
+  }
+  .guide-body {
+    max-width: none;
+  }
+}
+@media (max-width: 500px) {
+  .guide-contents ol {
+    columns: 1;
+  }
+  .marketing-guide .btn-primary {
+    width: 100%;
+  }
+}

@@ -24,6 +24,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Navigation</h4>
             <ul className="space-y-2">
+              <li><Link href="/guides" className="text-sm hover:text-primary-400">Marketing Guides</Link></li>
               {NAVIGATION.map((item) => (
                 <li key={item.href}>
                   <Link

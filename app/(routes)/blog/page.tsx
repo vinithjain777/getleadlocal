@@ -2,6 +2,7 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations";
 import { VisualPanel } from "@/components/visual-panel";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 import Link from "next/link";
+import { GuideLinks } from "@/components/guide-links";
 import {
   ArrowRight,
   BarChart3,
@@ -97,6 +98,8 @@ export default function BlogPage() {
           ))}
         </StaggerContainer>
       </div>
+      <GuideLinks category="facebook-ads" />
+      <GuideLinks category="seo" />
     </main>
   );
 }

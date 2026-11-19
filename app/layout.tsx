@@ -4,6 +4,7 @@ import { GeistSans, GeistMono } from "geist/font";
 import "./globals.css";
 import "./home.css";
 import "./site-theme.css";
+import "./marketing-guides.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { StickyMobileCTA } from "@/components/sticky-mobile-cta";

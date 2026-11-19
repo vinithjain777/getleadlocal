@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 import { INDUSTRIES, SITE_CONFIG } from "@/lib/constants";
 import { GOOGLE_ADS_PAGES } from "@/lib/google-ads-pages";
+import { MARKETING_GUIDES, GUIDE_DATE } from "@/lib/marketing-guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const corePaths = [
@@ -14,6 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/industries",
     "/blog",
     "/contact",
+    "/guides",
+    "/guides/facebook-ads",
+    "/guides/seo",
   ];
 
   // Omit lastModified when the true content-update date is unknown. A fresh
@@ -35,5 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(post.date),
   }));
 
-  return [...corePages, ...googleAdsPages, ...industryPages, ...blogPages];
+  const guidePages: MetadataRoute.Sitemap = MARKETING_GUIDES.map((page) => ({
+    url: `${SITE_CONFIG.url}/${page.slug}`,
+    lastModified: GUIDE_DATE,
+  }));
+  return [...corePages, ...googleAdsPages, ...industryPages, ...blogPages, ...guidePages];
 }

@@ -7,6 +7,7 @@ import { CALENDLY_URL } from "@/lib/constants";
 import { INDUSTRY_CONTENT } from "@/lib/industry-content";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { RelatedMarketingGuides } from "@/components/related-marketing-guides";
 
 interface IndustryPageProps {
   params: Promise<{ industry: string }>;
@@ -294,6 +295,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           </div>
         </FadeUp>
       </div>
+      <RelatedMarketingGuides path={`/industries/${industry.id}`} />
     </main>
   );
 }

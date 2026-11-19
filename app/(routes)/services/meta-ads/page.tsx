@@ -12,6 +12,7 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
+import { GuideLinks } from "@/components/guide-links";
 
 export const metadata = {
   title: "Facebook & Instagram Ads for Local Businesses",
@@ -423,6 +424,7 @@ export default function MetaAdsPage() {
         </div>
       </section>
 
+      <GuideLinks category="facebook-ads" />
       {/* Contact Form Section */}
       <section className="section-padding bg-slate-50">
         <div className="container-max">

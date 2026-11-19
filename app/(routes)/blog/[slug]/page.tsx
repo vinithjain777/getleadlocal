@@ -1,3 +1,4 @@
+import { RelatedMarketingGuides } from "@/components/related-marketing-guides";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
@@ -239,6 +240,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           }),
         }}
       />
+      <RelatedMarketingGuides path={`/blog/${post.slug}`} />
     </main>
   );
 }
