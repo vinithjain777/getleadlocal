@@ -16,6 +16,7 @@ import {
   Sun,
   Grid3X3,
   Plus,
+  PanelsTopLeft,
 } from "lucide-react";
 import { LeadCaptureForm } from "@/components/lead-capture-form";
 import { CALENDLY_URL } from "@/lib/constants";
@@ -44,6 +45,14 @@ const services = [
     href: "/services/local-seo",
     copy: "Build your visibility in local search with a stronger Google Business Profile, useful service pages, and a solid technical foundation.",
     tags: ["Google Maps", "Service pages", "Technical SEO"],
+  },
+  {
+    title: "Make it easy to request a quote.",
+    name: "Website Development",
+    icon: PanelsTopLeft,
+    href: "/services/websites-for-small-businesses",
+    copy: "Show customers what you do and where you work. Connect their enquiries to your calendar, inbox, or CRM.",
+    tags: ["Website design", "AI intake", "SMS follow-up"],
   },
 ];
 const industries = [
@@ -108,8 +117,8 @@ export function AgencyHome() {
               </span>
             </h1>
             <p className="gll-intro">
-              More local customers. More booked jobs. Google Ads, Meta Ads, and Local SEO built
-              around the business you want to grow.
+              Help local customers find your business with Google Ads, Meta Ads, and local SEO.
+              Give them a website where they can request a quote or book a visit.
             </p>
             <div className="gll-actions">
               <CallButton />
@@ -254,7 +263,7 @@ export function AgencyHome() {
         <div className="gll-wrap">
           <div className="gll-section-heading">
             <div>
-              <p className="gll-eyebrow">Three ways to move your business forward</p>
+              <p className="gll-eyebrow">Our services</p>
               <h2>
                 Local marketing.
                 <br />

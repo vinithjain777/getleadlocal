@@ -489,6 +489,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+.gll-service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .gll-service-card {
   display: flex;
   flex-direction: column;

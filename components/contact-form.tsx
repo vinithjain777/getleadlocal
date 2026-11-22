@@ -19,7 +19,7 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export function ContactForm() {
+export function ContactForm({ websiteProject = false }: { websiteProject?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -50,9 +50,9 @@ export function ContactForm() {
           phone: data.phone,
           budget: data.budget || "Not specified",
           message: data.message,
-          form_type: "Contact Page Form",
+          form_type: websiteProject ? "Website Development Enquiry" : "Contact Page Form",
           from_name: "GetLeadLocal Website",
-          subject: `New Contact Form: ${data.name} - ${data.business}`,
+          subject: `${websiteProject ? "Website project" : "New Contact Form"}: ${data.name} - ${data.business}`,
         }),
       });
 
@@ -179,17 +179,26 @@ export function ContactForm() {
               {/* Budget */}
               <div>
                 <label className="block text-sm font-semibold text-slate-900 mb-2">
-                  Marketing Budget
+                  {websiteProject ? "Project budget (optional)" : "Marketing Budget"}
                 </label>
                 <select
                   {...register("budget")}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 >
                   <option value="">Select...</option>
+                  {websiteProject ? (
+                    <>
+                      <option>Under $2,000 total</option>
+                      <option>$2,000 to $5,000 total</option>
+                      <option>Over $5,000 total</option>
+                      <option>I need an estimate</option>
+                    </>
+                  ) : (<>
                   <option value="1000-2000">$1,000 - $2,000/month</option>
                   <option value="2000-3000">$2,000 - $3,000/month</option>
                   <option value="3000-5000">$3,000 - $5,000/month</option>
                   <option value="5000+">$5,000+/month</option>
+                  </>)}
                 </select>
               </div>
             </div>
@@ -201,7 +210,7 @@ export function ContactForm() {
               </label>
               <textarea
                 {...register("message")}
-                placeholder="What are your main challenges? What results are you looking for?"
+                placeholder={websiteProject ? "What do you sell, where do you work, and what should happen after a customer gets in touch?" : "What are your main challenges? What results are you looking for?"}
                 rows={4}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
               />
@@ -216,7 +225,7 @@ export function ContactForm() {
               disabled={loading}
               className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "Sending..." : "Get Your Free Strategy"}
+              {loading ? "Sending..." : websiteProject ? "Request my website quote" : "Get Your Free Strategy"}
             </button>
 
             <p className="text-xs text-slate-600 text-center">

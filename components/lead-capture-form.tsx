@@ -19,7 +19,8 @@ const SERVICE_OPTIONS = [
   "Google Ads",
   "Facebook & Instagram Ads",
   "Local SEO",
-  "All Three Services",
+  "Website Development",
+  "Multiple Services",
   "Not sure yet",
 ];
 

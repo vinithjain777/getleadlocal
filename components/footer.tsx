@@ -66,6 +66,11 @@ export function Footer() {
                   Local SEO
                 </Link>
               </li>
+              <li>
+                <Link href="/services/websites-for-small-businesses" className="hover:text-primary-400">
+                  Website Development
+                </Link>
+              </li>
             </ul>
           </div>
 

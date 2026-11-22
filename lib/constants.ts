@@ -119,6 +119,14 @@ export const INDUSTRIES = [
 
 export const SERVICES = [
   {
+    id: "websites-for-small-businesses",
+    title: "Website Development",
+    description: "Give local customers a clear path from a service page to a quote or booked appointment.",
+    icon: "PanelsTopLeft",
+    features: ["Mobile-friendly service pages", "Quote forms and booking", "Optional AI intake and SMS follow-up"],
+    cta: "Plan Your Website",
+  },
+  {
     id: "google-ads",
     title: "Google Ads",
     description: "Get your business in front of customers actively searching for your services right now",

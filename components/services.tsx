@@ -6,12 +6,6 @@ import * as Icons from "lucide-react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 
-const SERVICE_ROUTES: Record<string, string> = {
-  "google-ads": "/services/google-ads",
-  "meta-ads": "/services/meta-ads",
-  "local-seo": "/services/local-seo",
-};
-
 export function Services() {
   return (
     <section className="section-padding bg-slate-50">
@@ -19,7 +13,7 @@ export function Services() {
         <FadeUp>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Three Ways We Help Local Businesses Get More Customers
+              How We Help Local Businesses Get More Customers
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               We focus on the channels that connect your business with people actively looking for what you sell — or are ready to become your next customer.
@@ -30,7 +24,7 @@ export function Services() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
             const IconComponent = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
-            const serviceRoute = SERVICE_ROUTES[service.id] || "/contact";
+            const serviceRoute = `/services/${service.id}`;
 
             return (
               <StaggerItem key={service.id}>

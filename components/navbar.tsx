@@ -11,6 +11,7 @@ const SERVICES = [
   { label: "Google Ads", href: "/services/google-ads" },
   { label: "Facebook & Instagram Ads", href: "/services/meta-ads" },
   { label: "Local SEO", href: "/services/local-seo" },
+  { label: "Website Development", href: "/services/websites-for-small-businesses" },
 ];
 
 export function Navbar() {

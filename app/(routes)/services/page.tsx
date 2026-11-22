@@ -6,15 +6,16 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { CALENDLY_URL } from "@/lib/constants";
 
+const description = "Website development, Google Ads, Meta Ads, and local SEO for service businesses. Explore websites with quote forms, booking, AI intake, and SMS follow-up.";
 export const metadata = {
   title: "Digital Marketing Services for Local Businesses",
-  description: "Google Ads, Meta Ads (Facebook & Instagram), and Local SEO services designed specifically for local service businesses. Get more calls and booked jobs.",
+  description,
   alternates: {
     canonical: "https://getleadlocal.com/services",
   },
   openGraph: {
     title: "Digital Marketing Services for Local Businesses | GetLeadLocal",
-    description: "Google Ads, Meta Ads (Facebook & Instagram), and Local SEO services designed specifically for local service businesses. Get more calls and booked jobs.",
+    description,
     url: "https://getleadlocal.com/services",
     type: "website",
     images: [
@@ -29,7 +30,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Digital Marketing Services for Local Businesses",
-    description: "Google Ads, Meta Ads, and Local SEO services for local service businesses. Get more calls and booked jobs.",
+    description,
     images: ["/og-image.png"],
   },
 };
@@ -45,8 +46,14 @@ export default function ServicesPage() {
               Digital Marketing Services for Local Businesses
             </h1>
             <p className="text-xl text-slate-600">
-              Three proven strategies to get more customers: Google Ads, Meta Ads, and Local SEO
+              Website development, Google Ads, Meta Ads, and local SEO for businesses that rely on calls and booked jobs.
             </p>
+            <Link
+              className="mt-5 inline-block font-semibold text-primary-700 underline underline-offset-4"
+              href="/lead-generation-services-for-small-business"
+            >
+              Compare lead generation services for your small business
+            </Link>
           </div>
         </FadeUp>
 
@@ -77,13 +84,10 @@ export default function ServicesPage() {
         </FadeUp>
 
         {/* Services Grid */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service) => {
             const IconComponent = (Icons[service.icon as keyof typeof Icons] || Icons.Zap) as LucideIcon;
-            const serviceRoute = service.id === "google-ads" ? "/services/google-ads" 
-              : service.id === "meta-ads" ? "/services/meta-ads"
-              : service.id === "local-seo" ? "/services/local-seo"
-              : "/contact";
+            const serviceRoute = `/services/${service.id}`;
 
             return (
               <StaggerItem key={service.id}>
@@ -363,10 +367,13 @@ export default function ServicesPage() {
                     <li>Mobile-responsive layout that works on all devices</li>
                     <li>Clear calls-to-action and conversion optimization</li>
                     <li>Contact forms and lead capture functionality</li>
-                    <li>Fast hosting with 99.9% uptime guarantee</li>
+                    <li>Optional AI intake, booking reminders, and opt-in SMS follow-up</li>
                     <li>Easy content management system (CMS) for updates</li>
                     <li>SSL security certificate included</li>
                   </ul>
+                  <Link href="/services/websites-for-small-businesses" className="mt-5 inline-block font-semibold underline">
+                    Explore website development and request a project quote
+                  </Link>
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import { generateMetadata as buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Marketing Guides for Local Businesses",
   description:
-    "Explore practical Facebook Ads and SEO guides by industry, with campaign examples, planning checklists, and useful next steps for local businesses.",
+    "Explore lead generation, Facebook Ads, and SEO guides for local businesses, with campaign examples, planning checklists, and help choosing your next step.",
   url: `${SITE_CONFIG.url}/guides`,
 });
 export default function GuidesPage() {
@@ -27,6 +27,8 @@ export default function GuidesPage() {
           </Link>
         </p>
       </header>
+      <GuideLinks category="lead-generation" />
+      <GuideLinks category="websites" />
       <GuideLinks category="facebook-ads" />
       <GuideLinks category="seo" />
     </main>

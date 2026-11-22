@@ -17,12 +17,6 @@ async function getIndustry(slug: string) {
   return INDUSTRIES.find((ind) => ind.id === slug);
 }
 
-const SERVICE_ROUTES: Record<string, string> = {
-  "google-ads": "/services/google-ads",
-  "meta-ads": "/services/meta-ads",
-  "local-seo": "/services/local-seo",
-};
-
 export async function generateMetadata({ params }: IndustryPageProps) {
   const { industry } = await params;
   const ind = await getIndustry(industry);
@@ -211,8 +205,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">
               Services For {industry.name} Companies
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {SERVICES.slice(0, 3).map((service) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {SERVICES.map((service) => {
                 const ServiceIcon = (Icons[service.icon as keyof typeof Icons] ||
                   Icons.Zap) as LucideIcon;
                 return (
@@ -224,7 +218,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       <h3 className="text-lg font-semibold text-slate-900 mb-2">{service.title}</h3>
                       <p className="text-slate-600 text-sm">{service.description}</p>
                       <Link
-                        href={SERVICE_ROUTES[service.id] || "/services"}
+                        href={`/services/${service.id}`}
                         className="mt-4 inline-flex text-sm font-semibold text-primary-600 hover:text-primary-700"
                       >
                         Explore {service.title}

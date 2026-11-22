@@ -5,7 +5,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { generateMetadata as buildMetadata } from "@/lib/seo";
 type Props = { params: Promise<{ category: string }> };
 function categoryFor(key: string) {
-  return key === "seo" || key === "facebook-ads" ? key : null;
+  return Object.keys(GUIDE_CATEGORIES).find((name): name is keyof typeof GUIDE_CATEGORIES => name === key);
 }
 export function generateStaticParams() {
   return Object.keys(GUIDE_CATEGORIES).map((category) => ({ category }));

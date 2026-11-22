@@ -10,6 +10,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
   const category = GUIDE_CATEGORIES[guide.category];
+  const enquiryUrl = guide.category === "websites" ? category.service + "#project-quote" : "/contact";
+  const published = guide.published ?? GUIDE_DATE;
   const url = `${SITE_CONFIG.url}/${guide.slug}`;
   const related = guide.related.map((href) => ({
     href,
@@ -30,8 +32,8 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
         "@id": `${url}#article`,
         headline: guide.title,
         description: guide.description,
-        datePublished: GUIDE_DATE,
-        dateModified: GUIDE_DATE,
+        datePublished: published,
+        dateModified: published,
         mainEntityOfPage: url,
         author: {
           "@type": "Organization",
@@ -82,8 +84,19 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
             <Link className="underline underline-offset-4" href="/about">
               GetLeadLocal
             </Link>{" "}
-            · Published <time dateTime={GUIDE_DATE}>19 November 2026</time>
+            · Published{" "}
+            <time dateTime={published}>
+              {new Date(published).toLocaleDateString("en-GB", {
+                dateStyle: "long",
+                timeZone: "UTC",
+              })}
+            </time>
           </p>
+          {guide.contactCta && (
+            <Link className="btn-primary mt-5" href={enquiryUrl}>
+              {guide.contactCta} <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          )}
         </header>
         <div className="guide-layout">
           <aside className="guide-contents">
@@ -170,40 +183,55 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
                 </details>
               ))}
             </section>
-            <section aria-label="Further reading" className="mb-12 border-t border-slate-300 pt-6">
-              <h2 className="text-xl mb-4">Platform guidance to check alongside your plan</h2>
-              {guide.category === "seo" ? (
-                <ul className="space-y-3 text-sm">
-                  <li>
+            {guide.sources?.length || guide.category === "seo" || guide.category === "facebook-ads" ? (
+              <section
+                aria-label="Further reading"
+                className="mb-12 border-t border-slate-300 pt-6"
+              >
+                <h2 className="text-xl mb-4">Platform guidance to check alongside your plan</h2>
+                {guide.sources ? (
+                  <ul className="space-y-3 text-sm">
+                    {guide.sources.map((source) => (
+                      <li key={source.href}>
+                        <a className="underline underline-offset-4" href={source.href}>
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : guide.category === "seo" ? (
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <a
+                        className="underline underline-offset-4"
+                        href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                      >
+                        Google’s SEO Starter Guide
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="underline underline-offset-4"
+                        href="https://support.google.com/business/answer/7091?hl=en"
+                      >
+                        Google’s guidance on local ranking
+                      </a>
+                    </li>
+                  </ul>
+                ) : (
+                  <p className="text-sm">
+                    Before launching, review the current{" "}
                     <a
                       className="underline underline-offset-4"
-                      href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+                      href="https://transparency.meta.com/policies/ad-standards/"
                     >
-                      Google’s SEO Starter Guide
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="underline underline-offset-4"
-                      href="https://support.google.com/business/answer/7091?hl=en"
-                    >
-                      Google’s guidance on local ranking
-                    </a>
-                  </li>
-                </ul>
-              ) : (
-                <p className="text-sm">
-                  Before launching, review the current{" "}
-                  <a
-                    className="underline underline-offset-4"
-                    href="https://transparency.meta.com/policies/ad-standards/"
-                  >
-                    Meta Advertising Standards
-                  </a>{" "}
-                  for your service and campaign. Available features and requirements can change.
-                </p>
-              )}
-            </section>
+                      Meta Advertising Standards
+                    </a>{" "}
+                    for your service and campaign. Available features and requirements can change.
+                  </p>
+                )}
+              </section>
+            ) : null}
             <section className="mb-12">
               <h2 className="text-2xl mb-5">Keep building your plan</h2>
               <div className="grid gap-4">
@@ -225,8 +253,9 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
                 Tell us about your services, location, and current marketing. We can discuss what to
                 prioritize and agree on a scope that fits your business.
               </p>
-              <Link className="btn-primary" href="/contact">
-                Discuss your marketing plan <ArrowUpRight size={18} aria-hidden="true" />
+              <Link className="btn-primary" href={enquiryUrl}>
+                {guide.contactCta ?? "Discuss your marketing plan"}{" "}
+                <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             </section>
           </article>
