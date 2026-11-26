@@ -121,16 +121,16 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 8,
-    title: "Facebook Ads for Plumbers: Offers, Targeting, and Campaign Setup",
+    title: "Facebook Ads for Plumbers Who Want More Installation Enquiries",
     category: "Plumbing Marketing",
     author: "GetLeadLocal",
     date: "Oct 10, 2026",
     readTime: "9 min read",
     description:
-      "A practical guide to plumbing ads for Facebook, including the services to promote, campaign offers, local targeting, creative, lead forms, and measurement.",
+      "See how GetLeadLocal can promote the plumbing jobs you want, collect estimate requests, and help your dispatcher follow up.",
     slug: "facebook-ads-for-plumbers",
     intro:
-      "Plumbing ads for Facebook work differently from Google search campaigns. People scrolling Facebook or Instagram are usually not searching for an emergency plumber at that moment. A successful campaign therefore needs the right service, a clear local offer, credible creative, and a follow-up process that turns interest into a booked estimate or appointment.",
+      "Plumbing ads for Facebook can introduce your water heater installations or maintenance visits to homeowners before they need an emergency repair. Tell GetLeadLocal which jobs your crew has room for. We can build the ads, ask for the area and job details, and send estimate requests to your dispatcher.",
     sections: [
       {
         heading: "Do Facebook Ads Work for Plumbing Companies?",

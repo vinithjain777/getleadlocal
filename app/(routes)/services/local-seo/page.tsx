@@ -12,7 +12,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import Link from "next/link";
+
 
 export const metadata = {
   title: "Local SEO Services for Small Businesses",
@@ -49,7 +49,7 @@ const BENEFITS = [
   {
     icon: MapPin,
     title: "Google Map Pack",
-    description: "Appear in the top 3 local results when customers search",
+    description: "Help nearby customers find your address, opening hours, and phone number",
   },
   {
     icon: Search,
@@ -81,50 +81,10 @@ const FEATURES = [
 ];
 
 const TIMELINE = [
-  {
-    month: "Month 1-2",
-    title: "Foundation & Setup",
-    tasks: [
-      "Google Business Profile optimization",
-      "Website technical SEO audit",
-      "Keyword research completed",
-      "Citations started",
-    ],
-    progress: 25,
-  },
-  {
-    month: "Month 3-4",
-    title: "Momentum Building",
-    tasks: [
-      "Rankings improve for primary keywords",
-      "Map Pack appearances increase",
-      "More organic traffic and calls",
-      "Review generation active",
-    ],
-    progress: 50,
-  },
-  {
-    month: "Month 5-6",
-    title: "Consistent Results",
-    tasks: [
-      "Top 3 rankings for key terms",
-      "Steady lead flow from SEO",
-      "Strong online reputation",
-      "Expanding keyword coverage",
-    ],
-    progress: 75,
-  },
-  {
-    month: "Month 7+",
-    title: "Market Dominance",
-    tasks: [
-      "Dominate local search",
-      "Ongoing optimization",
-      "Scale to more keywords",
-      "Maintain competitive edge",
-    ],
-    progress: 100,
-  },
+  { title: "Tell us which calls you want", tasks: ["Choose a priority service and the towns you cover.", "Show us how a customer currently gets in touch."] },
+  { title: "We check what a customer sees", tasks: ["Review the business listing, hours, and contact details.", "Identify missing service information and broken enquiry routes."] },
+  { title: "We make the agreed changes", tasks: ["Update priority pages and listings with your approval.", "Test calls and forms on the published pages."] },
+  { title: "Review the enquiries together", tasks: ["Look at the services and areas people asked about.", "Use your feedback on booked jobs to choose the next improvement."] },
 ];
 
 const RANKING_FACTORS = [
@@ -135,7 +95,7 @@ const RANKING_FACTORS = [
   },
   {
     title: "Online Reviews",
-    description: "Generate authentic 5-star reviews from real customers",
+    description: "Invite customers to leave an honest review of their experience",
     icon: Star,
   },
   {
@@ -174,7 +134,7 @@ const FAQS = [
   {
     question: "Can you help with negative reviews?",
     answer:
-      "We help you generate positive reviews to dilute negative ones and teach you how to respond professionally. We can't remove legitimate negative reviews, but we can help build a strong overall reputation that minimizes their impact.",
+      "We help you respond to customer feedback and invite honest reviews from people you have served. We can't remove legitimate negative reviews, but we can help build a strong overall reputation that minimizes their impact.",
   },
 ];
 
@@ -191,25 +151,18 @@ export default function LocalSEOPage() {
                 <span className="text-sm font-semibold text-white">Local SEO Services</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Get Found in Google Local Search
+                Local SEO Services for Small Businesses
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Rank higher in Google Maps and local search results. Our Local SEO strategies help
-                your business appear when customers search for services in your area.
+                Local SEO services for small businesses help nearby customers find the right number, the right service, and a reason to call. GetLeadLocal reviews your Google Business Profile and website, fixes unclear business details, and helps you see which searches bring enquiries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex gap-2 group"
-                >
-                  Book Your Free Strategy Call
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <a href="#service-enquiry" className="btn-primary inline-flex gap-2">
+                  Request help with local SEO <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link href="/contact" className="btn-outline inline-flex gap-2">
-                  Contact Us
-                </Link>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex gap-2">
+                  Book a free call
+                </a>
               </div>
             </FadeUp>
 
@@ -225,7 +178,7 @@ export default function LocalSEOPage() {
                       <div>
                         <h3 className="font-semibold text-slate-900 mb-1">Google Map Pack</h3>
                         <p className="text-sm text-slate-600">
-                          Appear in the top 3 local results with maps and reviews
+                          Give customers directions, current hours, and a way to call
                         </p>
                       </div>
                     </div>
@@ -301,17 +254,17 @@ export default function LocalSEOPage() {
           <FadeUp>
             <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Expected Results Timeline
+                How we work with your business
               </h2>
               <p className="text-lg text-slate-600">
-                Local SEO is a long-term strategy. Here&apos;s what to expect month by month.
+                You know which customers you can serve. We use that information to choose and review the work.
               </p>
             </div>
           </FadeUp>
 
           <div className="max-w-4xl mx-auto space-y-8">
             {TIMELINE.map((phase, idx) => (
-              <FadeUp key={phase.month} delay={idx * 0.1}>
+              <FadeUp key={phase.title} delay={idx * 0.1}>
                 <div className="card">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="inline-flex items-center justify-center w-10 h-10 bg-green-500 text-white font-bold rounded-full text-sm">
@@ -319,7 +272,7 @@ export default function LocalSEOPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-slate-900">{phase.title}</h3>
-                      <p className="text-sm text-slate-500">{phase.month}</p>
+
                     </div>
                   </div>
 
@@ -332,12 +285,7 @@ export default function LocalSEOPage() {
                     ))}
                   </ul>
 
-                  <div className="h-3 bg-slate-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-1000"
-                      style={{ width: `${phase.progress}%` }}
-                    ></div>
-                  </div>
+
                 </div>
               </FadeUp>
             ))}
@@ -449,23 +397,22 @@ export default function LocalSEOPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="section-padding bg-slate-50">
+      <section id="service-enquiry" className="scroll-mt-24 section-padding bg-slate-50">
         <div className="container-max">
           <FadeUp>
             <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Ready to Rank Higher?
+                Where would you like more customers to find you?
               </h2>
               <p className="text-lg text-slate-600">
-                Let&apos;s discuss how Local SEO can help your business get found by more local
-                customers.
+                Tell us your main service and the towns you cover. Share your website or business profile if you have one, and we’ll discuss what to improve first.
               </p>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.2}>
             <div className="max-w-2xl mx-auto">
-              <ContactForm />
+              <ContactForm service="Local SEO" />
             </div>
           </FadeUp>
         </div>

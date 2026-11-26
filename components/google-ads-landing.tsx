@@ -70,8 +70,8 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                     Book Free Strategy Call
                     <ArrowRight className="w-4 h-4" />
                   </a>
-                  <Link href="/contact" className="btn-secondary">
-                    Contact Us
+                  <Link href="/services/google-ads#service-enquiry" className="btn-secondary">
+                    Request a Google Ads plan
                   </Link>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                 Common Challenges For {data.industry}
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Here&apos;s what typically gets in the way of a profitable ad account
+                These are the problems we look for when your ads bring the wrong calls or too few bookings.
               </p>
             </div>
           </FadeUp>
@@ -188,7 +188,7 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                 What&apos;s Included
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Everything you need to launch and scale a profitable Google Ads account
+                You choose the work you want and approve the budget. We build and manage the ads and review the enquiries with you.
               </p>
             </div>
           </FadeUp>
@@ -246,9 +246,9 @@ export function GoogleAdsLandingPageTemplate({ data }: { data: GoogleAdsLandingP
                 Book Your Free Strategy Call
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <Link href="/contact" className="btn-outline-dark">
+              <Link href="/services/google-ads#service-enquiry" className="btn-outline-dark">
                 <PhoneCall className="w-4 h-4" />
-                Contact Us
+                Request my Google Ads plan
               </Link>
             </div>
           </FadeUp>

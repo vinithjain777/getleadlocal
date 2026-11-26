@@ -3,19 +3,19 @@ import type { MarketingGuide } from "../marketing-guides";
 export const SEO_GUIDES: MarketingGuide[] = [
   {
     slug: "seo-services-for-small-business",
+    updated: "2026-11-26",
     keywords: ["seo services for small business"],
     category: "seo",
     title: "SEO Services for Small Business: What to Prioritize",
     description:
-      "Learn what small-business SEO services should include, how to choose priorities, evaluate proposals, and measure useful enquiries beyond rankings.",
+      "Ask GetLeadLocal how local SEO could bring enquiries for the services and towns that matter to your business.",
     intro:
-      "SEO services for a small business should begin with the products or services that pay the bills. A report full of keyword movements is not enough if visitors cannot understand the offer or get in touch. The right starting plan depends on the website, the market, and the business’s ability to serve additional customers.",
+      "SEO services for small business owners should start with a job worth winning. Tell us what a good enquiry looks like. We’ll review how customers find that service today and explain what we would change, what it costs, and how you can judge the work.",
     sections: [
       {
-        heading: "Start with an inventory of opportunities",
+        heading: "What would make SEO worth paying for?",
         paragraphs: [
-          "List your core services, the customers they suit, and the areas you genuinely serve. Check whether each important service has a useful page and an obvious next step. An existing page that already receives relevant impressions may deserve attention before a new batch of articles.",
-          "Separate technical access problems from content and conversion problems. A blocked or incorrectly canonicalized page needs a different fix from a page that is indexed but unhelpful. Ask your provider to identify the problem, the proposed change, and how they will check whether it worked.",
+          "Take the last job you wish you could repeat. What did the customer need and where did they live? We use that example to review the search listing, service page, and contact route a similar customer would encounter.",
         ],
       },
       {
@@ -65,19 +65,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "local-seo-for-dentists",
+    updated: "2026-11-26",
     keywords: ["local seo for dentists", "seo for dentist"],
     category: "seo",
     title: "Local SEO for Dentists: A Practice Visibility Guide",
     description:
-      "Plan dental SEO around practice locations, treatment pages, accurate profiles, patient questions, and appointment enquiries with a clear local search strategy.",
+      "Get help making your practice easier to find and turning local searches into the right appointment requests.",
     intro:
-      "Local SEO for dentists connects a practice’s location, services, and appointment information. A person comparing nearby practices needs to know whether you offer the appointment they want, how to reach you, and what happens next. Dental SEO should make those answers easy to find without treating every treatment keyword as a reason for another nearly identical page.",
+      "Local SEO for dentists should help nearby patients find your practice, check which appointments you offer, and reach reception. Tell us which appointments you can take. We’ll review your listing and website with that first call in mind.",
     sections: [
       {
-        heading: "Make practice information consistent",
+        heading: "Can a new patient find the right practice?",
         paragraphs: [
-          "Check the practice name, address, telephone number, opening hours, and appointment URL across the website and your business profile. Add real photographs of the entrance and reception so visitors can recognize the location. Maintain special hours and accessibility details where relevant.",
-          "If there are several genuine locations, give each one its own useful page with directions, practitioners, and location-specific booking information. Do not publish pages for neighbourhoods where the practice has no distinct information simply to repeat a city keyword.",
+          "When branches offer different appointments, a patient can call the wrong desk. Give us each practice’s hours, contact details, and services. We’ll check how they appear in search and correct the pages with your approval.",
         ],
       },
       {
@@ -123,19 +123,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-electricians",
+    updated: "2026-11-26",
     keywords: ["seo for electricians"],
     category: "seo",
     title: "SEO for Electricians: Service Pages That Bring Useful Enquiries",
     description:
-      "Build an electrician SEO plan around service demand, real coverage areas, installation pages, local profiles, and calls that match your work.",
+      "Attract enquiries for the electrical work you want in the towns your team can serve.",
     intro:
-      "SEO for electricians should distinguish a quick repair call from a planned installation project. Both may matter, but the customer questions and value of the work differ. A website that lists every electrical service in one paragraph makes it difficult for searchers to decide whether your business handles their particular job.",
+      "SEO for electricians can help nearby customers distinguish the work you take from the work you turn down. If you want more panel upgrades, we’ll review whether someone searching locally can find that service and request a visit.",
     sections: [
       {
-        heading: "Organize services around actual work",
+        heading: "Which jobs pay for a call-out?",
         paragraphs: [
-          "Create a clear structure for the services you genuinely deliver, such as fault-finding enquiries, lighting projects, rewiring assessments, and installation work. Use separate pages when the customer needs a different explanation, not simply because a keyword tool suggests another variation.",
-          "Describe how an assessment or estimate is arranged, what affects the scope, and which property types you serve. Avoid writing instructions that encourage unsafe electrical work. The page’s role is to help a customer choose an appropriate professional service.",
+          "Tell us whether you handle urgent faults, scheduled installation work, or both. We’ll check that the website sets expectations about coverage and hours before someone picks up the phone.",
         ],
       },
       {
@@ -185,19 +185,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "local-seo-for-plumbers",
+    updated: "2026-11-26",
     keywords: ["local seo for plumbers"],
     category: "seo",
     title: "Local SEO for Plumbers: A Practical Plan for Local Calls",
     description:
-      "Improve plumbing search visibility with clear service pages, accurate coverage and hours, useful local proof, and tracking tied to booked work.",
+      "Put your plumbing services, hours, and coverage in front of customers who need a repair or installation.",
     intro:
-      "Local SEO for plumbers needs to answer three questions quickly: do you handle this job, do you cover this address, and can someone respond? Urgent leaks and planned installations create different search journeys. Organize the website around those differences so callers do not have to explain a problem your business does not handle.",
+      "Local SEO for plumbers should bring calls your dispatcher can book. If your team installs water heaters but gets mostly drain-cleaning calls, we’ll check what your listing and service pages tell local customers and make the installation work easier to find.",
     sections: [
       {
-        heading: "Map services to different kinds of demand",
+        heading: "Which calls should reach the dispatcher?",
         paragraphs: [
-          "Give important services such as drain work, leak repair, and water-heater enquiries clear destinations where the scope differs. Describe how the customer can arrange help, what information is useful for the first call, and which locations you serve.",
-          "Keep emergency claims accurate. If service is available only during stated hours, display them prominently. Do not promise an arrival time that cannot be consistently supported. A useful page sets expectations before the phone rings.",
+          "Tell us your service radius and the jobs you can take today. We’ll review how an urgent repair customer finds your phone number and how someone planning an installation requests an estimate. Those customers often need different next steps.",
         ],
       },
       {
@@ -247,19 +247,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-carpet-cleaners",
+    updated: "2026-11-26",
     keywords: ["seo for carpet cleaners"],
     category: "seo",
     title: "SEO for Carpet Cleaners: Local Visibility and Quote Requests",
     description:
-      "Plan carpet cleaning SEO around domestic and commercial services, quote information, real project evidence, coverage areas, and repeatable enquiries.",
+      "Help local customers choose your carpet-cleaning service and request a quote with the details you need.",
     intro:
-      "SEO for carpet cleaners should make it easy to understand what is cleaned, where the company works, and how an estimate is prepared. Domestic room cleaning, end-of-tenancy work, and recurring commercial contracts have different buyers. A single vague cleaning page rarely answers all of their questions well.",
+      "SEO for carpet cleaners can bring enquiries for the properties and jobs that suit your route. We’ll check how households and property managers find your services and what information they see before asking for a price.",
     sections: [
       {
-        heading: "Separate services by customer need",
+        heading: "Which cleaning jobs fit your schedule?",
         paragraphs: [
-          "Decide which services warrant their own explanation: domestic carpet cleaning, upholstery work, commercial maintenance, or tenancy-related cleaning. Be precise about what is included and whether additional work needs a separate assessment.",
-          "Explain the practical visit: how a quote is arranged, what the customer should prepare, and which factors affect the scope. Avoid universal stain-removal or drying-time promises. Let the team confirm expectations for the actual property and materials.",
+          "A landlord booking an empty property and a family asking about a stained sofa need different information. Tell us which jobs you want. We’ll make the relevant service, travel area, and quotation process clear.",
         ],
       },
       {
@@ -305,19 +305,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-physiotherapists",
+    updated: "2026-11-26",
     keywords: ["seo for physiotherapists"],
     category: "seo",
     title: "SEO for Physiotherapists: Clinic Pages and Local Discovery",
     description:
-      "Organize physiotherapy SEO around clinic locations, practitioner information, reviewed service content, appointment details, and appropriate enquiry tracking.",
+      "Help nearby patients find your physiotherapy clinic and book an appropriate first appointment.",
     intro:
-      "SEO for physiotherapists should help people understand the clinic and the appointment process without replacing a professional assessment. Someone searching for a local physiotherapy service may need practical details as much as clinical information: the location, practitioner, appointment format, access, and how to request a visit.",
+      "SEO for physiotherapists should make it easy for a prospective patient to find the right clinic and request an assessment. We review how each location and service appears online. Your clinicians approve the clinical wording.",
     sections: [
       {
-        heading: "Connect practitioners, services, and locations",
+        heading: "What should a first-time patient be able to find?",
         paragraphs: [
-          "Make it clear which practitioners work at each genuine clinic location and how appointments are arranged. Include verified qualifications and accurate areas of practice. If the team works across several premises, keep the schedule and contact route understandable.",
-          "Build service pages around what the clinic actually offers. Describe the appointment process and relevant practical information, with clinical statements reviewed by a qualified professional. Avoid dozens of unsupported condition pages created solely to target search phrases.",
+          "A patient may want to know whether you offer evening visits, whether a referral is needed, and how to book. Give us the answers your reception team uses and we’ll make them easy to find on the relevant clinic pages.",
         ],
       },
       {
@@ -367,19 +367,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-packages-for-small-business-uk",
+    updated: "2026-11-26",
     keywords: ["seo packages for small business uk"],
     category: "seo",
     title: "SEO Packages for Small Business UK: How to Compare Scope",
     description:
-      "Compare UK small-business SEO packages by deliverables, implementation, reporting, contract scope, VAT clarity, and account ownership rather than headline price.",
+      "Compare UK small business SEO proposals by the work included, access you keep, and enquiries you want to receive.",
     intro:
-      "Comparing SEO packages for a small business in the UK is difficult when one quote covers advice and another includes implementation. A monthly fee is only meaningful alongside the work, responsibilities, and exclusions. This is a buyer’s planning guide, not a published GetLeadLocal package price or a claim of a UK office.",
+      "SEO packages for small business owners in the UK vary in what they cover. If you’re weighing proposals, start with one service and town, then ask each provider what they would change to help a customer enquire.",
     sections: [
       {
-        heading: "Turn the package into a work schedule",
+        heading: "What are you actually buying each month?",
         paragraphs: [
-          "Ask what happens in the first phase and what changes in later months. A proposal should identify whether technical fixes, service-page work, business profile support, and reporting are included. Confirm whether the provider implements the changes or sends recommendations to your developer.",
-          "Request examples of deliverables: an issue list, a revised page brief, or a reporting format. A package containing a fixed number of posts may not fit a website whose main problem is duplicate service pages or a broken enquiry form.",
+          "Ask for the pages and listings the agency will work on, who implements fixes, and what needs your approval. At GetLeadLocal we discuss the scope against your business goals before quoting. Use the same brief to compare providers.",
         ],
       },
       {
@@ -425,19 +425,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-orthodontists",
+    updated: "2026-11-26",
     keywords: ["seo for orthodontists"],
     category: "seo",
     title: "SEO for Orthodontists: Consultation-Focused Search Content",
     description:
-      "Plan orthodontic SEO around consultation journeys, specialist credentials, reviewed treatment information, clinic locations, and useful patient enquiries.",
+      "Make it easier for local families and adults to find your orthodontic practice and request a consultation.",
     intro:
-      "SEO for orthodontists involves a longer comparison journey than a simple appointment search. Prospective patients and families may compare providers, ask about consultation arrangements, and read about treatment options before making contact. The website should help them understand the practice without suggesting that a search result can determine suitability.",
+      "SEO for orthodontists should support the first conversation with your coordinator. Tell us which locations and appointment types have capacity. We’ll help prospective patients find those details and follow your practice’s consultation process.",
     sections: [
       {
-        heading: "Separate consultation questions from treatment decisions",
+        heading: "Which questions delay booking?",
         paragraphs: [
-          "Explain how the first consultation is arranged, who conducts it, and what practical information a visitor needs. Make any fees or introductory terms clear and confirmed. Do not turn a marketing page into a personalized treatment recommendation.",
-          "Organize reviewed treatment information so visitors can explore relevant options and return easily to the consultation route. Avoid near-identical pages for every minor keyword variation. Each page should answer a distinct question that the practice can responsibly explain.",
+          "A parent may need after-school hours while an adult may be looking for an initial consultation near work. We’ll organise the location and booking information around those questions. Your team reviews the treatment descriptions.",
         ],
       },
       {
@@ -483,19 +483,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-surgeons",
+    updated: "2026-11-26",
     keywords: ["seo for surgeons"],
     category: "seo",
     title: "SEO for Surgeons: Credentials, Locations and Consultation Pages",
     description:
-      "Build a surgical practice SEO plan with verified clinician information, reviewed service content, accurate consultation locations, and appropriate enquiries.",
+      "Help prospective patients and referring practices find accurate surgeon profiles, locations, and consultation details.",
     intro:
-      "SEO for surgeons should make professional information findable and understandable. A prospective patient or referring professional may be checking a clinician’s identity, specialty, consultation locations, and contact process. The website needs to support that research with accurate information rather than broad promises about outcomes.",
+      "SEO for surgeons should make it clear where you consult, what your practice handles, and how someone requests an appointment. We work on how that information is found. You retain approval of credentials and clinical details.",
     sections: [
       {
-        heading: "Build a reliable clinician profile",
+        heading: "Who handles a consultation request?",
         paragraphs: [
-          "Publish a clear biography with verified qualifications, professional roles, and the scope of the practice. Identify where consultations take place and distinguish them from other facilities involved in care. Update affiliations when they change.",
-          "Use consistent naming across the site and relevant professional profiles. Link the clinician page to reviewed service information and the correct contact route. Do not create artificial profile pages or imply credentials that have not been confirmed.",
+          "Some offices require a referral before scheduling. Others start with a coordinator call. Tell us the route for each location and we’ll make it visible on the pages prospective patients and referring offices use.",
         ],
       },
       {
@@ -545,19 +545,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-company-for-law-firms",
+    updated: "2026-11-26",
     keywords: ["seo company for law firms"],
     category: "seo",
     title: "Choosing an SEO Company for Law Firms: A Practical Checklist",
     description:
-      "Compare law-firm SEO providers by practice-area strategy, professional review, technical work, ownership, reporting, and the quality of enquiries.",
+      "Assess local SEO help for your firm by practice area, geographic fit, and the matters reaching intake.",
     intro:
-      "Choosing an SEO company for a law firm requires more than a ranking report. Different practice areas attract different questions, jurisdictions, and intake requirements. A provider needs a credible plan for accurate content, website improvements, and reporting that distinguishes suitable enquiries from unrelated traffic. This guide helps compare proposals; it does not provide legal advice.",
+      "An SEO company for law firms should understand the matters your lawyers can take. Tell GetLeadLocal which practice area needs more enquiries and who handles intake. We’ll review how a prospective client finds the firm and requests a conversation.",
     sections: [
       {
-        heading: "Ask for a practice-area and jurisdiction plan",
+        heading: "Which matters belong with your intake team?",
         paragraphs: [
-          "A family-law enquiry and a commercial dispute enquiry do not follow the same journey. Ask how the provider will prioritize the firm’s actual work and locations. The proposal should explain why a page is needed and how it will connect to the relevant lawyers and intake team.",
-          "Be cautious about a plan built entirely around near-identical city pages. Locations, professional descriptions, and service claims should be genuine. The firm should review all statements about its capabilities and where it can provide services.",
+          "A firm seeking commercial lease work may already get plenty of residential calls. We’ll review the language on the relevant pages, clarify the work you accept, and give your lawyers a chance to approve it before publication.",
         ],
       },
       {
@@ -607,19 +607,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-painters",
+    updated: "2026-11-26",
     keywords: ["seo for painters"],
     category: "seo",
     title: "SEO for Painters: Turn Local Searches into Estimate Requests",
     description:
-      "Plan painting contractor SEO around interior and exterior services, project examples, real service areas, and estimates that fit your schedule and scope.",
+      "Help nearby homeowners and property managers find your painting services and request estimates that fit your crew.",
     intro:
-      "SEO for painters should help a homeowner or property manager see whether your business fits their project. Interior decorating, exterior preparation, and commercial repainting need different explanations. A portfolio can attract attention, but visitors also need scope, location, scheduling, and a clear estimate process.",
+      "SEO for painters should generate estimate requests that match the work you want. If your crew has space for exterior repaints, we’ll check whether customers can find that service, see an example of your finish, and book an estimate.",
     sections: [
       {
-        heading: "Give distinct painting services enough detail",
+        heading: "What kind of estimate is worth a visit?",
         paragraphs: [
-          "Separate interior, exterior, and commercial work when the buyer’s questions differ. Explain how preparation, access, occupied properties, and finish choices are discussed during the estimate. Describe only work the business actually provides.",
-          "Avoid a separate page for every small wording variation. A useful exterior-painting page can answer several related questions without duplicating the same content under new URLs. Link specialist work from the main service structure.",
+          "Show us a finished project you have permission to share, the towns you cover, and the size of jobs you take. We’ll use those details to help a homeowner decide whether to call.",
         ],
       },
       {
@@ -669,19 +669,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-for-small-business-london",
+    updated: "2026-11-26",
     keywords: ["seo for small business london"],
     category: "seo",
     title: "SEO for Small Business in London: A Local Planning Guide",
     description:
-      "Plan London small-business SEO around real coverage, borough-level customer needs, service priorities, useful location information, and qualified enquiries.",
+      "Assess which London areas and services to prioritise for the enquiries your business can realistically serve.",
     intro:
-      "SEO for a small business in London needs a realistic view of geography. A shop with walk-in customers, a mobile service business, and a professional firm serving clients remotely should not use the same location strategy. This guide explains how to plan coverage and content; it does not imply that GetLeadLocal has a London office.",
+      "SEO for small business owners in London starts with where you can serve a customer profitably. Tell us which boroughs you cover and where travel time rules out a job. We’ll use those boundaries to review the pages and listings a customer finds.",
     sections: [
       {
-        heading: "Define the London market you can actually serve",
+        heading: "Where would you accept a booking?",
         paragraphs: [
-          "List the boroughs or neighbourhoods where the business can reliably deliver the service, considering travel, opening hours, and capacity. A mobile provider may need tighter boundaries than a remote consultancy. Do not treat the whole city as one interchangeable audience.",
-          "For a customer-facing premises, provide accurate address, entrance, travel, and appointment information. For a service-area business, explain actual coverage without inventing additional offices. The website should help a customer judge whether you can serve their address.",
+          "A service business may work within a few neighbouring boroughs even when its address is in central London. Start with the jobs you can fulfil, opening hours, and customer access. We’ll discuss useful changes for that footprint.",
         ],
       },
       {
@@ -731,19 +731,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "seo-services-for-therapists",
+    updated: "2026-11-26",
     keywords: ["seo services for therapists"],
     category: "seo",
     title: "SEO Services for Therapists: A Clear and Considerate Website",
     description:
-      "Prioritize therapist SEO with accurate practitioner information, service scope, local and online session details, reviewed content, and private enquiry routes.",
+      "Help prospective clients understand your practice, availability, and preferred route to a first enquiry.",
     intro:
-      "SEO services for therapists should support a careful decision, not pressure a visitor into an appointment. Someone comparing practitioners may need to understand qualifications, approach, availability, location, and how first contact works. Search visibility is useful when the page helps answer those questions accurately and respectfully.",
+      "SEO services for therapists should help someone find the right practice and make first contact comfortably. We can improve how your services and availability appear in local search while you review all descriptions of your work.",
     sections: [
       {
-        heading: "Make practitioner information coherent",
+        heading: "How do you want a prospective client to reach you?",
         paragraphs: [
-          "Publish a clear biography with verified qualifications and an accurate description of the services offered. Identify whether appointments are in person, online, or both, and where the practitioner can provide them. Keep availability and contact details current.",
-          "Link practitioner information to the relevant service and location pages. Avoid conflicting biographies across the site or implying qualifications that have not been verified. A visitor should be able to understand who they would be contacting.",
+          "Tell us whether you offer an introductory call, in-person sessions, or online appointments. We’ll clarify those options and route requests to the intake method you choose.",
         ],
       },
       {
@@ -793,19 +793,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "local-seo-services-for-accountants",
+    updated: "2026-11-26",
     keywords: ["local seo services for accountants"],
     category: "seo",
     title: "Local SEO Services for Accountants: Find the Right Clients",
     description:
-      "Plan accountancy SEO around client types, service pages, genuine locations, verified credentials, and discovery enquiries that fit the firm.",
+      "Attract enquiries for the bookkeeping, tax, or advisory engagements your firm wants to take on.",
     intro:
-      "Local SEO services for accountants should help the right kind of client understand the firm’s work. A sole trader seeking bookkeeping support and a larger company seeking a specialist engagement have different questions. A broad ‘accounting services’ page may not explain either offer clearly enough to generate a useful enquiry.",
+      "Local SEO services for accountants should help the right clients find your firm. If you want monthly bookkeeping engagements, we’ll check whether a business owner sees that offer and knows how to arrange a first call.",
     sections: [
       {
-        heading: "Organize services and client types",
+        heading: "Which engagements do you have room for?",
         paragraphs: [
-          "Identify the services the firm wants to grow and the businesses they suit. Build distinct pages where scope, jurisdiction, onboarding, or buyer questions differ. Explain what the first conversation covers and which work requires a separate assessment or quote.",
-          "Avoid publishing general tax answers as if they apply to every visitor. Have professional content reviewed by the firm and keep time-sensitive material current. A useful service page can explain the engagement without giving personalised financial advice.",
+          "Tell us the business sizes and services that suit your team. We’ll use your answers to distinguish recurring engagements from one-off work and clarify what a new client needs for the first conversation.",
         ],
       },
       {
@@ -855,19 +855,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "local-seo-for-chiropractors",
+    updated: "2026-11-26",
     keywords: ["local seo for chiropractors"],
     category: "seo",
     title: "Local SEO for Chiropractors: Practice Information That Helps",
     description:
-      "Improve chiropractic practice search content with accurate locations, verified practitioner details, reviewed services, and a clear appointment request process.",
+      "Help prospective patients find accurate clinic hours, practitioner details, and a clear route to a first visit.",
     intro:
-      "Local SEO for chiropractors should make it straightforward to identify the practice, understand the appointment process, and find reliable practitioner information. A marketing website should not promise that a particular service will resolve a visitor’s condition. Focus on accurate information and an appropriate route to a professional conversation.",
+      "Local SEO for chiropractors can make the first visit easier to arrange. We’ll review how your clinic appears to nearby patients, from the address they tap for directions to the number they call for an appointment.",
     sections: [
       {
-        heading: "Make the practice easy to identify and visit",
+        heading: "What does reception answer every day?",
         paragraphs: [
-          "Check the name, address, phone number, opening hours, and booking link on the website and business profile. Add real entrance and facility photographs with permission. Explain parking, access, and any practical requirements for the first visit.",
-          "For more than one genuine practice location, provide distinct directions and practitioner information. Avoid suggesting a physical presence where one does not exist. Consistent information helps visitors reach the correct team.",
+          "Bring the questions about parking, hours, practitioner availability, and first visits that take up reception time. We’ll organise that information on the clinic pages and check the booking route. Your team approves clinical content.",
         ],
       },
       {
@@ -913,19 +913,19 @@ export const SEO_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "local-seo-for-plastic-surgeons",
+    updated: "2026-11-26",
     keywords: ["local seo for plastic surgeons"],
     category: "seo",
     title: "Local SEO for Plastic Surgeons: A Consultation-Led Plan",
     description:
-      "Structure plastic surgery SEO around verified credentials, genuine consultation locations, reviewed procedure information, and clear enquiry pathways.",
+      "Help prospective patients find accurate surgeon and location information before requesting a consultation.",
     intro:
-      "Local SEO for plastic surgeons should support careful research about the clinician, location, and consultation process. Elective decisions can involve several visits to a website and comparisons between providers. The goal is to make reliable practice information easy to evaluate without treating a procedure as an ordinary impulse purchase.",
+      "Local SEO for plastic surgeons should help a prospective patient find the right office, understand the consultation process, and contact your coordinator. We work on that search and enquiry journey with your practice reviewing the medical information.",
     sections: [
       {
-        heading: "Clarify clinician and location information",
+        heading: "Which office handles the first conversation?",
         paragraphs: [
-          "Keep biographies, qualifications, roles, and consultation locations accurate. Distinguish where consultations happen from any separate facilities involved in care. Give each genuine location useful directions and an appropriate contact route.",
-          "Connect practitioner pages to the reviewed services they actually provide. Avoid unsupported superlatives such as ‘best surgeon’ and do not imply affiliations that have not been confirmed. Visitors need verifiable information rather than promotional labels.",
+          "If consultations and procedures happen at different locations, the distinction matters to a patient. We’ll check the listings, clinician profiles, and contact details against information your practice approves.",
         ],
       },
       {

@@ -285,7 +285,7 @@ export const GOOGLE_ADS_PAGES: GoogleAdsLandingPage[] = [
       "Google Ads for plumbers built to capture emergency and same-day plumbing calls. Turn high-intent searches into booked jobs with call tracking and fast follow-up.",
     h1: "Google Ads for Plumbers That Generate More Booked Jobs",
     heroSubheadline:
-      "When a pipe bursts, homeowners search and call immediately. We build Google Ads campaigns that put your plumbing company first in those emergency moments.",
+      "When a pipe bursts, homeowners want a plumber who can answer and come out. Tell us your call-out hours, service radius, and which repairs you take. We’ll manage your Google Ads around the jobs your dispatcher can book.",
     heroIcon: "Wrench",
     whyItWorksHeading: "Why Google Ads Work For Plumbers",
     whyItWorksIntro:

@@ -57,9 +57,10 @@ export default function WebsiteDevelopmentPage() {
         </Link>
         <h1 className="my-6">Websites for Small Businesses That Run on Booked Jobs</h1>
         <p className="text-xl mb-7">
-          Websites for small businesses should answer three questions quickly. Can you do this job?
-          Do you work in my area? How do I get an estimate? We build the pages and connect the
-          forms, calendars, and follow-up your team needs to answer that last question.
+          Websites for small businesses should make requesting a quote easy. If customers have to phone just to find
+          out whether you cover their town or offer the job they need, we can make that clear before
+          they call. We write the service pages with you, build the site, and connect quote requests
+          to your inbox or calendar. Tell us what you want customers to book and we’ll quote the project.
         </p>
         <a href="#project-quote" className="btn-primary">
           Request a website quote <ArrowDownRight size={18} aria-hidden="true" />

@@ -19,7 +19,10 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export function ContactForm({ websiteProject = false }: { websiteProject?: boolean }) {
+export function ContactForm({ websiteProject = false, service }: {
+  websiteProject?: boolean;
+  service?: "Google Ads" | "Facebook Ads" | "Local SEO";
+}) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -50,9 +53,9 @@ export function ContactForm({ websiteProject = false }: { websiteProject?: boole
           phone: data.phone,
           budget: data.budget || "Not specified",
           message: data.message,
-          form_type: websiteProject ? "Website Development Enquiry" : "Contact Page Form",
+          form_type: websiteProject ? "Website Development Enquiry" : service ? `${service} Enquiry` : "Contact Page Form",
           from_name: "GetLeadLocal Website",
-          subject: `${websiteProject ? "Website project" : "New Contact Form"}: ${data.name} - ${data.business}`,
+          subject: `${websiteProject ? "Website project" : service ?? "New Contact Form"}: ${data.name} - ${data.business}`,
         }),
       });
 
@@ -206,7 +209,7 @@ export function ContactForm({ websiteProject = false }: { websiteProject?: boole
             {/* Message */}
             <div>
               <label className="block text-sm font-semibold text-slate-900 mb-2">
-                Tell us about your business
+                {service ? "Which services and areas do you want more enquiries for?" : "Tell us about your business"}
               </label>
               <textarea
                 {...register("message")}
@@ -225,7 +228,7 @@ export function ContactForm({ websiteProject = false }: { websiteProject?: boole
               disabled={loading}
               className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "Sending..." : websiteProject ? "Request my website quote" : "Get Your Free Strategy"}
+              {loading ? "Sending..." : websiteProject ? "Request my website quote" : service ? `Request my ${service} plan` : "Get Your Free Strategy"}
             </button>
 
             <p className="text-xs text-slate-600 text-center">

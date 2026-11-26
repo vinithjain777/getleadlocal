@@ -3,19 +3,19 @@ import type { MarketingGuide } from "../marketing-guides";
 export const FACEBOOK_GUIDES: MarketingGuide[] = [
   {
     slug: "facebook-ads-for-dentists",
+    updated: "2026-11-26",
     keywords: ["facebook ads for dentists"],
     category: "facebook-ads",
     title: "Facebook Ads for Dentists: A Practical Campaign Guide",
     description:
-      "Plan dental Facebook ads with clear appointment offers, useful creative, simple enquiry forms, and reporting that follows patients through to attended visits.",
+      "Have weekday appointments to fill? See how GetLeadLocal can promote your practice and send appointment requests to reception.",
     intro:
-      "Facebook ads for dentists work best when the practice makes one next step easy to understand. Someone scrolling through a feed may not be ready to choose a dentist immediately. Your campaign needs to introduce the practice, explain the appointment, and help reception turn an enquiry into a conversation. Start with available appointment capacity rather than a promise of cheap patient leads.",
+      "Facebook ads for dentists can introduce your practice to people nearby who are choosing a dentist. If you have room for new patients on weekday mornings, tell us. We’ll build the ads around those appointments and give reception a clear way to follow up.",
     sections: [
       {
-        heading: "Choose one appointment journey",
+        heading: "Which appointments would you like to fill?",
         paragraphs: [
-          "Separate general new-patient appointments from elective consultation campaigns. They have different questions, decision times, and reception workflows. Define what an enquiry is for, which location handles it, and whether there are actually appointments available before writing the ad.",
-          "The destination should explain what the first visit involves, how to request a time, and any clearly confirmed offer terms. A broad homepage that mixes every treatment forces the visitor to search again. Avoid advertising a price that reception cannot explain consistently.",
+          "A new-patient check-up and an elective consultation need different introductions. Tell us which one you offer, at which practice, and when you have availability. We’ll write the ad and booking-page copy for your approval. Your reception team can then tell us which requests became visits.",
         ],
       },
       {
@@ -61,19 +61,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-contractors",
+    updated: "2026-11-26",
     keywords: ["facebook ads for contractors"],
     category: "facebook-ads",
     title: "Facebook Ads for Contractors: From Projects to Enquiries",
     description:
-      "Build contractor Facebook campaigns around project type, service area, estimates, creative, and qualified opportunities rather than form submissions alone.",
+      "Get help bringing in estimate requests for the project types, neighbourhoods, and start dates your crew can take.",
     intro:
-      "Facebook ads for contractors should help homeowners understand the work you do and whether their project fits. A kitchen renovation, a roof replacement, and a small repair have different economics. Putting them into one generic ‘free quote’ campaign can fill an estimator’s calendar with unsuitable visits. Pick one type of work before deciding how much to spend.",
+      "Facebook ads for contractors can show a homeowner the kind of project you want to quote. If your crew wants kitchen refits and keeps getting calls about small repairs, we can use your finished projects, service area, and availability to make that distinction clear.",
     sections: [
       {
-        heading: "Define a project worth quoting",
+        heading: "What would make an estimate visit worthwhile?",
         paragraphs: [
-          "Write down the service radius, project categories, realistic start dates, and any minimum project scope. Use these boundaries to shape the page and form. A homeowner should know whether you offer the work they need before sharing their details.",
-          "Separate emergency work from planned improvements. Feed advertising can introduce ideas for a future renovation, while an urgent repair often begins with a direct search. Match campaign expectations to how homeowners make the decision.",
+          "Tell us the smallest job you can take profitably and show us a project you would like to repeat. We’ll write the ad and ask enough on the enquiry form for your estimator to decide whether a site visit makes sense.",
         ],
       },
       {
@@ -119,19 +119,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-accountants",
+    updated: "2026-11-26",
     keywords: ["facebook ads for accountants"],
     category: "facebook-ads",
     title: "Facebook Ads for Accountants: Offers, Leads and Follow-up",
     description:
-      "Plan Facebook advertising for an accountancy firm with a focused service offer, useful educational content, qualified calls, and a secure intake process.",
+      "See how GetLeadLocal can help your firm attract enquiries for ongoing bookkeeping, payroll, or tax work.",
     intro:
-      "Facebook ads for accountants need to make a professional service understandable before asking for an appointment. A business owner may recognise a bookkeeping problem without knowing whether they need monthly support, year-end accounts, or a specialist adviser. A clear service invitation is more useful than a general promise to ‘save money on tax’.",
+      "Facebook ads for accountants should reflect the clients your team has room to serve. If you want monthly bookkeeping engagements, we can promote that service and send prospective clients to a discovery call with your firm.",
     sections: [
       {
-        heading: "Separate recurring services from deadline work",
+        heading: "Which clients fit your practice?",
         paragraphs: [
-          "Choose whether the campaign is intended to attract monthly bookkeeping clients, a particular business sector, or enquiries about a confirmed filing service. These have different onboarding needs and commercial value. State the jurisdiction served and the kind of business the offer fits.",
-          "Seasonal deadlines can create urgency, but advertising a deadline-specific service requires the firm to check the date and its remaining capacity. Keep evergreen campaigns focused on ongoing business needs rather than recycling time-sensitive claims.",
+          "A shop owner looking for monthly payroll support has different needs from someone with a one-off tax question. Give us the business type, service, and onboarding capacity you prefer. We’ll put those details in the offer before someone books time with you.",
         ],
       },
       {
@@ -181,19 +181,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-personal-trainers",
+    updated: "2026-11-26",
     keywords: ["facebook ads for personal trainers"],
     category: "facebook-ads",
     title: "Facebook Ads for Personal Trainers: A Local Campaign Plan",
     description:
-      "Create personal training Facebook ads around coaching format, location, introductory sessions, useful creative, and booked consultations.",
+      "Promote the training sessions you have room for and see which enquiries lead to attended introductions.",
     intro:
-      "Facebook ads for personal trainers should explain the coaching experience, not promise a dramatic transformation. Prospective clients need to know where sessions happen, what level the programme suits, and whether the schedule fits their life. A well-defined introductory conversation can attract a better fit than a vague fitness challenge.",
+      "Facebook ads for personal trainers can help fill specific sessions in your diary. Tell us whether you want more one-to-one clients, a lunchtime group, or introductory consultations. We’ll promote the option you can actually deliver.",
     sections: [
       {
-        heading: "Sell the coaching format clearly",
+        heading: "Which sessions have spaces?",
         paragraphs: [
-          "Decide whether the campaign promotes one-to-one sessions, small-group coaching, or remote support. A studio-based service needs a realistic travel area; remote coaching needs a clear explanation of delivery. Include actual session availability and how the first meeting works.",
-          "If an introductory session is paid, say so before the visitor submits a form. If it is complimentary, describe its scope without suggesting that a full programme is free. Keep the promise aligned with what you can consistently deliver.",
+          "A trainer filling a Tuesday evening group needs people who can attend at that time and place. We’ll put those details in the ad and explain what a first visit involves. You handle the introduction and let us know who joins.",
         ],
       },
       {
@@ -243,19 +243,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-churches",
+    updated: "2026-11-26",
     keywords: ["facebook ads for churches"],
     category: "facebook-ads",
     title: "Facebook Ads for Churches: A Welcoming Local Outreach Plan",
     description:
-      "Plan church Facebook ads around clear event information, visitor experience, respectful messaging, and practical ways to measure community outreach.",
+      "Help nearby families find a public event with clear dates, directions, and an easy way to ask your team a question.",
     intro:
-      "Facebook ads for churches can introduce a community event or help a new visitor understand what to expect. The useful outcome may be a visit, a conversation, or a registration rather than a sales lead. Begin with a specific invitation and make the arrival experience as clear as the advertisement.",
+      "Facebook ads for churches can introduce a public community event to neighbours who have never visited. Share the invitation, location, and details newcomers ask about. We can prepare the advertising while your team looks after visitors.",
     sections: [
       {
-        heading: "Choose an invitation people can act on",
+        heading: "What does a first-time visitor need to know?",
         paragraphs: [
-          "Promote a defined service, community meal, music event, or visitor information page. Include the real date, location, accessibility information, and whether registration is required. Avoid mixing several events with different times into one crowded ad.",
-          "Check that the website and event team use the same information. A visitor should not have to search social posts to find parking details or discover that an event is full after registering. Update or pause time-sensitive campaigns promptly.",
+          "Tell us about one event, such as a community meal. We’ll build the invitation around its date, entrance, accessibility, and whether registration is needed. Choose someone on your team to answer practical questions before the day.",
         ],
       },
       {
@@ -301,19 +301,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-plastic-surgeons",
+    updated: "2026-11-26",
     keywords: ["facebook ads for plastic surgeons"],
     category: "facebook-ads",
     title: "Facebook Ads for Plastic Surgeons: Consultation Campaigns",
     description:
-      "Plan plastic surgery Facebook campaigns with clinician-reviewed messaging, informative consultation pages, careful intake, and meaningful follow-up metrics.",
+      "Explore managed Facebook advertising for consultation enquiries, with practice approval of messaging and a clear handoff to your coordinator.",
     intro:
-      "Facebook ads for plastic surgeons require a careful distinction between introducing a practice and promising a treatment outcome. A prospective patient needs reliable information about the clinician, consultation, and decision process. Marketing should support an informed conversation rather than pressure someone to purchase a procedure.",
+      "Facebook ads for plastic surgeons can introduce prospective patients to your consultation process. You decide which consultations the practice can accommodate. We prepare the campaign for clinical review and direct initial enquiries to your coordinator.",
     sections: [
       {
-        heading: "Build around a consultation process",
+        heading: "Which consultations can your team support?",
         paragraphs: [
-          "Choose the consultation pathway the practice can support and have the clinical team review the invitation. Explain who conducts the consultation, where it takes place, and how someone can ask about availability. Do not present clinical suitability as something an advertisement can determine.",
-          "Use a destination that introduces the clinician’s verified credentials and explains the next step. Avoid making a discounted procedure the entire message. Questions about treatment risks, alternatives, and suitability need appropriate clinician-reviewed material.",
+          "Let us know which clinician reviews the wording, which office handles calls, and what a prospective patient can expect at the first conversation. We’ll use those details for the invitation and leave individual clinical questions to your practice.",
         ],
       },
       {
@@ -359,19 +359,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-therapists",
+    updated: "2026-11-26",
     keywords: ["facebook ads for therapists"],
     category: "facebook-ads",
     title: "Facebook Ads for Therapists: A Thoughtful Enquiry Process",
     description:
-      "Plan therapist Facebook ads around service availability, clear practitioner information, privacy-conscious enquiries, and a suitable first conversation.",
+      "Help local people understand your practice and request an introductory conversation through your preferred intake route.",
     intro:
-      "Facebook ads for therapists should explain an available service without assuming anything about the person viewing the ad. Choosing a therapist is personal, and a fast form submission is not the only useful outcome. The page should help someone understand the practitioner, format, location, and next step at their own pace.",
+      "Facebook ads for therapists can make it easier for someone to understand your practice before reaching out. You tell us about your availability, appointment format, and preferred intake process. We prepare an introduction you can review before it runs.",
     sections: [
       {
-        heading: "Explain availability and scope",
+        heading: "What first conversation do you offer?",
         paragraphs: [
-          "State whether sessions are in person, online, or both, and where the practitioner is able to provide the service. Keep availability current. A campaign that continues promoting appointments while the practice is full creates frustration and unnecessary enquiries.",
-          "Describe the first contact accurately: a scheduling request, an administrative conversation, or an introductory consultation if offered. Avoid implying that an advertisement can assess a person or match them to treatment. Use the practitioner’s own reviewed descriptions of their work.",
+          "An introductory call, an intake appointment, and a place on a waiting list are different offers. We’ll state which one is available, where you practise, and who responds. Sensitive details belong in your practice’s intake process.",
         ],
       },
       {
@@ -421,19 +421,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-clinics",
+    updated: "2026-11-26",
     keywords: ["facebook ads for clinics"],
     category: "facebook-ads",
     title: "Facebook Ads for Clinics: Service-Specific Campaign Planning",
     description:
-      "Organize clinic Facebook ads by service and location, with reviewed information, clear appointment requests, and responsible conversion measurement.",
+      "See how managed Facebook campaigns can send enquiries for a specific appointment to the right clinic reception team.",
     intro:
-      "Facebook ads for clinics become difficult to manage when every service shares the same generic booking message. A clinic may offer several appointment types with different staff, locations, and availability. The campaign should make the correct route obvious and provide accurate information before an enquiry is submitted.",
+      "Facebook ads for clinics work best when reception knows exactly what appointment the caller saw. Give us one service with available slots and the location that offers it. We’ll prepare the ad and the enquiry route for that team.",
     sections: [
       {
-        heading: "Map each service to its booking route",
+        heading: "Which appointment should reception expect?",
         paragraphs: [
-          "List the services you plan to advertise, the clinician or team responsible, and the destination for enquiries. Start with one pathway that has capacity. If the campaign promotes a specific location, the page and contact process should consistently identify it.",
-          "Make the difference between a confirmed appointment and a callback request explicit. Show current opening hours and explain any administrative next step. Do not let a form confirmation imply that a clinical appointment has already been booked if staff still need to arrange it.",
+          "If only one branch offers a Saturday assessment, we’ll name the branch and explain how availability is confirmed. Your clinical lead approves the service description and reception tells us which enquiries became attended appointments.",
         ],
       },
       {
@@ -483,19 +483,19 @@ export const FACEBOOK_GUIDES: MarketingGuide[] = [
   },
   {
     slug: "facebook-ads-for-electricians",
+    updated: "2026-11-26",
     keywords: ["facebook ads for electricians"],
     category: "facebook-ads",
     title: "Facebook Ads for Electricians: Promote the Right Jobs",
     description:
-      "Plan electrician Facebook ads for scheduled projects, local service areas, useful creative, qualified estimates, and profitable booked work.",
+      "Promote planned electrical work in your service area and receive requests your estimator can qualify.",
     intro:
-      "Facebook ads for electricians are often better suited to planned projects than a broad promise to handle every electrical problem. A homeowner considering new lighting or a charger installation needs different information from someone seeking urgent assistance. Choose a job category and explain the next step before building the campaign.",
+      "Facebook ads for electricians can showcase planned work such as panel upgrades or EV charger installations. Tell us which jobs you want more of and where your van can travel. We’ll use that brief to attract requests your estimator can act on.",
     sections: [
       {
-        heading: "Separate planned projects from urgent demand",
+        heading: "What work would you like to repeat?",
         paragraphs: [
-          "Select work you have capacity to quote and deliver: lighting upgrades, planned rewiring enquiries, or installation consultations, for example. Describe only services you are qualified and equipped to provide. Keep service-area boundaries consistent between the ad and the website.",
-          "For urgent enquiries, a direct search campaign may align more closely with the customer’s immediate need. Do not assume that inexpensive social clicks will replace emergency search demand. Evaluate each channel against the jobs it actually produces.",
+          "If you want charger installations, we’ll show an approved example and ask for the customer’s location and installation needs. Your electrician decides what requires a site visit and gives the quote. That keeps technical decisions with the person doing the work.",
         ],
       },
       {

@@ -13,10 +13,10 @@ export default function GuidesPage() {
     <main className="pt-28 md:pt-36 pb-16">
       <header className="container-max">
         <span className="badge mb-6">The local marketing library</span>
-        <h1 className="max-w-3xl mb-6">A clearer plan for your next stage of growth.</h1>
+        <h1 className="max-w-3xl mb-6">Marketing guides for small business owners</h1>
         <p className="max-w-2xl text-xl">
-          Start with your industry and the channel you want to understand. Each guide includes a
-          practical example, a checklist, and questions to help you decide what to do next.
+          Choose the service you’re considering. See what it could look like for your business,
+          what to ask before you spend, and how to get help from GetLeadLocal.
         </p>
         <p className="mt-5">
           <Link

@@ -9,7 +9,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Compare a free hosted site with a paid build. Test the address, contact options, ownership, and upgrade path before printing your website on a van.",
     intro:
-      "Free websites for small business owners can work well when customers need your hours, service area, and a way to call. A free hosted page can answer all three while you find out what customers actually ask for.",
+      "Free websites for small business owners can be enough if all your customers need are your hours, area, and phone number. If you also need customers to send job details or book a visit, we can price that work separately so you can decide whether a custom build is worth it.",
     sections: [
       {
         heading: "Try the smallest useful site",
@@ -52,7 +52,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Compare website proposals line by line, from copy and domain ownership to booking integrations, handover, and ongoing charges.",
     intro:
-      "Website packages for small business owners are easiest to compare using one sample enquiry. Ask each provider to show how a visitor finds a service, requests an estimate, and receives a reply. A page count alone cannot tell you whether that journey is included.",
+      "Website packages for small business owners should tell you what happens when someone asks for a quote. With GetLeadLocal you can scope the pages, writing, booking, and follow-up in one proposal. Use the questions below to compare it with another offer.",
     sections: [
       {
         heading: "Separate launch work from running costs",
@@ -100,7 +100,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Choose between a hosted builder, a content management system, and a custom build using a practical booking and editing test.",
     intro:
-      "Website platforms for small business owners should fit the person who will run the site on Monday morning. Give that person three tasks to try before choosing a platform.",
+      "Website platforms for small business owners should fit the way you sell. Tell us who updates your opening hours, where bookings go, and which tools you already pay for. We can use those answers to recommend a build your team can run.",
     sections: [
       {
         heading: "Test an edit, an enquiry, and a handover",
@@ -148,7 +148,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Set a practical care scope for content changes, form delivery, renewals, backups, and urgent fixes. Know what your team still owns.",
     intro:
-      "Website management services for small businesses should make it clear who notices a broken quote form and who fixes it. A monthly report is more useful when it records what someone actually tested.",
+      "Website management services for small businesses should make one thing clear. If your quote form stops delivering on Monday morning, who spots it and who fixes it? Use this guide to decide which jobs you want a provider to own and what to include in a care quote.",
     sections: [
       {
         heading: "Write down recurring checks and owners",
@@ -193,7 +193,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Evaluate a WordPress care proposal with a restore test, plugin inventory, update routine, and checks for lead forms after changes.",
     intro:
-      "WordPress website maintenance service for small business sites should include a way back if an update breaks booking. Ask a provider to explain the restore process before giving them responsibility for updates.",
+      "WordPress website maintenance service for small business owners matters most when an update interrupts bookings. If you depend on your site for enquiries, ask what a provider will back up, test, and restore. Bring your current setup when you ask us about ongoing care.",
     sections: [
       {
         heading: "Verify what can be restored",
@@ -244,7 +244,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Turn a short owner interview into service copy that answers buyer questions and helps a visitor request the right job.",
     intro:
-      "Website and content writing for small business sites gets easier when the writer listens to the person who answers the phone. Start with three questions customers ask before they agree to a visit.",
+      "Website and content writing for small business owners starts with the questions your customers already ask. Tell us which jobs you take, what customers worry about, and how you quote. We can turn those answers into service pages for you to review.",
     sections: [
       {
         heading: "Interview the person who quotes the work",
@@ -289,7 +289,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Find out where customers abandon quote requests. Test the mobile experience, form delivery, response time, and booked-job rate.",
     intro:
-      "Conversion optimization for small business website forms begins with a real test request. Start on the page an ad or search result sends people to, use a phone, and follow the enquiry until a human can reply.",
+      "Conversion optimization for small business website owners starts with a familiar problem. People visit the site, but the phone stays quiet. We can trace a quote request from your busiest page to your inbox and show you where a customer might give up.",
     sections: [
       {
         heading: "Find the first point that fails",
@@ -334,7 +334,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Check local service content, indexability, canonical URLs, sitemap links, and your quote flow before sending Google a new website.",
     intro:
-      "SEO checklist for local small business websites — start with the page you most want a customer to find. Check whether it describes a real service in a real area and whether someone can reach it from the homepage.",
+      "SEO checklist for local small business websites — use these checks when you commission a new site or sign off on a redesign. Ask your provider to show that a customer can find the right service, reach it from the homepage, and send a quote request.",
     sections: [
       {
         heading: "Check the published URL",
@@ -382,7 +382,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Plan a redesign around the URLs, enquiries, and integrations you need to keep. Includes a launch-day handover checklist.",
     intro:
-      "Website redesign for small business owners starts with an inventory of what already works. Before changing the menus or URLs, list the pages that bring calls, the links customers use, and the systems that receive their enquiries.",
+      "Website redesign for small business owners should protect the calls you already receive. Tell us which pages customers use and which tasks frustrate them. We’ll plan what to keep, what to rebuild, and how to check the booking route on launch day.",
     sections: [
       {
         heading: "Map the old site to the new one",
@@ -431,7 +431,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Shortlist a local or remote website designer using a sample brief, account ownership questions, and a live enquiry demonstration.",
     intro:
-      "Best website design agencies for small businesses is a broad search. Narrow the shortlist by asking each designer to walk through a finished customer journey for a business with needs like yours.",
+      "Best website design agencies for small businesses often end up on a shortlist for different reasons. If you depend on estimates or appointments, ask each agency to show how a customer gets from a service page to your team. That’s a workflow we can include in your GetLeadLocal quote.",
     sections: [
       {
         heading: "Ask for a walkthrough you can verify",
@@ -473,7 +473,7 @@ const articles: Omit<MarketingGuide, "category" | "published" | "contactCta">[] 
     description:
       "Plan a lawn care site around route density, recurring mowing, real job photos, and estimate requests your crew can schedule.",
     intro:
-      "Small business website design for lawn care tradesman entrepreneurs starts with the route. A full calendar of scattered one-off jobs can leave a crew driving all day. Use the website to show which neighbourhoods, services, and visit schedules fit your business.",
+      "Small business website design for lawn care tradesman entrepreneurs starts with your route. If you want more weekly mowing jobs close to existing customers, we can build the site around those neighbourhoods, the work you accept, and the information you need to price a visit.",
     sections: [
       {
         heading: "Separate recurring work from one-off jobs",
@@ -514,5 +514,6 @@ export const WEBSITE_GUIDES: MarketingGuide[] = articles.map((article) => ({
   ...article,
   category: "websites",
   published: "2026-11-22",
+  updated: "2026-11-26",
   contactCta: "Discuss my website project",
 }));

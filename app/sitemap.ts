@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guidePages: MetadataRoute.Sitemap = MARKETING_GUIDES.map((page) => ({
     url: `${SITE_CONFIG.url}/${page.slug}`,
-    lastModified: page.published ?? GUIDE_DATE,
+    lastModified: page.updated ?? page.published ?? GUIDE_DATE,
   }));
   return [...corePages, ...googleAdsPages, ...industryPages, ...blogPages, ...guidePages];
 }

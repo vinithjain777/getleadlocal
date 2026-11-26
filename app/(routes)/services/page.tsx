@@ -301,7 +301,7 @@ export default function ServicesPage() {
                   <div>
                     <div className="mb-2">
                       <h4 className="font-semibold text-slate-900">Month 5-6</h4>
-                      <p className="text-sm text-slate-600">Consistent top 3 rankings for primary keywords, steady lead flow</p>
+                      <p className="text-sm text-slate-600">Review which services bring enquiries and which calls turn into bookings</p>
                     </div>
                     <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
                       <div className="h-full bg-primary-500 rounded-full" style={{width: '75%'}}></div>
@@ -310,7 +310,7 @@ export default function ServicesPage() {
                   <div>
                     <div className="mb-2">
                       <h4 className="font-semibold text-slate-900">Month 7+</h4>
-                      <p className="text-sm text-slate-600">Market dominance, ongoing optimization, scaling to more keywords</p>
+                      <p className="text-sm text-slate-600">Agree which services and towns to focus on next using feedback from booked jobs</p>
                     </div>
                     <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
                       <div className="h-full bg-primary-500 rounded-full" style={{width: '100%'}}></div>

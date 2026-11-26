@@ -11,7 +11,7 @@ import {
   Target,
   Users,
 } from "lucide-react";
-import Link from "next/link";
+
 import { GuideLinks } from "@/components/guide-links";
 
 export const metadata = {
@@ -68,7 +68,7 @@ const BENEFITS = [
 
 const FEATURES = [
   "Custom audience creation and targeting",
-  "Scroll-stopping ad creative design",
+  "Ads written and designed for the service you want to promote",
   "Before/after photo campaigns",
   "Video ad production and editing",
   "Local area targeting (zip code and radius)",
@@ -89,13 +89,13 @@ const PROCESS_STEPS = [
     number: 2,
     title: "Creative Development",
     description:
-      "We create eye-catching ad creatives with compelling copy and visuals that stop the scroll.",
+      "We turn your approved photos, service details, and booking offer into ads for your review.",
   },
   {
     number: 3,
     title: "Campaign Launch",
     description:
-      "Your ads go live targeting precise local audiences with conversion tracking in place.",
+      "We launch in your service area and check that enquiries reach the person who answers them.",
   },
   {
     number: 4,
@@ -171,25 +171,18 @@ export default function MetaAdsPage() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Build Your Brand on Facebook & Instagram
+                Facebook and Instagram Ads for Local Businesses
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Reach local customers where they spend their time with targeted Meta Ads campaigns
-                designed to build awareness and generate qualified leads.
+                Facebook and Instagram ads can put your work in front of nearby customers while they’re choosing a provider. You tell us what you want to sell and share photos you can use. We write the ads, set up the enquiry form, and send requests to the person who books the work.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex gap-2 group"
-                >
-                  Book Your Free Strategy Call
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <a href="#service-enquiry" className="btn-primary inline-flex gap-2">
+                  Ask us about Facebook Ads <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link href="/contact" className="btn-outline inline-flex gap-2">
-                  Contact Us
-                </Link>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex gap-2">
+                  Book a free call
+                </a>
               </div>
             </FadeUp>
 
@@ -426,23 +419,22 @@ export default function MetaAdsPage() {
 
       <GuideLinks category="facebook-ads" />
       {/* Contact Form Section */}
-      <section className="section-padding bg-slate-50">
+      <section id="service-enquiry" className="scroll-mt-24 section-padding bg-slate-50">
         <div className="container-max">
           <FadeUp>
             <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Ready to Build Your Brand?
+                What would you like local customers to book?
               </h2>
               <p className="text-lg text-slate-600">
-                Let&apos;s discuss how Meta Ads can help you reach more local customers on Facebook
-                and Instagram.
+                Tell us your service, area, and how you handle enquiries. We’ll discuss the offer, the ad budget, and who follows up.
               </p>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.2}>
             <div className="max-w-2xl mx-auto">
-              <ContactForm />
+              <ContactForm service="Facebook Ads" />
             </div>
           </FadeUp>
         </div>

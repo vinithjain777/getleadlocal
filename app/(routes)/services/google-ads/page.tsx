@@ -59,12 +59,12 @@ const BENEFITS = [
   {
     icon: TrendingUp,
     title: "Measurable Results",
-    description: "Track every call, lead, and dollar spent with full transparency",
+    description: "Review ad spend alongside calls, quote requests, and the jobs you book",
   },
   {
     icon: Zap,
-    title: "Fast Results",
-    description: "Start generating leads within days of campaign launch",
+    title: "Fit Your Opening Hours",
+    description: "Reach people searching during the hours your team can take calls",
   },
 ];
 
@@ -146,25 +146,18 @@ export default function GoogleAdsPage() {
                 <span className="text-sm font-semibold text-white">Google Ads Management</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Get More Customers From Google Search
+                Google Ads Management for Local Businesses
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Reach customers actively searching for your services with Google Ads campaigns
-                designed specifically for local businesses.
+                Google Ads management for local businesses starts with the calls you want to take. Tell us which jobs you can book and how far you travel. We write and manage the ads, track enquiries, and review which ones turned into paying work with you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex gap-2 group"
-                >
-                  Book Your Free Strategy Call
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <a href="#service-enquiry" className="btn-primary inline-flex gap-2 group">
+                  Talk to us about Google Ads <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link href="/contact" className="btn-outline inline-flex gap-2">
-                  Contact Us
-                </Link>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex gap-2">
+                  Book a free call
+                </a>
               </div>
             </FadeUp>
 
@@ -182,7 +175,7 @@ export default function GoogleAdsPage() {
                           Appear When Customers Search
                         </h3>
                         <p className="text-sm text-slate-600">
-                          Show up at the top of Google when someone searches for your services
+                          Reach people looking for the work you offer in the towns you serve
                         </p>
                       </div>
                     </div>
@@ -388,23 +381,22 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="section-padding bg-white">
+      <section id="service-enquiry" className="scroll-mt-24 section-padding bg-white">
         <div className="container-max">
           <FadeUp>
             <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Ready to Get More Customers?
+                Which jobs would you like more calls about?
               </h2>
               <p className="text-lg text-slate-600">
-                Let&apos;s discuss how Google Ads can help your business generate more qualified
-                leads and grow revenue.
+                Your service area and the work you want to book help us suggest a starting budget. We’ll explain our fee and the separate ad spend.
               </p>
             </div>
           </FadeUp>
 
           <FadeUp delay={0.2}>
             <div className="max-w-2xl mx-auto">
-              <ContactForm />
+              <ContactForm service="Google Ads" />
             </div>
           </FadeUp>
         </div>

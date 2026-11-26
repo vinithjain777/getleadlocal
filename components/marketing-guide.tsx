@@ -10,7 +10,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
   const category = GUIDE_CATEGORIES[guide.category];
-  const enquiryUrl = guide.category === "websites" ? category.service + "#project-quote" : "/contact";
+  const enquiryUrl = category.enquiry;
+  const action = guide.contactCta ?? category.action;
   const published = guide.published ?? GUIDE_DATE;
   const url = `${SITE_CONFIG.url}/${guide.slug}`;
   const related = guide.related.map((href) => ({
@@ -33,7 +34,7 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
         headline: guide.title,
         description: guide.description,
         datePublished: published,
-        dateModified: published,
+        dateModified: guide.updated ?? published,
         mainEntityOfPage: url,
         author: {
           "@type": "Organization",
@@ -75,7 +76,7 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
         </nav>
         <header className="max-w-4xl mb-12">
           <span className="badge mb-6">
-            <BookOpen size={16} aria-hidden="true" /> Practical marketing guide
+            <BookOpen size={16} aria-hidden="true" /> Business owner’s guide
           </span>
           <h1 className="mb-6">{guide.title}</h1>
           <p className="text-xl leading-relaxed mb-5">{guide.intro}</p>
@@ -92,11 +93,9 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
               })}
             </time>
           </p>
-          {guide.contactCta && (
             <Link className="btn-primary mt-5" href={enquiryUrl}>
-              {guide.contactCta} <ArrowUpRight size={18} aria-hidden="true" />
+              {action} <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
-          )}
         </header>
         <div className="guide-layout">
           <aside className="guide-contents">
@@ -127,7 +126,7 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
               </ol>
             </nav>
             <div className="mt-6 p-5">
-              <p className="text-sm mb-3">Looking for implementation help?</p>
+              <p className="text-sm mb-3">How GetLeadLocal can help</p>
               <Link
                 href={category.service}
                 className="text-sm font-bold text-primary-700 underline underline-offset-4"
@@ -248,13 +247,10 @@ export function MarketingGuidePage({ guide }: { guide: MarketingGuide }) {
               </div>
             </section>
             <section className="bg-navy-900 text-white rounded-2xl p-8">
-              <h2 className="text-3xl mb-4">Turn the guide into a practical next step.</h2>
-              <p className="mb-6">
-                Tell us about your services, location, and current marketing. We can discuss what to
-                prioritize and agree on a scope that fits your business.
-              </p>
+              <h2 className="text-3xl mb-4">Want GetLeadLocal to handle this for you?</h2>
+              <p className="mb-6">{category.offer}</p>
               <Link className="btn-primary" href={enquiryUrl}>
-                {guide.contactCta ?? "Discuss your marketing plan"}{" "}
+                {action}{" "}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </Link>
             </section>
