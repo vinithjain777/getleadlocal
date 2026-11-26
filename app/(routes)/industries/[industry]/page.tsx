@@ -27,25 +27,26 @@ export async function generateMetadata({ params }: IndustryPageProps) {
 
   const canonical = `${SITE_CONFIG.url}/industries/${ind.id}`;
   const industryContent = INDUSTRY_CONTENT[ind.id];
+  const title = industryContent?.title ?? `${ind.name} Lead Generation`;
   const description = industryContent
     ? industryContent.introduction
     : `${ind.description}. Google Ads, Meta Ads, and Local SEO built specifically for ${ind.name.toLowerCase()} businesses.`;
 
   return {
-    title: `${ind.name} Lead Generation`,
+    title,
     description,
     alternates: {
       canonical,
     },
     openGraph: {
-      title: `${ind.name} Lead Generation | GetLeadLocal`,
+      title: `${title} | GetLeadLocal`,
       description,
       url: canonical,
       type: "website",
     },
     twitter: {
       card: "summary_large_image" as const,
-      title: `${ind.name} Lead Generation | GetLeadLocal`,
+      title: `${title} | GetLeadLocal`,
       description,
     },
   };
@@ -101,7 +102,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 <IconComponent className="w-8 h-8 text-primary-600" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                More {industry.name} Leads For Your Business
+                {industryContent?.title ?? `More ${industry.name} Leads For Your Business`}
               </h1>
               <p className="text-xl text-slate-600 mb-8">
                 {industryContent?.introduction ||

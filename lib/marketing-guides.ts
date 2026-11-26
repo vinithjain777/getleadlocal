@@ -1,6 +1,7 @@
 import { FACEBOOK_GUIDES } from "./guides/facebook";
 import { SEO_GUIDES } from "./guides/seo";
 import { LEAD_GENERATION_GUIDES } from "./guides/lead-generation";
+import { CONTRACTOR_GUIDES } from "./guides/contractor-enquiries";
 import { WEBSITE_GUIDES } from "./guides/websites";
 
 export interface MarketingGuide {
@@ -72,6 +73,7 @@ export const MARKETING_GUIDES: MarketingGuide[] = [
   ...FACEBOOK_GUIDES,
   ...SEO_GUIDES,
   ...LEAD_GENERATION_GUIDES,
+  ...CONTRACTOR_GUIDES,
   ...WEBSITE_GUIDES,
 ];
 export const getMarketingGuide = (slug: string) =>

@@ -1,4 +1,5 @@
 export interface IndustryContent {
+  title?: string;
   introduction: string;
   heading: string;
   overview: string;
@@ -60,8 +61,9 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     resources: [{ label: "Local SEO for roofers", href: "/blog/local-seo-roofing" }],
   },
   flooring: {
+    title: "Flooring Leads for Installation and Refinishing Contractors",
     introduction:
-      "Flooring shoppers compare materials, rooms, installation quality, and project timelines. We create focused campaigns that turn those searches into qualified measure-and-quote appointments.",
+      "Flooring leads are useful when the property, material, and installation date fit your crew. Tell GetLeadLocal which jobs you want to quote. We can promote your flooring business locally and send measure requests to your showroom or estimator.",
     heading: "A Flooring Strategy Organized by Project",
     overview:
       "Hardwood, tile, carpet, vinyl, refinishing, and specialty coatings each have different margins and customer questions. Clear separation improves both relevance and lead qualification.",
@@ -110,8 +112,9 @@ export const INDUSTRY_CONTENT: Record<string, IndustryContent> = {
     resources: [{ label: "Landing-page conversion guide", href: "/blog/landing-page-mistakes" }],
   },
   hvac: {
+    title: "HVAC Lead Generation for Heating and Cooling Contractors",
     introduction:
-      "HVAC demand changes quickly with the weather. We separate repair, replacement, and maintenance campaigns so budget can follow seasonal demand and available technician capacity.",
+      "HVAC lead generation starts with your dispatch board. Tell us which towns you cover, when someone can answer, and whether you need repairs, replacements, or maintenance visits. GetLeadLocal can manage campaigns around the calls your team can book.",
     heading: "HVAC Marketing That Adapts to Demand",
     overview:
       "No-cooling calls require a different response from system-replacement research or maintenance-plan promotion. Each journey gets its own message, landing page, and measurement.",
