@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 import { INDUSTRIES, SITE_CONFIG } from "@/lib/constants";
 import { GOOGLE_ADS_PAGES } from "@/lib/google-ads-pages";
+import { LOCAL_AGENCY_PAGES } from "@/lib/local-agency-pages";
 import { GUIDE_CATEGORIES, MARKETING_GUIDES, GUIDE_DATE } from "@/lib/marketing-guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/contact",
     "/guides",
+    ...LOCAL_AGENCY_PAGES.map((page) => `/${page.slug}`),
     ...Object.keys(GUIDE_CATEGORIES).map((category) => `/guides/${category}`),
   ];
 

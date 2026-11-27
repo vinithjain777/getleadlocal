@@ -54,6 +54,11 @@ export default function ServicesPage() {
             >
               Compare lead generation services for your small business
             </Link>
+            <p className="mt-4">
+              <Link href="/local-business-marketing-agency" className="font-semibold text-primary-700 underline underline-offset-4">
+                Get a local marketing plan for the towns you serve
+              </Link>
+            </p>
           </div>
         </FadeUp>
 

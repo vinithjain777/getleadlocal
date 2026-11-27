@@ -6,6 +6,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { MARKETING_GUIDES, getMarketingGuide } from "@/lib/marketing-guides";
 import { MarketingGuidePage } from "@/components/marketing-guide";
 import { RelatedMarketingGuides } from "@/components/related-marketing-guides";
+import { LOCAL_AGENCY_PAGES } from "@/lib/local-agency-pages";
+import { LocalAgencyLanding } from "@/components/local-agency-landing";
 
 interface SlugPageProps {
   params: Promise<{ slug: string }>;
@@ -14,11 +16,18 @@ interface SlugPageProps {
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return [...GOOGLE_ADS_PAGES, ...MARKETING_GUIDES].map((page) => ({ slug: page.slug }));
+  return [...GOOGLE_ADS_PAGES, ...MARKETING_GUIDES, ...LOCAL_AGENCY_PAGES].map((page) => ({ slug: page.slug }));
 }
 
 export async function generateMetadata({ params }: SlugPageProps) {
   const { slug } = await params;
+  const agency = LOCAL_AGENCY_PAGES.find((page) => page.slug === slug);
+  if (agency)
+    return buildMetadata({
+      title: agency.title,
+      description: agency.description,
+      url: `${SITE_CONFIG.url}/${slug}`,
+    });
   const guide = getMarketingGuide(slug);
   if (guide)
     return buildMetadata({
@@ -42,6 +51,8 @@ export async function generateMetadata({ params }: SlugPageProps) {
 
 export default async function GoogleAdsIndustryPage({ params }: SlugPageProps) {
   const { slug } = await params;
+  const agency = LOCAL_AGENCY_PAGES.find((page) => page.slug === slug);
+  if (agency) return <LocalAgencyLanding page={agency} />;
   const guide = getMarketingGuide(slug);
   if (guide) return <MarketingGuidePage guide={guide} />;
   const page = getGoogleAdsPage(slug);
