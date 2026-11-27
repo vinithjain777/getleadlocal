@@ -66,11 +66,12 @@ export const SEO_GUIDES: MarketingGuide[] = [
   {
     slug: "local-seo-for-dentists",
     updated: "2026-11-26",
-    keywords: ["local seo for dentists", "seo for dentist"],
+    keywords: ["local seo for dentists", "seo for dentist", "seo for dentists", "seo services for dentists"],
+    contactCta: "Request SEO help for my dental practice",
     category: "seo",
     title: "Local SEO for Dentists: A Practice Visibility Guide",
     description:
-      "Get help making your practice easier to find and turning local searches into the right appointment requests.",
+      "Explore SEO services for dentists. Get help making your practice easier to find and routing enquiries for the appointments you have room to book.",
     intro:
       "Local SEO for dentists should help nearby patients find your practice, check which appointments you offer, and reach reception. Tell us which appointments you can take. We’ll review your listing and website with that first call in mind.",
     sections: [
@@ -78,6 +79,7 @@ export const SEO_GUIDES: MarketingGuide[] = [
         heading: "Can a new patient find the right practice?",
         paragraphs: [
           "When branches offer different appointments, a patient can call the wrong desk. Give us each practice’s hours, contact details, and services. We’ll check how they appear in search and correct the pages with your approval.",
+          "When comparing SEO services for dentists, ask each provider to follow a new-patient request from a mobile search through to reception. Your practice manager should be able to identify the appointment type and which branch received it.",
         ],
       },
       {
@@ -186,11 +188,12 @@ export const SEO_GUIDES: MarketingGuide[] = [
   {
     slug: "local-seo-for-plumbers",
     updated: "2026-11-26",
-    keywords: ["local seo for plumbers"],
+    keywords: ["local seo for plumbers", "seo for plumbers", "seo services for plumbers"],
+    contactCta: "Ask about SEO services for my plumbing business",
     category: "seo",
     title: "Local SEO for Plumbers: A Practical Plan for Local Calls",
     description:
-      "Put your plumbing services, hours, and coverage in front of customers who need a repair or installation.",
+      "Compare SEO services for plumbers who want local repair calls or planned installation enquiries. Discuss the jobs, areas, and hours your team can cover.",
     intro:
       "Local SEO for plumbers should bring calls your dispatcher can book. If your team installs water heaters but gets mostly drain-cleaning calls, we’ll check what your listing and service pages tell local customers and make the installation work easier to find.",
     sections: [
@@ -198,6 +201,7 @@ export const SEO_GUIDES: MarketingGuide[] = [
         heading: "Which calls should reach the dispatcher?",
         paragraphs: [
           "Tell us your service radius and the jobs you can take today. We’ll review how an urgent repair customer finds your phone number and how someone planning an installation requests an estimate. Those customers often need different next steps.",
+          "Ask anyone quoting SEO services for plumbers how they would handle calls outside your patch. We can review the towns shown on each service page with your dispatcher and track which requests you can actually book.",
         ],
       },
       {
@@ -546,18 +550,20 @@ export const SEO_GUIDES: MarketingGuide[] = [
   {
     slug: "seo-company-for-law-firms",
     updated: "2026-11-26",
-    keywords: ["seo company for law firms"],
+    keywords: ["seo company for law firms", "seo for solicitors", "local seo services for law firms"],
     category: "seo",
-    title: "Choosing an SEO Company for Law Firms: A Practical Checklist",
+    title: "SEO for Solicitors Choosing an SEO Company for Their Law Firm",
     description:
-      "Assess local SEO help for your firm by practice area, geographic fit, and the matters reaching intake.",
+      "Explore local SEO services for law firms. Tell GetLeadLocal which matters your solicitors want, which offices handle them, and how new clients contact you.",
     intro:
-      "An SEO company for law firms should understand the matters your lawyers can take. Tell GetLeadLocal which practice area needs more enquiries and who handles intake. We’ll review how a prospective client finds the firm and requests a conversation.",
+      "SEO for solicitors starts with the matters your firm wants to take on. If your conveyancing team is busy but your commercial property team has capacity, tell us. GetLeadLocal can review what prospective clients find for each office and how they reach the right solicitor for a first conversation.",
+    contactCta: "Discuss local SEO services for my law firm",
     sections: [
       {
         heading: "Which matters belong with your intake team?",
         paragraphs: [
           "A firm seeking commercial lease work may already get plenty of residential calls. We’ll review the language on the relevant pages, clarify the work you accept, and give your lawyers a chance to approve it before publication.",
+          "When comparing local SEO services for law firms, pick one matter and one office. Ask the provider to show how a prospective client would find the practice area, identify the solicitor who handles it, and request a callback without putting case details into a marketing form.",
         ],
       },
       {
@@ -794,11 +800,12 @@ export const SEO_GUIDES: MarketingGuide[] = [
   {
     slug: "local-seo-services-for-accountants",
     updated: "2026-11-26",
-    keywords: ["local seo services for accountants"],
+    keywords: ["local seo services for accountants", "seo for accountants"],
+    contactCta: "Discuss SEO for my accountancy practice",
     category: "seo",
     title: "Local SEO Services for Accountants: Find the Right Clients",
     description:
-      "Attract enquiries for the bookkeeping, tax, or advisory engagements your firm wants to take on.",
+      "Explore SEO for accountants who want more bookkeeping, tax, or advisory engagements. Ask GetLeadLocal for a plan based on the clients your firm can take.",
     intro:
       "Local SEO services for accountants should help the right clients find your firm. If you want monthly bookkeeping engagements, we’ll check whether a business owner sees that offer and knows how to arrange a first call.",
     sections: [
@@ -806,6 +813,7 @@ export const SEO_GUIDES: MarketingGuide[] = [
         heading: "Which engagements do you have room for?",
         paragraphs: [
           "Tell us the business sizes and services that suit your team. We’ll use your answers to distinguish recurring engagements from one-off work and clarify what a new client needs for the first conversation.",
+          "For a practice seeking monthly bookkeeping work, SEO for accountants can start with one existing page. We’ll check whether a business owner can see which records you handle, how often you meet, and where to request a discovery call.",
         ],
       },
       {

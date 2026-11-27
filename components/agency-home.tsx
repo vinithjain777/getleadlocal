@@ -107,18 +107,11 @@ export function AgencyHome() {
           <div className="gll-hero-copy">
             <p className="gll-eyebrow">Local businesses. Bigger possibilities.</p>
             <h1>
-              GREAT AT
-              <br />
-              YOUR TRADE.
-              <br />
-              <span>
-                GET KNOWN
-                <br className="gll-desktop-break" /> FOR IT.
-              </span>
+              GET MORE CALLS <span>FROM LOCAL CUSTOMERS.</span>
             </h1>
             <p className="gll-intro">
-              Help local customers find your business with Google Ads, Meta Ads, and local SEO.
-              Give them a website where they can request a quote or book a visit.
+              We help people nearby find your business through local SEO and ads on Google and
+              Facebook. We build websites that make it easy to request a quote or book an appointment.
             </p>
             <div className="gll-actions">
               <CallButton />

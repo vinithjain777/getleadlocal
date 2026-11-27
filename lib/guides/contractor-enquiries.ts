@@ -2,6 +2,63 @@ import type { MarketingGuide } from "../marketing-guides";
 
 export const CONTRACTOR_GUIDES: MarketingGuide[] = [
   {
+    slug: "water-damage-leads-get-local-marketing",
+    category: "lead-generation",
+    published: "2026-11-27",
+    keywords: ["water damage leads get local marketing", "water damage restoration leads", "water mitigation leads"],
+    title: "Which Water Damage Leads Get Local Marketing Dollars?",
+    description:
+      "Run a restoration company? Ask GetLeadLocal for a plan to reach local property owners who need extraction or drying and track which calls become signed jobs.",
+    intro:
+      "Water damage leads get local marketing dollars from your budget every time someone clicks a paid search ad. If half those callers need a plumber and your crew handles extraction and drying, buying more clicks can leave your trucks just as idle. GetLeadLocal helps restoration owners reach people who need the work their crews can take.",
+    contactCta: "Request a marketing plan for my restoration company",
+    sections: [
+      {
+        heading: "Choose the losses you want calls about",
+        paragraphs: [
+          "Start with your last ten dispatches. Which towns could your crew reach in time? Which jobs kept your drying equipment working? If residential water removal is your priority, we can build a search campaign around that work and give commercial property managers a separate way to request a site visit.",
+          "Show us the search terms behind calls you turned down. If you keep getting requests to fix a leaking tap, we can review the ad wording and exclude irrelevant plumbing searches while keeping searches about cleanup after a pipe burst.",
+        ],
+      },
+      {
+        heading: "Give a property owner one clear way to reach dispatch",
+        paragraphs: [
+          "On a phone, someone standing in a wet basement should be able to see whether you cover their town, what work you do, and which number to call. We can review your business listing, landing page, and call routing together. If you take overnight jobs, we’ll test the route to the on-call person with you before promoting those hours.",
+        ],
+      },
+      {
+        heading: "Decide what a signed job is worth before raising spend",
+        paragraphs: [
+          "Ask dispatch to record the job location, type of loss, and outcome for each enquiry. If you attend inspections but few owners authorise drying, review those estimates with your team. If most calls are outside your radius, the first change belongs in the campaign.",
+        ],
+      },
+    ],
+    example: {
+      title: "Two dispatch areas with the same number of calls",
+      text: "Suppose you spend $600 in each of two areas and each produces ten calls. In the first area, three owners sign mitigation work orders. In the second, only one does. Your ad cost per signed job is $200 in the first area and $600 in the second. Compare the margin on those jobs and the drive time before moving the next week’s budget.",
+    },
+    checklist: [
+      "List the towns, staffed hours, and types of loss you want to advertise.",
+      "Test the number on your landing page from a mobile phone during an on-call shift.",
+      "Bring recent call outcomes and your current ad spend to your planning call.",
+    ],
+    measurement:
+      "Track answered calls, in-area inspections, signed mitigation jobs, and gross profit by source. Divide ad spend and management fees by signed jobs to see what it cost to acquire one. Record jobs still awaiting authorisation separately until you know the outcome.",
+    faqs: [
+      {
+        question: "Am I buying a list of water damage leads?",
+        answer:
+          "GetLeadLocal offers managed marketing for your restoration business. We can scope campaigns and landing pages that direct enquiries to your own dispatch number. Your proposal sets out the work, fees, and media budget.",
+      },
+      {
+        question: "Can I advertise only when a crew is available?",
+        answer:
+          "Yes. Tell us when a dispatcher answers and which shifts have capacity. We can schedule search ads around those hours and agree who should pause them when a major loss ties up your equipment.",
+      },
+    ],
+    related: ["/services/google-ads", "/services/local-seo", "/blog/landing-page-mistakes"],
+  },
+  {
     slug: "plumbing-lead-generation-services",
     category: "lead-generation",
     published: "2026-11-26",

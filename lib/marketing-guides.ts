@@ -1,5 +1,6 @@
 import { FACEBOOK_GUIDES } from "./guides/facebook";
 import { SEO_GUIDES } from "./guides/seo";
+import { UK_SEO_GUIDES } from "./guides/uk-seo";
 import { LEAD_GENERATION_GUIDES } from "./guides/lead-generation";
 import { CONTRACTOR_GUIDES } from "./guides/contractor-enquiries";
 import { WEBSITE_GUIDES } from "./guides/websites";
@@ -72,6 +73,7 @@ export const GUIDE_CATEGORIES = {
 export const MARKETING_GUIDES: MarketingGuide[] = [
   ...FACEBOOK_GUIDES,
   ...SEO_GUIDES,
+  ...UK_SEO_GUIDES,
   ...LEAD_GENERATION_GUIDES,
   ...CONTRACTOR_GUIDES,
   ...WEBSITE_GUIDES,

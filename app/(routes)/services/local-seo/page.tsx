@@ -432,7 +432,7 @@ export default function LocalSEOPage() {
                 name: "GetLeadLocal",
                 url: "https://getleadlocal.com",
               },
-              areaServed: "United States",
+              areaServed: ["United States", "United Kingdom"],
               description:
                 "Local SEO services to help your business rank higher in Google local search and the Map Pack. Get found by customers in your area.",
               offers: {
